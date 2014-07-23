@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NCUAppDelegate : NSObject <NSApplicationDelegate>
+@interface NCUAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
 @property (assign) IBOutlet NSWindow *window;
 

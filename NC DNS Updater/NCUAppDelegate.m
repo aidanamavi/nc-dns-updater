@@ -7,6 +7,7 @@
 //
 
 #import "NCUAppDelegate.h"
+#import "NCUMainTableCellView.h"
 
 @implementation NCUAppDelegate
 
@@ -178,6 +179,18 @@
     }
 
     return NSTerminateNow;
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return 10;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NCUMainTableCellView *cell = [tableView makeViewWithIdentifier:@"MainTableCellView" owner:self];
+    
+    cell.textField.stringValue = @"SPENCER";
+
+    return cell;
 }
 
 @end

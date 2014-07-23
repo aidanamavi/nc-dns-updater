@@ -19,6 +19,7 @@
 		0FAAB78A197ECA2600A07A44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB766197ECA2600A07A44 /* Cocoa.framework */; };
 		0FAAB792197ECA2600A07A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB790197ECA2600A07A44 /* InfoPlist.strings */; };
 		0FAAB794197ECA2600A07A44 /* NC_DNS_UpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB793197ECA2600A07A44 /* NC_DNS_UpdaterTests.m */; };
+		0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		0FAAB78F197ECA2600A07A44 /* NC DNS UpdaterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NC DNS UpdaterTests-Info.plist"; sourceTree = "<group>"; };
 		0FAAB791197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FAAB793197ECA2600A07A44 /* NC_DNS_UpdaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NC_DNS_UpdaterTests.m; sourceTree = "<group>"; };
+		0FAAB7A2197F150100A07A44 /* NCUMainTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUMainTableCellView.h; sourceTree = "<group>"; };
+		0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUMainTableCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				0FAAB781197ECA2600A07A44 /* Images.xcassets */,
 				0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */,
 				0FAAB76D197ECA2600A07A44 /* Supporting Files */,
+				0FAAB7A2197F150100A07A44 /* NCUMainTableCellView.h */,
+				0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */,
 			);
 			path = "NC DNS Updater";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				0FAAB773197ECA2600A07A44 /* main.m in Sources */,
 				0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */,
 				0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */,
+				0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +477,7 @@
 				0FAAB799197ECA2600A07A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FAAB79A197ECA2600A07A44 /* Build configuration list for PBXNativeTarget "NC DNS UpdaterTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				0FAAB79C197ECA2600A07A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
