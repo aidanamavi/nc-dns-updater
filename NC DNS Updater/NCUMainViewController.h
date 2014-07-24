@@ -27,6 +27,7 @@
 @property IBOutlet NSButton *masterSwitchBackgroundButton;
 
 - (IBAction)addDomain_Clicked:(id)sender;
+- (IBAction)removeDomain_Clicked:(id)sender;
 - (IBAction)masterSwitch_Clicked:(id)sender;
 - (IBAction)enabledSwitch_Clicked:(id)sender;
 

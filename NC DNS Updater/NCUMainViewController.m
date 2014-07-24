@@ -9,6 +9,7 @@
 #import "NCUMainViewController.h"
 #import "NCUMainTableCellView.h"
 #import "NCUAppDelegate.h"
+#import "NCUOnlyIntegerValueFormatter.h"
 
 @interface NCUMainViewController ()
 @end
@@ -31,13 +32,22 @@
     
     [self.formView setHidden:YES];
     
+    self.domainNameTextField.nextKeyView = self.domainHostTextField;
+    self.domainHostTextField.nextKeyView = self.domainDomainTextField;
+    self.domainDomainTextField.nextKeyView = self.domainPasswordTextField;
+    self.domainPasswordTextField.nextKeyView = self.domainIntervalTextField;
+    self.domainIntervalTextField.nextKeyView = self.domainsTableView;
+    self.domainsTableView.nextKeyView = self.domainNameTextField;
+    
     [self updateMasterSwitchPosition];
+    self.domainIntervalTextField.formatter = [[NCUOnlyIntegerValueFormatter alloc] init];
+    
     NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
 
     if ([self.namecheapDomains count] && !self.selectedNamecheapDomain) {
         [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
     }
-
+    
     [appDelegate.window makeFirstResponder:self.domainsTableView];
 }
 
@@ -134,10 +144,54 @@
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
+    
+    if (self.domainEnabledButton.state == NSOnState) {
+        if (![self isDomainInfoValid]) {
+            self.domainEnabledButton.state = NSOffState;
+        }
+    }
+    
     if (self.selectedNamecheapDomain) {
         self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
         [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
+    
+    [self saveChanges];
+}
+
+- (BOOL)isDomainInfoValid {
+    BOOL isValid = YES;
+    NSMutableArray *missingInfo = [NSMutableArray array];
+    
+    if (self.domainHostTextField.stringValue.length <= 0) {
+        [missingInfo addObject:@"  - HOST"];
+        isValid = NO;
+    }
+    
+    if (self.domainDomainTextField.stringValue.length <=0) {
+        [missingInfo addObject:@"  - DOMAIN"];
+        isValid = NO;
+    }
+    
+    if (self.domainPasswordTextField.stringValue.length <= 0) {
+        [missingInfo addObject:@"  - PASSWORD"];
+        isValid = NO;
+    }
+    
+    if (self.domainIntervalTextField.stringValue.length <= 0) {
+        [missingInfo addObject:@"  - INTERVAL"];
+        isValid = NO;
+    }
+    
+    if (!isValid) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessageText:@"Cannot enable this domain for updates."];
+        [alert setInformativeText:[NSString stringWithFormat:@"Required information missing:\n%@", [missingInfo componentsJoinedByString:@"\n"]]];
+        [alert runModal];
+    }
+    
+    return isValid;
 }
 
 - (void)updateMasterSwitchPosition {
@@ -157,6 +211,14 @@
     if (self.selectedNamecheapDomain) {
         NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
         NSManagedObjectContext *context = appDelegate.managedObjectContext;
+        
+        if (self.domainNameTextField.stringValue.length == 0) {
+            self.domainNameTextField.stringValue = @"<< NO NAME >>";
+        }
+        
+        if (self.domainIntervalTextField.stringValue.length == 0) {
+            self.domainIntervalTextField.stringValue = @"5";
+        }
         
         self.selectedNamecheapDomain.name = self.domainNameTextField.stringValue;
         self.selectedNamecheapDomain.host = self.domainHostTextField.stringValue;
@@ -183,6 +245,32 @@
         self.selectedNamecheapDomain.host = [self.domainHostTextField stringValue];
         self.selectedNamecheapDomain.domain = [self.domainDomainTextField stringValue];
         [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }
+    
+    self.domainEnabledButton.state = NSOffState;
+}
+
+- (IBAction)removeDomain_Clicked:(id)sender {
+    if (self.selectedNamecheapDomain) {
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert setMessageText:@"Delete domain?"];
+        [alert setInformativeText:@"Deleted domains cannot be restored."];
+        
+        if ([alert runModal] == NSAlertFirstButtonReturn) {
+            NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
+            NSManagedObjectContext *context = appDelegate.managedObjectContext;
+            [context deleteObject:self.selectedNamecheapDomain];
+            self.selectedNamecheapDomain = nil;
+            [self loadDomains];
+            [self.domainsTableView reloadData];
+            if ([self.namecheapDomains count] && !self.selectedNamecheapDomain) {
+                [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
+            }
+            [self loadForm];
+        }
     }
 }
 
