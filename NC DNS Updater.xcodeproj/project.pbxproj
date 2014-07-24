@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9A3E33198146320028BA78 /* NCUNamecheapDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */; };
+		0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E35198146410028BA78 /* NCUMainViewController.m */; };
+		0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9A3E37198147370028BA78 /* NCUMainView.xib */; };
 		0FAAB767197ECA2600A07A44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB766197ECA2600A07A44 /* Cocoa.framework */; };
 		0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */; };
 		0FAAB773197ECA2600A07A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB772197ECA2600A07A44 /* main.m */; };
@@ -33,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9A3E31198146320028BA78 /* NCUNamecheapDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUNamecheapDomain.h; sourceTree = "<group>"; };
+		0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUNamecheapDomain.m; sourceTree = "<group>"; };
+		0F9A3E34198146410028BA78 /* NCUMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUMainViewController.h; sourceTree = "<group>"; };
+		0F9A3E35198146410028BA78 /* NCUMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUMainViewController.m; sourceTree = "<group>"; };
+		0F9A3E37198147370028BA78 /* NCUMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCUMainView.xib; sourceTree = "<group>"; };
 		0FAAB763197ECA2600A07A44 /* NC DNS Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC DNS Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAAB766197ECA2600A07A44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0FAAB769197ECA2600A07A44 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +136,11 @@
 				0FAAB76D197ECA2600A07A44 /* Supporting Files */,
 				0FAAB7A2197F150100A07A44 /* NCUMainTableCellView.h */,
 				0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */,
+				0F9A3E31198146320028BA78 /* NCUNamecheapDomain.h */,
+				0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */,
+				0F9A3E34198146410028BA78 /* NCUMainViewController.h */,
+				0F9A3E35198146410028BA78 /* NCUMainViewController.m */,
+				0F9A3E37198147370028BA78 /* NCUMainView.xib */,
 			);
 			path = "NC DNS Updater";
 			sourceTree = "<group>";
@@ -240,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */,
+				0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */,
 				0FAAB782197ECA2600A07A44 /* Images.xcassets in Resources */,
 				0FAAB777197ECA2600A07A44 /* Credits.rtf in Resources */,
 				0FAAB77D197ECA2600A07A44 /* MainMenu.xib in Resources */,
@@ -263,7 +277,9 @@
 			files = (
 				0FAAB773197ECA2600A07A44 /* main.m in Sources */,
 				0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */,
+				0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */,
 				0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */,
+				0F9A3E33198146320028BA78 /* NCUNamecheapDomain.m in Sources */,
 				0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

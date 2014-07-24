@@ -7,6 +7,7 @@
 //
 
 #import "NCUAppDelegate.h"
+#import "NCUMainViewController.h"
 #import "NCUMainTableCellView.h"
 
 @implementation NCUAppDelegate
@@ -15,9 +16,14 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+    NSLog(@"WILL FINISH LAUNCHING");
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.mainViewController = [[NCUMainViewController alloc] initWithNibName:@"NCUMainView" bundle:nil];
+    [self.window.contentView addSubview:self.mainViewController.view];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.laratech.NC_DNS_Updater" in the user's Application Support directory.
@@ -179,18 +185,6 @@
     }
 
     return NSTerminateNow;
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return 10;
-}
-
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NCUMainTableCellView *cell = [tableView makeViewWithIdentifier:@"MainTableCellView" owner:self];
-    
-    cell.textField.stringValue = @"SPENCER";
-
-    return cell;
 }
 
 @end

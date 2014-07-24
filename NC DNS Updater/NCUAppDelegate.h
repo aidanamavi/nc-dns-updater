@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class NCUMainViewController;
+
 @interface NCUAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
 @property (assign) IBOutlet NSWindow *window;
+@property NCUMainViewController *mainViewController;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
