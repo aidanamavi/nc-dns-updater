@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "NCUNamecheapDomain.h"
 
-@interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+@interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
 
 @property NSMutableArray *namecheapDomains;
 @property NCUNamecheapDomain *selectedNamecheapDomain;
@@ -28,5 +28,6 @@
 
 - (IBAction)addDomain_Clicked:(id)sender;
 - (IBAction)masterSwitch_Clicked:(id)sender;
+- (IBAction)enabledSwitch_Clicked:(id)sender;
 
 @end

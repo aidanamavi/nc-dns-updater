@@ -10,4 +10,10 @@
 
 @interface NCUMainTableCellView : NSTableCellView
 
+@property IBOutlet NSTextField *detailTextField;
+@property IBOutlet NSImageView *disclosureArrowImageView;
+
+@property (nonatomic) BOOL domainEnabled;
+@property (nonatomic) BOOL showDisclosureArrow;
+
 @end

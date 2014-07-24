@@ -25,6 +25,7 @@
     return self;
 }
 
+
 - (void)loadView {
     [super loadView];
     
@@ -32,12 +33,14 @@
     
     [self updateMasterSwitchPosition];
     NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-    [appDelegate.window makeFirstResponder:self.domainsTableView];
-    
+
     if ([self.namecheapDomains count] && !self.selectedNamecheapDomain) {
         [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
     }
+
+    [appDelegate.window makeFirstResponder:self.domainsTableView];
 }
+
 
 - (void)loadDomains {
     self.namecheapDomains = [NSMutableArray array];
@@ -59,20 +62,29 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NCUMainTableCellView *cell = [tableView makeViewWithIdentifier:@"MainTableCellView" owner:self];
     NCUNamecheapDomain *namecheapDomain = [self.namecheapDomains objectAtIndex:row];
+    cell.domainEnabled = [namecheapDomain.enabled boolValue];
+    cell.showDisclosureArrow = (namecheapDomain == self.selectedNamecheapDomain);
     cell.textField.stringValue = namecheapDomain.name;
-    
+    cell.detailTextField.stringValue = [NSString stringWithFormat:@"%@.%@", namecheapDomain.host, namecheapDomain.domain];
     return cell;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSTableView *tableView = (NSTableView *)notification.object;
+    
     [self saveChanges];
-
+    
     if (self.selectedNamecheapDomain) {
-        [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+        NSInteger previousSelectedIndex = [self.namecheapDomains indexOfObject:self.selectedNamecheapDomain];
+        NCUMainTableCellView *previousSelectedCell = [tableView viewAtColumn:0 row:previousSelectedIndex makeIfNecessary:NO];
+        
+        previousSelectedCell.showDisclosureArrow = NO;
     }
     
+    NCUMainTableCellView *selectedCell = [tableView viewAtColumn:0 row:tableView.selectedRow makeIfNecessary:YES];
+    selectedCell.showDisclosureArrow = YES;
     self.selectedNamecheapDomain = [self.namecheapDomains objectAtIndex:tableView.selectedRow];
+
     [self loadForm];
 }
 
@@ -121,6 +133,13 @@
     [NSAnimationContext endGrouping];
 }
 
+- (IBAction)enabledSwitch_Clicked:(id)sender {
+    if (self.selectedNamecheapDomain) {
+        self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
+        [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }
+}
+
 - (void)updateMasterSwitchPosition {
     if (self.masterSwitchState) {
         NSRect newFrame = self.masterSwitchButtonImageView.frame;
@@ -143,14 +162,26 @@
         self.selectedNamecheapDomain.host = self.domainHostTextField.stringValue;
         self.selectedNamecheapDomain.domain = self.domainDomainTextField.stringValue;
         self.selectedNamecheapDomain.password = self.domainPasswordTextField.stringValue;
-        self.selectedNamecheapDomain.interval = [NSNumber numberWithLong:self.domainIntervalTextField.integerValue];
-        self.selectedNamecheapDomain.enabled = [NSNumber numberWithInteger:self.domainEnabledButton.state];
+        self.selectedNamecheapDomain.interval = @(self.domainIntervalTextField.integerValue);
+        self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
         
         NSError *error;
         if (![context save:&error]) {
             NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
         }
-        
+    }
+}
+
+- (void)controlTextDidChange:(NSNotification *)notification {
+    NSTextField *textField = [notification object];
+    
+    if (textField == self.domainNameTextField) {
+        self.selectedNamecheapDomain.name = [self.domainNameTextField stringValue];
+        [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }
+    else if (textField == self.domainHostTextField || textField == self.domainDomainTextField) {
+        self.selectedNamecheapDomain.host = [self.domainHostTextField stringValue];
+        self.selectedNamecheapDomain.domain = [self.domainDomainTextField stringValue];
         [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
 }

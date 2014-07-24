@@ -26,4 +26,23 @@
     // Drawing code here.
 }
 
+- (void)setDomainEnabled:(BOOL)domainEnabled {
+    _domainEnabled = domainEnabled;
+    
+    if (_domainEnabled) {
+        self.imageView.image = [NSImage imageNamed:NSImageNameStatusAvailable];
+    }
+    else {
+        self.imageView.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+    }    
+}
+
+- (void)setShowDisclosureArrow:(BOOL)showDisclosureArrow {
+    NSLog(@"showDisclosureArrow: %hhd", showDisclosureArrow);
+    
+    _showDisclosureArrow = showDisclosureArrow;
+    
+    [self.disclosureArrowImageView setHidden:!_showDisclosureArrow];
+}
+
 @end

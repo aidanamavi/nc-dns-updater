@@ -111,7 +111,9 @@
                                                     </textField>
                                                 </subviews>
                                                 <connections>
-                                                    <outlet property="imageView" destination="5mH-gZ-Cqz" id="mH2-VG-61m"/>
+                                                    <outlet property="detailTextField" destination="BY3-HC-tB9" id="YJX-2J-Ldw"/>
+                                                    <outlet property="disclosureArrowImageView" destination="PBg-1u-kBG" id="IJY-fq-ePH"/>
+                                                    <outlet property="imageView" destination="5mH-gZ-Cqz" id="dYu-s7-WhL"/>
                                                     <outlet property="textField" destination="wsy-wK-dLW" id="y33-Og-ruK"/>
                                                 </connections>
                                             </tableCellView>
@@ -162,6 +164,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="enabledSwitch_Clicked:" target="-2" id="fla-KZ-Zgu"/>
+                                        </connections>
                                     </button>
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8t3-P5-SoD">
                                         <rect key="frame" x="151" y="54" width="242" height="22"/>
@@ -207,6 +212,9 @@
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="-2" id="Eq5-cR-c1p"/>
+                                        </connections>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdE-ei-iAo">
                                         <rect key="frame" x="18" y="131" width="127" height="17"/>
@@ -225,6 +233,9 @@
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="-2" id="fak-xU-LHS"/>
+                                        </connections>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-6u-jJA">
                                         <rect key="frame" x="18" y="168" width="127" height="17"/>
@@ -243,6 +254,9 @@
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="-2" id="bLH-Iu-4Mb"/>
+                                        </connections>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clu-9U-KwR">
                                         <rect key="frame" x="18" y="205" width="127" height="17"/>
