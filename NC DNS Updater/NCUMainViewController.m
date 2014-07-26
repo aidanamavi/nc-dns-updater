@@ -26,7 +26,6 @@
     return self;
 }
 
-
 - (void)loadView {
     [super loadView];
     
@@ -49,8 +48,11 @@
     }
     
     [appDelegate.window makeFirstResponder:self.domainsTableView];
+    
+    if (self.masterSwitchState) {
+        [self loadUpdateTimers];
+    }
 }
-
 
 - (void)loadDomains {
     self.namecheapDomains = [NSMutableArray array];
@@ -62,6 +64,54 @@
     
     if (error) {
         NSLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    }
+}
+
+- (void)loadUpdateTimers {
+    [self resetUpdateTimers];
+    
+    for (NCUNamecheapDomain *namecheapDomain in self.namecheapDomains) {
+        if ([namecheapDomain.enabled boolValue]) {
+            [self createTimerForNamecheapDomain:namecheapDomain];
+        }
+    }
+}
+
+- (void)updateDnsWithNamecheapDomain:(NSTimer *)timer {
+    NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
+    NSLog(@"UPDATING DNS: %@", namecheapDomain.name);
+}
+
+- (void)resetUpdateTimers {
+    if (!self.updateTimers) {
+        self.updateTimers = [NSMutableDictionary dictionary];
+    }
+    
+    for (NSTimer *updateTimer in self.updateTimers.objectEnumerator) {
+        [updateTimer invalidate];
+    }
+    
+    [self.updateTimers removeAllObjects];
+}
+
+- (NSTimer *)createTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
+    NSTimer *timer;
+    
+    if ([namecheapDomain.enabled boolValue]) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 5 target:self selector:@selector(updateDnsWithNamecheapDomain:) userInfo:namecheapDomain repeats:YES];
+        
+        [self.updateTimers setObject:timer forKey:namecheapDomain.identifier];
+    }
+    
+    return timer;
+}
+
+- (void)removeTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
+    NSTimer *timer = [self.updateTimers objectForKey:namecheapDomain.identifier];
+    
+    if (timer) {
+        [timer invalidate];
+        [self.updateTimers removeObjectForKey:namecheapDomain];
     }
 }
 
@@ -103,12 +153,13 @@
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     NCUNamecheapDomain *namecheapDomain = [NSEntityDescription insertNewObjectForEntityForName:@"NCUNamecheapDomain" inManagedObjectContext:context];
     
+    namecheapDomain.identifier = [[NSUUID UUID] UUIDString];
     namecheapDomain.name = @"new domain";
     namecheapDomain.host = @"";
     namecheapDomain.domain = @"";
     namecheapDomain.password = @"";
     namecheapDomain.interval = @5;
-    namecheapDomain.enabled = NO;
+    namecheapDomain.enabled = @NO;
     
     [self.namecheapDomains addObject:namecheapDomain];
     [self.domainsTableView reloadData];
@@ -141,6 +192,13 @@
     [NSAnimationContext beginGrouping];
     [self updateMasterSwitchPosition];
     [NSAnimationContext endGrouping];
+    
+    if (self.masterSwitchState) {
+        [self loadUpdateTimers];
+    }
+    else {
+        [self resetUpdateTimers];
+    }
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
@@ -157,6 +215,13 @@
     }
     
     [self saveChanges];
+    
+    if ([self.selectedNamecheapDomain.enabled boolValue]) {
+        [self createTimerForNamecheapDomain:self.selectedNamecheapDomain];
+    }
+    else {
+        [self removeTimerForNamecheapDomain:self.selectedNamecheapDomain];
+    }
 }
 
 - (BOOL)isDomainInfoValid {

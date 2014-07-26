@@ -12,6 +12,7 @@
 @interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
 
 @property NSMutableArray *namecheapDomains;
+@property NSMutableDictionary *updateTimers;
 @property NCUNamecheapDomain *selectedNamecheapDomain;
 @property BOOL masterSwitchState;
 
@@ -30,5 +31,7 @@
 - (IBAction)removeDomain_Clicked:(id)sender;
 - (IBAction)masterSwitch_Clicked:(id)sender;
 - (IBAction)enabledSwitch_Clicked:(id)sender;
+
+- (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain;
 
 @end

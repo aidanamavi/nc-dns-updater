@@ -14,6 +14,7 @@
 @dynamic domain;
 @dynamic enabled;
 @dynamic host;
+@dynamic identifier;
 @dynamic interval;
 @dynamic name;
 @dynamic password;
