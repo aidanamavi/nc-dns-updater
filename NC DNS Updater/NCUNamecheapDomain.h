@@ -1,8 +1,8 @@
 //
-//  NamecheapDomain.h
+//  NCUNamecheapDomain.h
 //  NC DNS Updater
 //
-//  Created by Spencer Müller Diniz on 7/23/14.
+//  Created by Spencer Müller Diniz on 7/28/14.
 //  Copyright (c) 2014 SPENCER. All rights reserved.
 //
 
@@ -19,5 +19,6 @@
 @property (nonatomic, retain) NSNumber * interval;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * password;
+@property (nonatomic, retain) NSString * currentIP;
 
 @end

@@ -1,8 +1,8 @@
 //
-//  NamecheapDomain.m
+//  NCUNamecheapDomain.m
 //  NC DNS Updater
 //
-//  Created by Spencer Müller Diniz on 7/23/14.
+//  Created by Spencer Müller Diniz on 7/28/14.
 //  Copyright (c) 2014 SPENCER. All rights reserved.
 //
 
@@ -18,5 +18,6 @@
 @dynamic interval;
 @dynamic name;
 @dynamic password;
+@dynamic currentIP;
 
 @end

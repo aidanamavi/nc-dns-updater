@@ -10,6 +10,7 @@
 #import "NCUMainTableCellView.h"
 #import "NCUAppDelegate.h"
 #import "NCUOnlyIntegerValueFormatter.h"
+#import "NCUIPService.h"
 
 @interface NCUMainViewController ()
 @end
@@ -80,6 +81,23 @@
 - (void)updateDnsWithNamecheapDomain:(NSTimer *)timer {
     NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
     NSLog(@"UPDATING DNS: %@", namecheapDomain.name);
+    
+    [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
+        if (!error) {
+            if (ipAddress) {
+                if ([NCUIPService isStringAnIP:ipAddress] && ![ipAddress isEqualToString:namecheapDomain.currentIP]) {
+                    namecheapDomain.currentIP = ipAddress;
+                    NSError *error;
+                    [[self getDataContext] save:&error];
+                    [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress];
+                    
+                    if (self.selectedNamecheapDomain == namecheapDomain) {
+                        [self.domainCurrentIPTextField setStringValue:ipAddress];
+                    }
+                }
+            }
+        }
+    }];
 }
 
 - (void)resetUpdateTimers {
@@ -98,7 +116,7 @@
     NSTimer *timer;
     
     if ([namecheapDomain.enabled boolValue]) {
-        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 5 target:self selector:@selector(updateDnsWithNamecheapDomain:) userInfo:namecheapDomain repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 60 target:self selector:@selector(updateDnsWithNamecheapDomain:) userInfo:namecheapDomain repeats:YES];
         
         [self.updateTimers setObject:timer forKey:namecheapDomain.identifier];
     }
@@ -149,9 +167,7 @@
 }
 
 - (IBAction)addDomain_Clicked:(id)sender {
-    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = appDelegate.managedObjectContext;
-    NCUNamecheapDomain *namecheapDomain = [NSEntityDescription insertNewObjectForEntityForName:@"NCUNamecheapDomain" inManagedObjectContext:context];
+    NCUNamecheapDomain *namecheapDomain = [NSEntityDescription insertNewObjectForEntityForName:@"NCUNamecheapDomain" inManagedObjectContext:[self getDataContext]];
     
     namecheapDomain.identifier = [[NSUUID UUID] UUIDString];
     namecheapDomain.name = @"new domain";
@@ -160,6 +176,7 @@
     namecheapDomain.password = @"";
     namecheapDomain.interval = @5;
     namecheapDomain.enabled = @NO;
+    namecheapDomain.currentIP = @"";
     
     [self.namecheapDomains addObject:namecheapDomain];
     [self.domainsTableView reloadData];
@@ -176,6 +193,7 @@
         [self.domainPasswordTextField setStringValue:self.selectedNamecheapDomain.password];
         [self.domainIntervalTextField setStringValue:[NSString stringWithFormat:@"%@", self.selectedNamecheapDomain.interval]];
         [self.domainEnabledButton setState:[self.selectedNamecheapDomain.enabled integerValue]];
+        [self.domainCurrentIPTextField setStringValue:self.selectedNamecheapDomain.currentIP];
     }
     else {
         [self.formView setHidden:YES];
@@ -274,9 +292,6 @@
 
 - (void)saveChanges {
     if (self.selectedNamecheapDomain) {
-        NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-        NSManagedObjectContext *context = appDelegate.managedObjectContext;
-        
         if (self.domainNameTextField.stringValue.length == 0) {
             self.domainNameTextField.stringValue = @"<< NO NAME >>";
         }
@@ -291,9 +306,10 @@
         self.selectedNamecheapDomain.password = self.domainPasswordTextField.stringValue;
         self.selectedNamecheapDomain.interval = @(self.domainIntervalTextField.integerValue);
         self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
+        self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;
         
         NSError *error;
-        if (![context save:&error]) {
+        if (![[self getDataContext] save:&error]) {
             NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
         }
     }
@@ -326,9 +342,7 @@
         [alert setInformativeText:@"Deleted domains cannot be restored."];
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
-            NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-            NSManagedObjectContext *context = appDelegate.managedObjectContext;
-            [context deleteObject:self.selectedNamecheapDomain];
+            [[self getDataContext] deleteObject:self.selectedNamecheapDomain];
             self.selectedNamecheapDomain = nil;
             [self loadDomains];
             [self.domainsTableView reloadData];
@@ -338,6 +352,12 @@
             [self loadForm];
         }
     }
+}
+
+- (NSManagedObjectContext *)getDataContext {
+    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    return context;
 }
 
 @end

@@ -24,6 +24,7 @@
 @property IBOutlet NSTextField *domainPasswordTextField;
 @property IBOutlet NSTextField *domainIntervalTextField;
 @property IBOutlet NSButton *domainEnabledButton;
+@property IBOutlet NSTextField *domainCurrentIPTextField;
 @property IBOutlet NSImageView *masterSwitchButtonImageView;
 @property IBOutlet NSButton *masterSwitchBackgroundButton;
 
