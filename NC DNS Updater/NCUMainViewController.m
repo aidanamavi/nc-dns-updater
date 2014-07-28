@@ -313,6 +313,7 @@
     }
     
     self.domainEnabledButton.state = NSOffState;
+    [self enabledSwitch_Clicked:self.domainEnabledButton];
 }
 
 - (IBAction)removeDomain_Clicked:(id)sender {

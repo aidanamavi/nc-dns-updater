@@ -1,529 +1,1295 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0F9A3E33198146320028BA78 /* NCUNamecheapDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */; };
-		0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E35198146410028BA78 /* NCUMainViewController.m */; };
-		0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9A3E37198147370028BA78 /* NCUMainView.xib */; };
-		0F9A3E3E19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */; };
-		0FAAB767197ECA2600A07A44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB766197ECA2600A07A44 /* Cocoa.framework */; };
-		0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */; };
-		0FAAB773197ECA2600A07A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB772197ECA2600A07A44 /* main.m */; };
-		0FAAB777197ECA2600A07A44 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB775197ECA2600A07A44 /* Credits.rtf */; };
-		0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB779197ECA2600A07A44 /* NCUAppDelegate.m */; };
-		0FAAB77D197ECA2600A07A44 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB77B197ECA2600A07A44 /* MainMenu.xib */; };
-		0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */; };
-		0FAAB782197ECA2600A07A44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB781197ECA2600A07A44 /* Images.xcassets */; };
-		0FAAB789197ECA2600A07A44 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB788197ECA2600A07A44 /* XCTest.framework */; };
-		0FAAB78A197ECA2600A07A44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB766197ECA2600A07A44 /* Cocoa.framework */; };
-		0FAAB792197ECA2600A07A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB790197ECA2600A07A44 /* InfoPlist.strings */; };
-		0FAAB794197ECA2600A07A44 /* NC_DNS_UpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB793197ECA2600A07A44 /* NC_DNS_UpdaterTests.m */; };
-		0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0FAAB78B197ECA2600A07A44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FAAB75B197ECA2600A07A44 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FAAB762197ECA2600A07A44;
-			remoteInfo = "NC DNS Updater";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0F9A3E31198146320028BA78 /* NCUNamecheapDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUNamecheapDomain.h; sourceTree = "<group>"; };
-		0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUNamecheapDomain.m; sourceTree = "<group>"; };
-		0F9A3E34198146410028BA78 /* NCUMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUMainViewController.h; sourceTree = "<group>"; };
-		0F9A3E35198146410028BA78 /* NCUMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUMainViewController.m; sourceTree = "<group>"; };
-		0F9A3E37198147370028BA78 /* NCUMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCUMainView.xib; sourceTree = "<group>"; };
-		0F9A3E3C19817B120028BA78 /* NCUOnlyIntegerValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUOnlyIntegerValueFormatter.h; sourceTree = "<group>"; };
-		0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUOnlyIntegerValueFormatter.m; sourceTree = "<group>"; };
-		0FAAB763197ECA2600A07A44 /* NC DNS Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC DNS Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FAAB766197ECA2600A07A44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		0FAAB769197ECA2600A07A44 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		0FAAB76A197ECA2600A07A44 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		0FAAB76B197ECA2600A07A44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0FAAB76E197ECA2600A07A44 /* NC DNS Updater-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NC DNS Updater-Info.plist"; sourceTree = "<group>"; };
-		0FAAB770197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0FAAB772197ECA2600A07A44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0FAAB774197ECA2600A07A44 /* NC DNS Updater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NC DNS Updater-Prefix.pch"; sourceTree = "<group>"; };
-		0FAAB776197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		0FAAB778197ECA2600A07A44 /* NCUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCUAppDelegate.h; sourceTree = "<group>"; };
-		0FAAB779197ECA2600A07A44 /* NCUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCUAppDelegate.m; sourceTree = "<group>"; };
-		0FAAB77C197ECA2600A07A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater.xcdatamodel; sourceTree = "<group>"; };
-		0FAAB781197ECA2600A07A44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0FAAB787197ECA2600A07A44 /* NC DNS UpdaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NC DNS UpdaterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FAAB788197ECA2600A07A44 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0FAAB78F197ECA2600A07A44 /* NC DNS UpdaterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NC DNS UpdaterTests-Info.plist"; sourceTree = "<group>"; };
-		0FAAB791197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0FAAB793197ECA2600A07A44 /* NC_DNS_UpdaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NC_DNS_UpdaterTests.m; sourceTree = "<group>"; };
-		0FAAB7A2197F150100A07A44 /* NCUMainTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUMainTableCellView.h; sourceTree = "<group>"; };
-		0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUMainTableCellView.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0FAAB760197ECA2600A07A44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB767197ECA2600A07A44 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FAAB784197ECA2600A07A44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB78A197ECA2600A07A44 /* Cocoa.framework in Frameworks */,
-				0FAAB789197ECA2600A07A44 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0FAAB75A197ECA2600A07A44 = {
-			isa = PBXGroup;
-			children = (
-				0FAAB76C197ECA2600A07A44 /* NC DNS Updater */,
-				0FAAB78D197ECA2600A07A44 /* NC DNS UpdaterTests */,
-				0FAAB765197ECA2600A07A44 /* Frameworks */,
-				0FAAB764197ECA2600A07A44 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		0FAAB764197ECA2600A07A44 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB763197ECA2600A07A44 /* NC DNS Updater.app */,
-				0FAAB787197ECA2600A07A44 /* NC DNS UpdaterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0FAAB765197ECA2600A07A44 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB766197ECA2600A07A44 /* Cocoa.framework */,
-				0FAAB788197ECA2600A07A44 /* XCTest.framework */,
-				0FAAB768197ECA2600A07A44 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0FAAB768197ECA2600A07A44 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB769197ECA2600A07A44 /* AppKit.framework */,
-				0FAAB76A197ECA2600A07A44 /* CoreData.framework */,
-				0FAAB76B197ECA2600A07A44 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		0FAAB76C197ECA2600A07A44 /* NC DNS Updater */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB778197ECA2600A07A44 /* NCUAppDelegate.h */,
-				0FAAB779197ECA2600A07A44 /* NCUAppDelegate.m */,
-				0FAAB77B197ECA2600A07A44 /* MainMenu.xib */,
-				0FAAB781197ECA2600A07A44 /* Images.xcassets */,
-				0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */,
-				0FAAB76D197ECA2600A07A44 /* Supporting Files */,
-				0FAAB7A2197F150100A07A44 /* NCUMainTableCellView.h */,
-				0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */,
-				0F9A3E31198146320028BA78 /* NCUNamecheapDomain.h */,
-				0F9A3E32198146320028BA78 /* NCUNamecheapDomain.m */,
-				0F9A3E34198146410028BA78 /* NCUMainViewController.h */,
-				0F9A3E35198146410028BA78 /* NCUMainViewController.m */,
-				0F9A3E37198147370028BA78 /* NCUMainView.xib */,
-				0F9A3E3C19817B120028BA78 /* NCUOnlyIntegerValueFormatter.h */,
-				0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */,
-			);
-			path = "NC DNS Updater";
-			sourceTree = "<group>";
-		};
-		0FAAB76D197ECA2600A07A44 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB76E197ECA2600A07A44 /* NC DNS Updater-Info.plist */,
-				0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */,
-				0FAAB772197ECA2600A07A44 /* main.m */,
-				0FAAB774197ECA2600A07A44 /* NC DNS Updater-Prefix.pch */,
-				0FAAB775197ECA2600A07A44 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0FAAB78D197ECA2600A07A44 /* NC DNS UpdaterTests */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB793197ECA2600A07A44 /* NC_DNS_UpdaterTests.m */,
-				0FAAB78E197ECA2600A07A44 /* Supporting Files */,
-			);
-			path = "NC DNS UpdaterTests";
-			sourceTree = "<group>";
-		};
-		0FAAB78E197ECA2600A07A44 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0FAAB78F197ECA2600A07A44 /* NC DNS UpdaterTests-Info.plist */,
-				0FAAB790197ECA2600A07A44 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		0FAAB762197ECA2600A07A44 /* NC DNS Updater */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FAAB797197ECA2600A07A44 /* Build configuration list for PBXNativeTarget "NC DNS Updater" */;
-			buildPhases = (
-				0FAAB75F197ECA2600A07A44 /* Sources */,
-				0FAAB760197ECA2600A07A44 /* Frameworks */,
-				0FAAB761197ECA2600A07A44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NC DNS Updater";
-			productName = "NC DNS Updater";
-			productReference = 0FAAB763197ECA2600A07A44 /* NC DNS Updater.app */;
-			productType = "com.apple.product-type.application";
-		};
-		0FAAB786197ECA2600A07A44 /* NC DNS UpdaterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FAAB79A197ECA2600A07A44 /* Build configuration list for PBXNativeTarget "NC DNS UpdaterTests" */;
-			buildPhases = (
-				0FAAB783197ECA2600A07A44 /* Sources */,
-				0FAAB784197ECA2600A07A44 /* Frameworks */,
-				0FAAB785197ECA2600A07A44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0FAAB78C197ECA2600A07A44 /* PBXTargetDependency */,
-			);
-			name = "NC DNS UpdaterTests";
-			productName = "NC DNS UpdaterTests";
-			productReference = 0FAAB787197ECA2600A07A44 /* NC DNS UpdaterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		0FAAB75B197ECA2600A07A44 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = NCU;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = SPENCER;
-				TargetAttributes = {
-					0FAAB786197ECA2600A07A44 = {
-						TestTargetID = 0FAAB762197ECA2600A07A44;
-					};
-				};
-			};
-			buildConfigurationList = 0FAAB75E197ECA2600A07A44 /* Build configuration list for PBXProject "NC DNS Updater" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 0FAAB75A197ECA2600A07A44;
-			productRefGroup = 0FAAB764197ECA2600A07A44 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				0FAAB762197ECA2600A07A44 /* NC DNS Updater */,
-				0FAAB786197ECA2600A07A44 /* NC DNS UpdaterTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		0FAAB761197ECA2600A07A44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */,
-				0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */,
-				0FAAB782197ECA2600A07A44 /* Images.xcassets in Resources */,
-				0FAAB777197ECA2600A07A44 /* Credits.rtf in Resources */,
-				0FAAB77D197ECA2600A07A44 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FAAB785197ECA2600A07A44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB792197ECA2600A07A44 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0FAAB75F197ECA2600A07A44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB773197ECA2600A07A44 /* main.m in Sources */,
-				0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */,
-				0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */,
-				0F9A3E3E19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m in Sources */,
-				0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */,
-				0F9A3E33198146320028BA78 /* NCUNamecheapDomain.m in Sources */,
-				0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FAAB783197ECA2600A07A44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAAB794197ECA2600A07A44 /* NC_DNS_UpdaterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0FAAB78C197ECA2600A07A44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0FAAB762197ECA2600A07A44 /* NC DNS Updater */;
-			targetProxy = 0FAAB78B197ECA2600A07A44 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FAAB770197ECA2600A07A44 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0FAAB775197ECA2600A07A44 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FAAB776197ECA2600A07A44 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		0FAAB77B197ECA2600A07A44 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FAAB77C197ECA2600A07A44 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		0FAAB790197ECA2600A07A44 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FAAB791197ECA2600A07A44 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		0FAAB795197ECA2600A07A44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		0FAAB796197ECA2600A07A44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		0FAAB798197ECA2600A07A44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NC DNS Updater/NC DNS Updater-Prefix.pch";
-				INFOPLIST_FILE = "NC DNS Updater/NC DNS Updater-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		0FAAB799197ECA2600A07A44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NC DNS Updater/NC DNS Updater-Prefix.pch";
-				INFOPLIST_FILE = "NC DNS Updater/NC DNS Updater-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		0FAAB79B197ECA2600A07A44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NC DNS Updater.app/Contents/MacOS/NC DNS Updater";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NC DNS Updater/NC DNS Updater-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "NC DNS UpdaterTests/NC DNS UpdaterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		0FAAB79C197ECA2600A07A44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NC DNS Updater.app/Contents/MacOS/NC DNS Updater";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NC DNS Updater/NC DNS Updater-Prefix.pch";
-				INFOPLIST_FILE = "NC DNS UpdaterTests/NC DNS UpdaterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		0FAAB75E197ECA2600A07A44 /* Build configuration list for PBXProject "NC DNS Updater" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FAAB795197ECA2600A07A44 /* Debug */,
-				0FAAB796197ECA2600A07A44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FAAB797197ECA2600A07A44 /* Build configuration list for PBXNativeTarget "NC DNS Updater" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FAAB798197ECA2600A07A44 /* Debug */,
-				0FAAB799197ECA2600A07A44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FAAB79A197ECA2600A07A44 /* Build configuration list for PBXNativeTarget "NC DNS UpdaterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FAAB79B197ECA2600A07A44 /* Debug */,
-				0FAAB79C197ECA2600A07A44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */,
-			);
-			currentVersion = 0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */;
-			path = NC_DNS_Updater.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = 0FAAB75B197ECA2600A07A44 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0F9A3E31198146320028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NCUNamecheapDomain.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E32198146320028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NCUNamecheapDomain.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E33198146320028BA78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F9A3E32198146320028BA78</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0F9A3E34198146410028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NCUMainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E35198146410028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NCUMainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E36198146410028BA78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F9A3E35198146410028BA78</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0F9A3E37198147370028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>NCUMainView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E38198147370028BA78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F9A3E37198147370028BA78</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0F9A3E3C19817B120028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NCUOnlyIntegerValueFormatter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E3D19817B120028BA78</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NCUOnlyIntegerValueFormatter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9A3E3E19817B120028BA78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F9A3E3D19817B120028BA78</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB75A197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB76C197ECA2600A07A44</string>
+				<string>0FAAB78D197ECA2600A07A44</string>
+				<string>0FAAB765197ECA2600A07A44</string>
+				<string>0FAAB764197ECA2600A07A44</string>
+				<string>BC1A0C2F726A4BBEBD1F5B7E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB75B197ECA2600A07A44</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>NCU</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>SPENCER</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>0FAAB786197ECA2600A07A44</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>0FAAB762197ECA2600A07A44</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>0FAAB75E197ECA2600A07A44</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>0FAAB75A197ECA2600A07A44</string>
+			<key>productRefGroup</key>
+			<string>0FAAB764197ECA2600A07A44</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>0FAAB762197ECA2600A07A44</string>
+				<string>0FAAB786197ECA2600A07A44</string>
+			</array>
+		</dict>
+		<key>0FAAB75E197ECA2600A07A44</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FAAB795197ECA2600A07A44</string>
+				<string>0FAAB796197ECA2600A07A44</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FAAB75F197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB773197ECA2600A07A44</string>
+				<string>0FAAB77A197ECA2600A07A44</string>
+				<string>0F9A3E36198146410028BA78</string>
+				<string>0F9A3E3E19817B120028BA78</string>
+				<string>0FAAB780197ECA2600A07A44</string>
+				<string>0F9A3E33198146320028BA78</string>
+				<string>0FAAB7A4197F150100A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB760197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB767197ECA2600A07A44</string>
+				<string>74ABF17B2BDE469B82E623F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB761197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB771197ECA2600A07A44</string>
+				<string>0F9A3E38198147370028BA78</string>
+				<string>0FAAB782197ECA2600A07A44</string>
+				<string>0FAAB777197ECA2600A07A44</string>
+				<string>0FAAB77D197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB762197ECA2600A07A44</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0FAAB797197ECA2600A07A44</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E48C67939FB241CE854506A4</string>
+				<string>0FAAB75F197ECA2600A07A44</string>
+				<string>0FAAB760197ECA2600A07A44</string>
+				<string>0FAAB761197ECA2600A07A44</string>
+				<string>10650724AC174DDB8BF364A8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NC DNS Updater</string>
+			<key>productName</key>
+			<string>NC DNS Updater</string>
+			<key>productReference</key>
+			<string>0FAAB763197ECA2600A07A44</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>0FAAB763197ECA2600A07A44</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>NC DNS Updater.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0FAAB764197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB763197ECA2600A07A44</string>
+				<string>0FAAB787197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB765197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB766197ECA2600A07A44</string>
+				<string>0FAAB788197ECA2600A07A44</string>
+				<string>0FAAB768197ECA2600A07A44</string>
+				<string>171452A43C9F4D53B8DAB49B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB766197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>0FAAB767197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB766197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB768197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB769197ECA2600A07A44</string>
+				<string>0FAAB76A197ECA2600A07A44</string>
+				<string>0FAAB76B197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB769197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>0FAAB76A197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>0FAAB76B197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>0FAAB76C197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB778197ECA2600A07A44</string>
+				<string>0FAAB779197ECA2600A07A44</string>
+				<string>0FAAB77B197ECA2600A07A44</string>
+				<string>0FAAB781197ECA2600A07A44</string>
+				<string>0FAAB77E197ECA2600A07A44</string>
+				<string>0FAAB76D197ECA2600A07A44</string>
+				<string>0FAAB7A2197F150100A07A44</string>
+				<string>0FAAB7A3197F150100A07A44</string>
+				<string>0F9A3E31198146320028BA78</string>
+				<string>0F9A3E32198146320028BA78</string>
+				<string>0F9A3E34198146410028BA78</string>
+				<string>0F9A3E35198146410028BA78</string>
+				<string>0F9A3E37198147370028BA78</string>
+				<string>0F9A3E3C19817B120028BA78</string>
+				<string>0F9A3E3D19817B120028BA78</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NC DNS Updater</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB76D197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB76E197ECA2600A07A44</string>
+				<string>0FAAB76F197ECA2600A07A44</string>
+				<string>0FAAB772197ECA2600A07A44</string>
+				<string>0FAAB774197ECA2600A07A44</string>
+				<string>0FAAB775197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB76E197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>NC DNS Updater-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB76F197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB770197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB770197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB771197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB76F197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB772197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB773197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB772197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB774197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NC DNS Updater-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB775197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB776197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB776197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.rtf</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB777197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB775197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB778197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NCUAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB779197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NCUAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB77A197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB779197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB77B197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB77C197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB77C197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB77D197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB77B197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB77E197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB77F197ECA2600A07A44</string>
+			</array>
+			<key>currentVersion</key>
+			<string>0FAAB77F197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>NC_DNS_Updater.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>0FAAB77F197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>NC_DNS_Updater.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB780197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB77E197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB781197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB782197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB781197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB783197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB794197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB784197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB78A197ECA2600A07A44</string>
+				<string>0FAAB789197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB785197ECA2600A07A44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0FAAB792197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0FAAB786197ECA2600A07A44</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0FAAB79A197ECA2600A07A44</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0FAAB783197ECA2600A07A44</string>
+				<string>0FAAB784197ECA2600A07A44</string>
+				<string>0FAAB785197ECA2600A07A44</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>0FAAB78C197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NC DNS UpdaterTests</string>
+			<key>productName</key>
+			<string>NC DNS UpdaterTests</string>
+			<key>productReference</key>
+			<string>0FAAB787197ECA2600A07A44</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>0FAAB787197ECA2600A07A44</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>NC DNS UpdaterTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0FAAB788197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>0FAAB789197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB788197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB78A197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB766197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB78B197ECA2600A07A44</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>0FAAB75B197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0FAAB762197ECA2600A07A44</string>
+			<key>remoteInfo</key>
+			<string>NC DNS Updater</string>
+		</dict>
+		<key>0FAAB78C197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>0FAAB762197ECA2600A07A44</string>
+			<key>targetProxy</key>
+			<string>0FAAB78B197ECA2600A07A44</string>
+		</dict>
+		<key>0FAAB78D197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB793197ECA2600A07A44</string>
+				<string>0FAAB78E197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NC DNS UpdaterTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB78E197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB78F197ECA2600A07A44</string>
+				<string>0FAAB790197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB78F197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>NC DNS UpdaterTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB790197ECA2600A07A44</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FAAB791197ECA2600A07A44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB791197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB792197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB790197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB793197ECA2600A07A44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NC_DNS_UpdaterTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB794197ECA2600A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB793197ECA2600A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0FAAB795197ECA2600A07A44</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FAAB796197ECA2600A07A44</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FAAB797197ECA2600A07A44</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FAAB798197ECA2600A07A44</string>
+				<string>0FAAB799197ECA2600A07A44</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FAAB798197ECA2600A07A44</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC1A0C2F726A4BBEBD1F5B7E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>NC DNS Updater/NC DNS Updater-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NC DNS Updater/NC DNS Updater-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FAAB799197ECA2600A07A44</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC1A0C2F726A4BBEBD1F5B7E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>NC DNS Updater/NC DNS Updater-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NC DNS Updater/NC DNS Updater-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FAAB79A197ECA2600A07A44</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0FAAB79B197ECA2600A07A44</string>
+				<string>0FAAB79C197ECA2600A07A44</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0FAAB79B197ECA2600A07A44</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/NC DNS Updater.app/Contents/MacOS/NC DNS Updater</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>NC DNS Updater/NC DNS Updater-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>NC DNS UpdaterTests/NC DNS UpdaterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0FAAB79C197ECA2600A07A44</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/NC DNS Updater.app/Contents/MacOS/NC DNS Updater</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>NC DNS Updater/NC DNS Updater-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NC DNS UpdaterTests/NC DNS UpdaterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0FAAB7A2197F150100A07A44</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NCUMainTableCellView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB7A3197F150100A07A44</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NCUMainTableCellView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FAAB7A4197F150100A07A44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FAAB7A3197F150100A07A44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>10650724AC174DDB8BF364A8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-NC DNS Updater-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>171452A43C9F4D53B8DAB49B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>74ABF17B2BDE469B82E623F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>171452A43C9F4D53B8DAB49B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BC1A0C2F726A4BBEBD1F5B7E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-NC DNS Updater.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E48C67939FB241CE854506A4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>0FAAB75B197ECA2600A07A44</string>
+</dict>
+</plist>

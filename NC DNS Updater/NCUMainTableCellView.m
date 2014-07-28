@@ -38,8 +38,6 @@
 }
 
 - (void)setShowDisclosureArrow:(BOOL)showDisclosureArrow {
-    NSLog(@"showDisclosureArrow: %hhd", showDisclosureArrow);
-    
     _showDisclosureArrow = showDisclosureArrow;
     
     [self.disclosureArrowImageView setHidden:!_showDisclosureArrow];
