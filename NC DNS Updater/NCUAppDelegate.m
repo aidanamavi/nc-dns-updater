@@ -22,6 +22,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [self.window setReleasedWhenClosed:NO];
     self.mainViewController = [[NCUMainViewController alloc] initWithNibName:@"NCUMainView" bundle:nil];
     [self.window.contentView addSubview:self.mainViewController.view];
 }
@@ -185,6 +186,11 @@
     }
 
     return NSTerminateNow;
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+    [self.window setIsVisible:YES];
+    return YES;
 }
 
 @end
