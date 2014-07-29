@@ -12,10 +12,10 @@
 		0F9A3E3E19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */; };
 		0F9A3E4A1986B2830028BA78 /* NCUIPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E491986B2830028BA78 /* NCUIPService.m */; };
 		0F9A3E4D1986FF4D0028BA78 /* NCUNamecheapDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E4C1986FF4D0028BA78 /* NCUNamecheapDomain.m */; };
+		0F9A3E4F19880EE70028BA78 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F9A3E4E19880EE70028BA78 /* Credits.html */; };
 		0FAAB767197ECA2600A07A44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAAB766197ECA2600A07A44 /* Cocoa.framework */; };
 		0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */; };
 		0FAAB773197ECA2600A07A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB772197ECA2600A07A44 /* main.m */; };
-		0FAAB777197ECA2600A07A44 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB775197ECA2600A07A44 /* Credits.rtf */; };
 		0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB779197ECA2600A07A44 /* NCUAppDelegate.m */; };
 		0FAAB77D197ECA2600A07A44 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAAB77B197ECA2600A07A44 /* MainMenu.xib */; };
 		0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */; };
@@ -48,6 +48,7 @@
 		0F9A3E491986B2830028BA78 /* NCUIPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUIPService.m; sourceTree = "<group>"; };
 		0F9A3E4B1986FF4D0028BA78 /* NCUNamecheapDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUNamecheapDomain.h; sourceTree = "<group>"; };
 		0F9A3E4C1986FF4D0028BA78 /* NCUNamecheapDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUNamecheapDomain.m; sourceTree = "<group>"; };
+		0F9A3E4E19880EE70028BA78 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		0FAAB763197ECA2600A07A44 /* NC DNS Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NC DNS Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAAB766197ECA2600A07A44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0FAAB769197ECA2600A07A44 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,7 +58,6 @@
 		0FAAB770197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FAAB772197ECA2600A07A44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0FAAB774197ECA2600A07A44 /* NC DNS Updater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NC DNS Updater-Prefix.pch"; sourceTree = "<group>"; };
-		0FAAB776197ECA2600A07A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0FAAB778197ECA2600A07A44 /* NCUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCUAppDelegate.h; sourceTree = "<group>"; };
 		0FAAB779197ECA2600A07A44 /* NCUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCUAppDelegate.m; sourceTree = "<group>"; };
 		0FAAB77C197ECA2600A07A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				0FAAB76F197ECA2600A07A44 /* InfoPlist.strings */,
 				0FAAB772197ECA2600A07A44 /* main.m */,
 				0FAAB774197ECA2600A07A44 /* NC DNS Updater-Prefix.pch */,
-				0FAAB775197ECA2600A07A44 /* Credits.rtf */,
+				0F9A3E4E19880EE70028BA78 /* Credits.html */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,8 +273,8 @@
 				0FAAB771197ECA2600A07A44 /* InfoPlist.strings in Resources */,
 				0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */,
 				0FAAB782197ECA2600A07A44 /* Images.xcassets in Resources */,
-				0FAAB777197ECA2600A07A44 /* Credits.rtf in Resources */,
 				0FAAB77D197ECA2600A07A44 /* MainMenu.xib in Resources */,
+				0F9A3E4F19880EE70028BA78 /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +362,6 @@
 				0FAAB770197ECA2600A07A44 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0FAAB775197ECA2600A07A44 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FAAB776197ECA2600A07A44 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		0FAAB77B197ECA2600A07A44 /* MainMenu.xib */ = {
