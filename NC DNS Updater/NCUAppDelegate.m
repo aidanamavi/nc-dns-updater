@@ -25,6 +25,17 @@
     [self.window setReleasedWhenClosed:NO];
     self.mainViewController = [[NCUMainViewController alloc] initWithNibName:@"NCUMainView" bundle:nil];
     [self.window.contentView addSubview:self.mainViewController.view];
+
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    NSImage *menuIcon = [NSImage imageNamed:@"StatusItemIcon"];
+    NSImage *highlightIcon = [NSImage imageNamed:@"StatusItemIcon"];
+//    [highlightIcon setTemplate:YES];
+    
+    [self.statusItem setImage:menuIcon];
+//    [self.statusItem setAlternateImage:highlightIcon];
+    [self.statusItem setMenu:self.menu];
+    [self.statusItem setHighlightMode:YES];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.laratech.NC_DNS_Updater" in the user's Application Support directory.
@@ -128,20 +139,6 @@
     return [[self managedObjectContext] undoManager];
 }
 
-// Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-- (IBAction)saveAction:(id)sender
-{
-    NSError *error = nil;
-    
-    if (![[self managedObjectContext] commitEditing]) {
-        NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));
-    }
-    
-    if (![[self managedObjectContext] save:&error]) {
-        [[NSApplication sharedApplication] presentError:error];
-    }
-}
-
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.
@@ -191,6 +188,14 @@
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
     [self.window setIsVisible:YES];
     return YES;
+}
+
+-(IBAction)menuActionSettings:(id)sender {
+    [self.window setIsVisible:YES];
+}
+
+-(IBAction)menuActionQuit:(id)sender {
+    [[NSApplication sharedApplication] terminate:nil];
 }
 
 @end

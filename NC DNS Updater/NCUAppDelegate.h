@@ -12,6 +12,8 @@
 
 @interface NCUAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
+@property (readwrite, retain) IBOutlet NSMenu *menu;
+@property (readwrite, retain) IBOutlet NSStatusItem *statusItem;
 @property (assign) IBOutlet NSWindow *window;
 @property NCUMainViewController *mainViewController;
 
@@ -19,6 +21,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-- (IBAction)saveAction:(id)sender;
+- (IBAction)menuActionSettings:(id)sender;
+- (IBAction)menuActionQuit:(id)sender;
 
 @end

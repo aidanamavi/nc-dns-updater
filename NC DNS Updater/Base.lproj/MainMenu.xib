@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="NCUAppDelegate">
             <connections>
+                <outlet property="menu" destination="liI-Mb-ccH" id="oJe-XR-wt5"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -23,12 +24,6 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="NC DNS Updater" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About NC DNS Updater" id="5kV-Vb-QxS">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
-                                </connections>
-                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -100,5 +95,28 @@
                 <autoresizingMask key="autoresizingMask"/>
             </view>
         </window>
+        <menu id="liI-Mb-ccH">
+            <items>
+                <menuItem title="About NC DNS Updater" id="5kV-Vb-QxS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Settings..." id="e93-Be-MKC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="menuActionSettings:" target="Voe-Tx-rLC" id="STC-mK-LZJ"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="3N0-vq-KJS"/>
+                <menuItem title="Quit" id="Slv-t3-arz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="menuActionQuit:" target="Voe-Tx-rLC" id="iy4-pE-bc7"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
 </document>
