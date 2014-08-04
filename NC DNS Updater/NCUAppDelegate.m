@@ -29,11 +29,8 @@
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     NSImage *menuIcon = [NSImage imageNamed:@"StatusItemIcon"];
-    NSImage *highlightIcon = [NSImage imageNamed:@"StatusItemIcon"];
-//    [highlightIcon setTemplate:YES];
     
     [self.statusItem setImage:menuIcon];
-//    [self.statusItem setAlternateImage:highlightIcon];
     [self.statusItem setMenu:self.menu];
     [self.statusItem setHighlightMode:YES];
 }
