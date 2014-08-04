@@ -78,10 +78,16 @@
     }
 }
 
-- (void)updateDnsWithNamecheapDomain:(NSTimer *)timer {
+- (void)timer_Ticked:(NSTimer *)timer {
     NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
     NSLog(@"UPDATING DNS: %@", namecheapDomain.name);
     
+    if (namecheapDomain) {
+        [self updateDnsWithNamecheapDomain:namecheapDomain];
+    }
+}
+
+- (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
     [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
         if (!error) {
             if (ipAddress) {
@@ -116,7 +122,7 @@
     NSTimer *timer;
     
     if ([namecheapDomain.enabled boolValue]) {
-        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 60 target:self selector:@selector(updateDnsWithNamecheapDomain:) userInfo:namecheapDomain repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 60 target:self selector:@selector(timer_Ticked:) userInfo:namecheapDomain repeats:YES];
         
         [self.updateTimers setObject:timer forKey:namecheapDomain.identifier];
     }
@@ -334,7 +340,6 @@
 
 - (IBAction)removeDomain_Clicked:(id)sender {
     if (self.selectedNamecheapDomain) {
-        
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
         [alert addButtonWithTitle:@"Cancel"];
@@ -342,6 +347,7 @@
         [alert setInformativeText:@"Deleted domains cannot be restored."];
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
+            [self removeTimerForNamecheapDomain:self.selectedNamecheapDomain];
             [[self getDataContext] deleteObject:self.selectedNamecheapDomain];
             self.selectedNamecheapDomain = nil;
             [self loadDomains];
@@ -358,6 +364,12 @@
     NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     return context;
+}
+
+- (IBAction)updateNow_Clicked:(id)sender {
+    if (self.selectedNamecheapDomain && [self isDomainInfoValid]) {
+        [self updateDnsWithNamecheapDomain:self.selectedNamecheapDomain];
+    }
 }
 
 @end
