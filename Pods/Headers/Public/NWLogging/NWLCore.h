@@ -1,0 +1,1 @@
+../../../NWLogging/Library/Core/NWLCore.h

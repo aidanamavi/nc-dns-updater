@@ -12,6 +12,7 @@
 
 @interface NCUAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
+@property (strong, nonatomic) NWLFilePrinter *logFilePrinter;
 @property (readwrite, retain) IBOutlet NSMenu *menu;
 @property (readwrite, retain) IBOutlet NSStatusItem *statusItem;
 @property (assign) IBOutlet NSWindow *window;

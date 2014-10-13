@@ -39,11 +39,10 @@
     namecheapSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
     [namecheapSession GET:@"/update" parameters:@{@"host":namecheapDomain.host, @"domain":namecheapDomain.domain, @"password":namecheapDomain.password, @"ip":ip} success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"SUCCESS: %@", responseString);
+        NWLog(@"Successfully update %@.%@ with to %@.", namecheapDomain.host, namecheapDomain.domain, ip);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"FAIL: %@", error.localizedDescription);
+        NSLog(@"ERROR UPDATING %@.%@ to %@: %@", namecheapDomain.host, namecheapDomain.domain, ip, error.localizedDescription);
     }];
 }
 

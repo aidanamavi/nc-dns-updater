@@ -11,8 +11,12 @@
 #import "NCUAppDelegate.h"
 #import "NCUOnlyIntegerValueFormatter.h"
 #import "NCUIPService.h"
+#import "NCULogViewerWindowController.h"
 
 @interface NCUMainViewController ()
+
+@property NCULogViewerWindowController *logViewerWindow;
+
 @end
 
 @implementation NCUMainViewController
@@ -22,6 +26,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.masterSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"];
+        NWLog(@"Master switch state is %@.", self.masterSwitchState ? @"ON" : @"OFF");
+        
         [self loadDomains];
     }
     return self;
@@ -56,6 +62,8 @@
 }
 
 - (void)loadDomains {
+    NWLog(@"Loading domain configuration.");
+    
     self.namecheapDomains = [NSMutableArray array];
     NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUNamecheapDomain"];
@@ -64,11 +72,14 @@
     [self.namecheapDomains addObjectsFromArray:[appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
     
     if (error) {
-        NSLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    } else {
+        NWLog(@"Domain configuration loaded successfully.");
     }
 }
 
 - (void)loadUpdateTimers {
+    NWLog(@"Loading update timers.");
     [self resetUpdateTimers];
     
     for (NCUNamecheapDomain *namecheapDomain in self.namecheapDomains) {
@@ -76,22 +87,30 @@
             [self createTimerForNamecheapDomain:namecheapDomain];
         }
     }
+    
+    NWLog(@"Update timers loaded successfully.");
 }
 
 - (void)timer_Ticked:(NSTimer *)timer {
     NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
-    NSLog(@"UPDATING DNS: %@", namecheapDomain.name);
     
     if (namecheapDomain) {
+        NWLog(@"Update timer ticked for %@.", namecheapDomain.name);
         [self updateDnsWithNamecheapDomain:namecheapDomain];
     }
 }
 
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
+    NWLog(@"Updating %@.%@.", namecheapDomain.host, namecheapDomain.domain);
+    NWLog(@"Fetching current IP address.");
     [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
-        if (!error) {
+        if (error) {
+            NWLog(@"ERROR FETCHING CURRENT IP ADDRESS: %@", error.localizedDescription);
+        }
+        else {
             if (ipAddress) {
                 if ([NCUIPService isStringAnIP:ipAddress] && ![ipAddress isEqualToString:namecheapDomain.currentIP]) {
+                    NWLog(@"Current IP address is %@.", ipAddress);
                     namecheapDomain.currentIP = ipAddress;
                     NSError *error;
                     [[self getDataContext] save:&error];
@@ -100,6 +119,9 @@
                     if (self.selectedNamecheapDomain == namecheapDomain) {
                         [self.domainCurrentIPTextField setStringValue:ipAddress];
                     }
+                }
+                else {
+                    NWLog(@"%@ is not a valid IP address or IP address did not change.", ipAddress);
                 }
             }
         }
@@ -207,8 +229,6 @@
 }
 
 - (IBAction)masterSwitch_Clicked:(id)sender {
-    NSLog(@"MASTER SWITCH CLICKED");
-    
     self.masterSwitchState = !self.masterSwitchState;
     [[NSUserDefaults standardUserDefaults] setBool:self.masterSwitchState forKey:@"MASTER_SWITCH"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -370,6 +390,12 @@
     if (self.selectedNamecheapDomain && [self isDomainInfoValid]) {
         [self updateDnsWithNamecheapDomain:self.selectedNamecheapDomain];
     }
+}
+
+- (IBAction)viewLogs_Clicked:(id)sender {
+    self.logViewerWindow = [[NCULogViewerWindowController alloc] initWithWindowNibName:@"NCULogViewerWindowController"];
+    
+    [self.logViewerWindow showWindow:self];
 }
 
 @end

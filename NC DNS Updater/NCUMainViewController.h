@@ -33,6 +33,7 @@
 - (IBAction)masterSwitch_Clicked:(id)sender;
 - (IBAction)enabledSwitch_Clicked:(id)sender;
 - (IBAction)updateNow_Clicked:(id)sender;
+- (IBAction)viewLogs_Clicked:(id)sender;
 
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain;
 
