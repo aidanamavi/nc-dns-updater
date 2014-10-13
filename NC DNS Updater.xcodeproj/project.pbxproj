@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F7C4AEE19EC3F52002BE4CC /* NCUApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C4AED19EC3F52002BE4CC /* NCUApplication.m */; };
 		0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E35198146410028BA78 /* NCUMainViewController.m */; };
 		0F9A3E38198147370028BA78 /* NCUMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9A3E37198147370028BA78 /* NCUMainView.xib */; };
 		0F9A3E3E19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F7C4AEC19EC3F52002BE4CC /* NCUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUApplication.h; sourceTree = "<group>"; };
+		0F7C4AED19EC3F52002BE4CC /* NCUApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUApplication.m; sourceTree = "<group>"; };
 		0F9A3E34198146410028BA78 /* NCUMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUMainViewController.h; sourceTree = "<group>"; };
 		0F9A3E35198146410028BA78 /* NCUMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUMainViewController.m; sourceTree = "<group>"; };
 		0F9A3E37198147370028BA78 /* NCUMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCUMainView.xib; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				0F9A3E3D19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m */,
 				0F9A3E481986B2830028BA78 /* NCUIPService.h */,
 				0F9A3E491986B2830028BA78 /* NCUIPService.m */,
+				0F7C4AEC19EC3F52002BE4CC /* NCUApplication.h */,
+				0F7C4AED19EC3F52002BE4CC /* NCUApplication.m */,
 			);
 			path = "NC DNS Updater";
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				0F9A3E4A1986B2830028BA78 /* NCUIPService.m in Sources */,
 				0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */,
 				0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */,
+				0F7C4AEE19EC3F52002BE4CC /* NCUApplication.m in Sources */,
 				0F9A3E3E19817B120028BA78 /* NCUOnlyIntegerValueFormatter.m in Sources */,
 				0FAAB780197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld in Sources */,
 				0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */,
