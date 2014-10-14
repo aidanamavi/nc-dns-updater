@@ -23,10 +23,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.logFilePrinter = [[NWLFilePrinter alloc] initAndOpenName:@"NCDNSUpdater"];
-
-    [[NWLMultiLogger shared] addPrinter:self.logFilePrinter];
-
-    NWLog(@"Application launched.");
     
     [self.window setReleasedWhenClosed:NO];
     self.mainViewController = [[NCUMainViewController alloc] initWithNibName:@"NCUMainView" bundle:nil];

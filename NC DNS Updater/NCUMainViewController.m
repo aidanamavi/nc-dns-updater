@@ -26,6 +26,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.masterSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"];
+
+        self.activityLoggingState = [[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"];
         NWLog(@"Master switch state is %@.", self.masterSwitchState ? @"ON" : @"OFF");
         
         [self loadDomains];
@@ -45,6 +47,7 @@
     self.domainIntervalTextField.nextKeyView = self.domainsTableView;
     self.domainsTableView.nextKeyView = self.domainNameTextField;
     
+    [self updateActivityLoggingPosition];
     [self updateMasterSwitchPosition];
     self.domainIntervalTextField.formatter = [[NCUOnlyIntegerValueFormatter alloc] init];
     
@@ -56,6 +59,7 @@
     
     [appDelegate.window makeFirstResponder:self.domainsTableView];
     
+    [self setLoggingEnabledTo:self.activityLoggingState];
     if (self.masterSwitchState) {
         [self loadUpdateTimers];
     }
@@ -228,6 +232,18 @@
     }
 }
 
+- (IBAction)activityLogging_Clicked:(id)sender {
+    self.activityLoggingState = !self.activityLoggingState;
+    [[NSUserDefaults standardUserDefaults] setBool:self.activityLoggingState forKey:@"ACTIVITY_LOGGING"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [NSAnimationContext beginGrouping];
+    [self updateActivityLoggingPosition];
+    [NSAnimationContext endGrouping];
+    
+    [self setLoggingEnabledTo:self.activityLoggingState];
+}
+
 - (IBAction)masterSwitch_Clicked:(id)sender {
     self.masterSwitchState = !self.masterSwitchState;
     [[NSUserDefaults standardUserDefaults] setBool:self.masterSwitchState forKey:@"MASTER_SWITCH"];
@@ -301,6 +317,19 @@
     }
     
     return isValid;
+}
+
+- (void)updateActivityLoggingPosition {
+    if (self.activityLoggingState) {
+        NSRect newFrame = self.activityLoggingButtonImageView.frame;
+        newFrame.origin.x = CGRectGetMaxX(self.activityLoggingBackgroundButton.frame) - self.activityLoggingButtonImageView.frame.size.width;
+        self.activityLoggingButtonImageView.animator.frame = newFrame;
+    }
+    else {
+        NSRect newFrame = self.activityLoggingButtonImageView.frame;
+        newFrame.origin = self.activityLoggingBackgroundButton.frame.origin;
+        self.activityLoggingButtonImageView.animator.frame = newFrame;
+    }
 }
 
 - (void)updateMasterSwitchPosition {
@@ -396,6 +425,19 @@
     self.logViewerWindow = [[NCULogViewerWindowController alloc] initWithWindowNibName:@"NCULogViewerWindowController"];
     
     [self.logViewerWindow showWindow:self];
+}
+
+- (void)setLoggingEnabledTo:(BOOL)state {
+    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
+    
+    if (state) {
+        [[NWLMultiLogger shared] addPrinter:appDelegate.logFilePrinter];
+    }
+    else {
+        [[NWLMultiLogger shared] removePrinter:appDelegate.logFilePrinter];
+    }
+    
+    NSLog(@"LOGGING IS %@", state ? @"enabled" : @"disabled");
 }
 
 @end

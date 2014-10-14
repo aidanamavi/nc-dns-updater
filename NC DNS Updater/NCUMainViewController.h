@@ -15,6 +15,7 @@
 @property NSMutableDictionary *updateTimers;
 @property NCUNamecheapDomain *selectedNamecheapDomain;
 @property BOOL masterSwitchState;
+@property BOOL activityLoggingState;
 
 @property IBOutlet NSTableView *domainsTableView;
 @property IBOutlet NSView *formView;
@@ -27,10 +28,13 @@
 @property IBOutlet NSTextField *domainCurrentIPTextField;
 @property IBOutlet NSImageView *masterSwitchButtonImageView;
 @property IBOutlet NSButton *masterSwitchBackgroundButton;
+@property IBOutlet NSImageView *activityLoggingButtonImageView;
+@property IBOutlet NSButton *activityLoggingBackgroundButton;
 
 - (IBAction)addDomain_Clicked:(id)sender;
 - (IBAction)removeDomain_Clicked:(id)sender;
 - (IBAction)masterSwitch_Clicked:(id)sender;
+- (IBAction)activityLogging_Clicked:(id)sender;
 - (IBAction)enabledSwitch_Clicked:(id)sender;
 - (IBAction)updateNow_Clicked:(id)sender;
 - (IBAction)viewLogs_Clicked:(id)sender;
