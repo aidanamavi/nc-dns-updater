@@ -125,7 +125,7 @@
         }
         else {
             if (ipAddress) {
-                if ([NCUIPService isStringAnIP:ipAddress] && ![ipAddress isEqualToString:namecheapDomain.currentIP]) {
+                if ([NCUIPService isStringAnIP:ipAddress]) {
                     NWLog(@"Current IP address is %@.", ipAddress);
                     namecheapDomain.currentIP = ipAddress;
                     NSError *error;
@@ -137,8 +137,11 @@
                     }
                 }
                 else {
-                    NWLog(@"%@ is not a valid IP address or IP address did not change.", ipAddress);
+                    NWLog(@"%@ is not a valid IP address.", ipAddress);
                 }
+            }
+            else {
+                NWLog(@"Could not determine IP address.");
             }
         }
     }];
