@@ -30,6 +30,7 @@
 @property IBOutlet NSButton *masterSwitchBackgroundButton;
 @property IBOutlet NSImageView *activityLoggingButtonImageView;
 @property IBOutlet NSButton *activityLoggingBackgroundButton;
+@property IBOutlet NSTextField *messageTextField;
 
 - (IBAction)addDomain_Clicked:(id)sender;
 - (IBAction)removeDomain_Clicked:(id)sender;

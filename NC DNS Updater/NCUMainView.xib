@@ -19,6 +19,7 @@
                 <outlet property="formView" destination="e6A-bM-KCj" id="VdG-nZ-M9e"/>
                 <outlet property="masterSwitchBackgroundButton" destination="Eh3-Hj-Uhp" id="vhS-lj-mN8"/>
                 <outlet property="masterSwitchButtonImageView" destination="eea-wu-RFf" id="mpw-hb-GzC"/>
+                <outlet property="messageTextField" destination="sFr-CX-lVt" id="6gE-ag-pbD"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -376,6 +377,15 @@
                         <action selector="viewLogs_Clicked:" target="-2" id="ewM-Pe-OC1"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFr-CX-lVt">
+                    <rect key="frame" x="18" y="10" width="607" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="Zej-Mk-QQz">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
         </customView>
     </objects>

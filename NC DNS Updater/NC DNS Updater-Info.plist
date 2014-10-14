@@ -34,5 +34,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NCUApplication</string>
+	<key>ReleaseDate</key>
+	<string>2014-10-14</string>
 </dict>
 </plist>

@@ -12,10 +12,14 @@
 #import "NCUOnlyIntegerValueFormatter.h"
 #import "NCUIPService.h"
 #import "NCULogViewerWindowController.h"
+#import "NCUVersionService.h"
+#import "NCUVersion.h"
 
 @interface NCUMainViewController ()
 
 @property NCULogViewerWindowController *logViewerWindow;
+@property NSTimer *checkForUpdateTimer;
+
 
 @end
 
@@ -63,6 +67,9 @@
     if (self.masterSwitchState) {
         [self loadUpdateTimers];
     }
+    
+    [self checkForNewVersion];
+    [self createCheckForUpdateTimer];
 }
 
 - (void)loadDomains {
@@ -96,11 +103,16 @@
 }
 
 - (void)timer_Ticked:(NSTimer *)timer {
-    NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
-    
-    if (namecheapDomain) {
-        NWLog(@"Update timer ticked for %@.", namecheapDomain.name);
-        [self updateDnsWithNamecheapDomain:namecheapDomain];
+    if (timer == self.checkForUpdateTimer) {
+        [self checkForNewVersion];
+    }
+    else {
+        NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
+        
+        if (namecheapDomain) {
+            NWLog(@"Update timer ticked for %@.", namecheapDomain.name);
+            [self updateDnsWithNamecheapDomain:namecheapDomain];
+        }
     }
 }
 
@@ -438,6 +450,47 @@
     }
     
     NSLog(@"LOGGING IS %@", state ? @"enabled" : @"disabled");
+}
+
+- (void)checkForNewVersion {
+    
+    NWLog(@"Checking for updates.");
+    
+    self.messageTextField.textColor = [NSColor blackColor];
+    self.messageTextField.stringValue = @"Checking for updates.";
+    
+    [NCUVersionService getAvailableVersionWithCompletionBlock:^(NCUVersion *availableVersion, NSError *error) {
+        NSLog(@"availableVersion: %@", availableVersion.versionNumber);
+        
+        if (error) {
+            NWLog(@"ERROR CHECKING FOR UPDATES: %@", error.localizedDescription);
+            
+            self.messageTextField.textColor = [NSColor redColor];
+            self.messageTextField.stringValue = @"Error checking for updates.";
+        }
+        else {
+            NCUVersion *currentVersion = [NCUVersionService getCurrentVersion];
+            
+            NWLog(@"Current Version: %@ / Available Version: %@.", currentVersion.versionNumber, availableVersion.versionNumber);
+
+            if ([availableVersion.versionNumber isEqualToString:currentVersion.versionNumber]) {
+                NWLog(@"%@ is the latest version.", currentVersion.versionNumber);
+                
+                self.messageTextField.textColor = [NSColor blackColor];
+                self.messageTextField.stringValue = @"You have the latest version of NC DNS Updater.";
+            }
+            else {
+                NWLog(@"New version (%@) is available.", availableVersion.versionNumber);
+                
+                self.messageTextField.textColor = [NSColor blueColor];
+                self.messageTextField.stringValue = @"A new version of NC DNS Updater is available. Get it at http://idb.gosmd.net/.";
+            }
+        }
+    }];
+}
+
+- (void)createCheckForUpdateTimer {
+    self.checkForUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:86400 target:self selector:@selector(timer_Ticked:) userInfo:nil repeats:YES];
 }
 
 @end
