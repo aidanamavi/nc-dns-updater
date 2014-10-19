@@ -193,6 +193,7 @@
 
 -(IBAction)menuActionSettings:(id)sender {
     [self.window setIsVisible:YES];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 -(IBAction)menuActionQuit:(id)sender {
