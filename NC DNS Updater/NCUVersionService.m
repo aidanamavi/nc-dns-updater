@@ -7,26 +7,24 @@
 //
 
 #import "NCUVersionService.h"
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import "NCUVersion.h"
 
 @implementation NCUVersionService
 
 + (void)getAvailableVersionWithCompletionBlock:(void (^)(NCUVersion *availableVersion, NSError* error))completionBlock {
     
-    AFHTTPSessionManager *session = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://echoip.gosmd.net"]];
+    AFHTTPRequestOperationManager *session = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://echoip.gosmd.net"]];
     
     session.responseSerializer = [[AFJSONResponseSerializer alloc] init];
     
-    [session GET:@"ncdnsupdaterversion.json" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [session GET:@"ncdnsupdaterversion.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (completionBlock) {
-            
             NCUVersion *version = [[NCUVersion alloc] initWithVersionNumber:responseObject[@"versionNumber"] andReleaseDate:responseObject[@"releaseDate"]];
             completionBlock(version, nil);
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"FAIL: %@", error.localizedDescription);
-        
         if (completionBlock) {
             completionBlock(nil, error);
         }

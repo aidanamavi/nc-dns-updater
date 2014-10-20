@@ -1,6 +1,6 @@
 // AFHTTPRequestOperation.m
 //
-// Copyright (c) 2013-2014 AFNetworking (http://afnetworking.com)
+// Copyright (c) 2013 AFNetworking (http://afnetworking.com)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -44,62 +44,18 @@ static dispatch_group_t http_request_operation_completion_group() {
 
 #pragma mark -
 
-@interface AFURLConnectionOperation ()
-@property (readwrite, nonatomic, strong) NSURLRequest *request;
-@property (readwrite, nonatomic, strong) NSURLResponse *response;
-@end
-
 @interface AFHTTPRequestOperation ()
+@property (readwrite, nonatomic, strong) NSURLRequest *request;
 @property (readwrite, nonatomic, strong) NSHTTPURLResponse *response;
-@property (readwrite, nonatomic, strong) id responseObject;
-@property (readwrite, nonatomic, strong) NSError *responseSerializationError;
-@property (readwrite, nonatomic, strong) NSRecursiveLock *lock;
+@property (readwrite, nonatomic, strong) NSError *error;
 @end
 
 @implementation AFHTTPRequestOperation
-@dynamic lock;
-
-- (instancetype)initWithRequest:(NSURLRequest *)urlRequest {
-    self = [super initWithRequest:urlRequest];
-    if (!self) {
-        return nil;
-    }
-
-    self.responseSerializer = [AFHTTPResponseSerializer serializer];
-
-    return self;
-}
 
 - (void)setResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
     NSParameterAssert(responseSerializer);
 
-    [self.lock lock];
     _responseSerializer = responseSerializer;
-    self.responseObject = nil;
-    self.responseSerializationError = nil;
-    [self.lock unlock];
-}
-
-- (id)responseObject {
-    [self.lock lock];
-    if (!_responseObject && [self isFinished] && !self.error) {
-        NSError *error = nil;
-        self.responseObject = [self.responseSerializer responseObjectForResponse:self.response data:self.responseData error:&error];
-        if (error) {
-            self.responseSerializationError = error;
-        }
-    }
-    [self.lock unlock];
-
-    return _responseObject;
-}
-
-- (NSError *)error {
-    if (_responseSerializationError) {
-        return _responseSerializationError;
-    } else {
-        return [super error];
-    }
 }
 
 #pragma mark - AFHTTPRequestOperation
@@ -112,10 +68,6 @@ static dispatch_group_t http_request_operation_completion_group() {
 #pragma clang diagnostic ignored "-Warc-retain-cycles"
 #pragma clang diagnostic ignored "-Wgnu"
     self.completionBlock = ^{
-        if (self.completionGroup) {
-            dispatch_group_enter(self.completionGroup);
-        }
-
         dispatch_async(http_request_operation_processing_queue(), ^{
             if (self.error) {
                 if (failure) {
@@ -124,8 +76,12 @@ static dispatch_group_t http_request_operation_completion_group() {
                     });
                 }
             } else {
-                id responseObject = self.responseObject;
-                if (self.error) {
+                NSError *error = nil;
+                id responseObject = [self.responseSerializer responseObjectForResponse:self.response data:self.responseData error:&error];
+
+                if (error) {
+                    self.error = error;
+
                     if (failure) {
                         dispatch_group_async(self.completionGroup ?: http_request_operation_completion_group(), self.completionQueue ?: dispatch_get_main_queue(), ^{
                             failure(self, self.error);
@@ -138,11 +94,7 @@ static dispatch_group_t http_request_operation_completion_group() {
                         });
                     }
                 }
-            }
-
-            if (self.completionGroup) {
-                dispatch_group_leave(self.completionGroup);
-            }
+            }            
         });
     };
 #pragma clang diagnostic pop
@@ -151,11 +103,9 @@ static dispatch_group_t http_request_operation_completion_group() {
 #pragma mark - AFURLRequestOperation
 
 - (void)pause {
-    [super pause];
-
-    u_int64_t offset = 0;
+    int64_t offset = 0;
     if ([self.outputStream propertyForKey:NSStreamFileCurrentOffsetKey]) {
-        offset = [(NSNumber *)[self.outputStream propertyForKey:NSStreamFileCurrentOffsetKey] unsignedLongLongValue];
+        offset = [(NSNumber *)[self.outputStream propertyForKey:NSStreamFileCurrentOffsetKey] longLongValue];
     } else {
         offset = [(NSData *)[self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey] length];
     }
@@ -166,35 +116,35 @@ static dispatch_group_t http_request_operation_completion_group() {
     }
     [mutableURLRequest setValue:[NSString stringWithFormat:@"bytes=%llu-", offset] forHTTPHeaderField:@"Range"];
     self.request = mutableURLRequest;
+
+    [super pause];
 }
 
-#pragma mark - NSSecureCoding
+#pragma mark - NSCoding
 
-+ (BOOL)supportsSecureCoding {
-    return YES;
-}
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    NSURLRequest *request = [aDecoder decodeObjectForKey:@"request"];
 
-- (id)initWithCoder:(NSCoder *)decoder {
-    self = [super initWithCoder:decoder];
+    self = [self initWithRequest:request];
     if (!self) {
         return nil;
     }
 
-    self.responseSerializer = [decoder decodeObjectOfClass:[AFHTTPResponseSerializer class] forKey:NSStringFromSelector(@selector(responseSerializer))];
+    self.responseSerializer = [aDecoder decodeObjectForKey:@"responseSerializer"];
 
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)coder {
-    [super encodeWithCoder:coder];
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
 
-    [coder encodeObject:self.responseSerializer forKey:NSStringFromSelector(@selector(responseSerializer))];
+    [aCoder encodeObject:self.responseSerializer forKey:@"responseSerializer"];
 }
 
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    AFHTTPRequestOperation *operation = [super copyWithZone:zone];
+    AFHTTPRequestOperation *operation = [[[self class] allocWithZone:zone] initWithRequest:self.request];
 
     operation.responseSerializer = [self.responseSerializer copyWithZone:zone];
     operation.completionQueue = self.completionQueue;

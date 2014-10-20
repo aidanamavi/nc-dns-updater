@@ -7,24 +7,26 @@
 //
 
 #import "NCUIPService.h"
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import "NCUNamecheapDomain.h"
 
 @implementation NCUIPService
 
 + (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString * ipAddress, NSError* error))completionBlock {
-    AFHTTPSessionManager *echoIPSession = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://echoip.gosmd.net"]];
+
+    
+    AFHTTPRequestOperationManager *echoIPSession = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://echoip.gosmd.net"]];
 
     echoIPSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
-    [echoIPSession GET:@"" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [echoIPSession GET:@"" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *detectedIpAddress = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSLog(@"IP: %@", detectedIpAddress);
         
         if (completionBlock) {
             completionBlock(detectedIpAddress, nil);
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"FAIL: %@", error.localizedDescription);
         
         if (completionBlock) {
@@ -34,16 +36,15 @@
 }
 
 + (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip{
-    AFHTTPSessionManager *namecheapSession = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://dynamicdns.park-your-domain.com"]];
+    AFHTTPRequestOperationManager *namecheapSession = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://dynamicdns.park-your-domain.com"]];
     
     namecheapSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
-    [namecheapSession GET:@"/update" parameters:@{@"host":namecheapDomain.host, @"domain":namecheapDomain.domain, @"password":namecheapDomain.password, @"ip":ip} success:^(NSURLSessionDataTask *task, id responseObject) {
+    [namecheapSession GET:@"/update" parameters:@{@"host":namecheapDomain.host, @"domain":namecheapDomain.domain, @"password":namecheapDomain.password, @"ip":ip} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NWLog(@"Successfully update %@.%@ with to %@.", namecheapDomain.host, namecheapDomain.domain, ip);
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR UPDATING %@.%@ to %@: %@", namecheapDomain.host, namecheapDomain.domain, ip, error.localizedDescription);
-    }];
+    }];    
 }
 
 + (BOOL)isStringAnIP:(NSString *)stringValue {

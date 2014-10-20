@@ -1,6 +1,6 @@
 // AFNetworkReachabilityManager.m
 // 
-// Copyright (c) 2013-2014 AFNetworking (http://afnetworking.com)
+// Copyright (c) 2013 AFNetworking (http://afnetworking.com)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,22 +22,10 @@
 
 #import "AFNetworkReachabilityManager.h"
 
-#import <netinet/in.h>
-#import <netinet6/in6.h>
-#import <arpa/inet.h>
-#import <ifaddrs.h>
-#import <netdb.h>
-
 NSString * const AFNetworkingReachabilityDidChangeNotification = @"com.alamofire.networking.reachability.change";
 NSString * const AFNetworkingReachabilityNotificationStatusItem = @"AFNetworkingReachabilityNotificationStatusItem";
 
 typedef void (^AFNetworkReachabilityStatusBlock)(AFNetworkReachabilityStatus status);
-
-typedef NS_ENUM(NSUInteger, AFNetworkReachabilityAssociation) {
-    AFNetworkReachabilityForAddress = 1,
-    AFNetworkReachabilityForAddressPair = 2,
-    AFNetworkReachabilityForName = 3,
-};
 
 NSString * AFStringFromNetworkReachabilityStatus(AFNetworkReachabilityStatus status) {
     switch (status) {
@@ -88,7 +76,6 @@ static void AFNetworkReachabilityCallback(SCNetworkReachabilityRef __unused targ
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
         [notificationCenter postNotificationName:AFNetworkingReachabilityDidChangeNotification object:nil userInfo:@{ AFNetworkingReachabilityNotificationStatusItem: @(status) }];
     });
-    
 }
 
 static const void * AFNetworkReachabilityRetainCallback(const void *info) {
@@ -103,7 +90,6 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 
 @interface AFNetworkReachabilityManager ()
 @property (readwrite, nonatomic, assign) SCNetworkReachabilityRef networkReachability;
-@property (readwrite, nonatomic, assign) AFNetworkReachabilityAssociation networkReachabilityAssociation;
 @property (readwrite, nonatomic, assign) AFNetworkReachabilityStatus networkReachabilityStatus;
 @property (readwrite, nonatomic, copy) AFNetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 @end
@@ -128,19 +114,13 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 + (instancetype)managerForDomain:(NSString *)domain {
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [domain UTF8String]);
 
-    AFNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
-    manager.networkReachabilityAssociation = AFNetworkReachabilityForName;
-
-    return manager;
+    return [[self alloc] initWithReachability:reachability];
 }
 
-+ (instancetype)managerForAddress:(const void *)address {
++ (instancetype)managerForAddress:(const struct sockaddr_in *)address {
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr *)address);
 
-    AFNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
-    manager.networkReachabilityAssociation = AFNetworkReachabilityForAddress;
-
-    return manager;
+    return [[self alloc] initWithReachability:reachability];
 }
 
 - (instancetype)initWithReachability:(SCNetworkReachabilityRef)reachability {
@@ -150,6 +130,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     }
 
     self.networkReachability = reachability;
+
     self.networkReachabilityStatus = AFNetworkReachabilityStatusUnknown;
 
     return self;
@@ -158,10 +139,8 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 - (void)dealloc {
     [self stopMonitoring];
 
-    if (_networkReachability) {
-        CFRelease(_networkReachability);
-        _networkReachability = NULL;
-    }
+    CFRelease(_networkReachability);
+    _networkReachability = NULL;
 }
 
 #pragma mark -
@@ -195,35 +174,19 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
         if (strongSelf.networkReachabilityStatusBlock) {
             strongSelf.networkReachabilityStatusBlock(status);
         }
-
     };
 
     SCNetworkReachabilityContext context = {0, (__bridge void *)callback, AFNetworkReachabilityRetainCallback, AFNetworkReachabilityReleaseCallback, NULL};
     SCNetworkReachabilitySetCallback(self.networkReachability, AFNetworkReachabilityCallback, &context);
+
+    SCNetworkReachabilityFlags flags;
+    SCNetworkReachabilityGetFlags(self.networkReachability, &flags);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        AFNetworkReachabilityStatus status = AFNetworkReachabilityStatusForFlags(flags);
+        callback(status);
+    });
+
     SCNetworkReachabilityScheduleWithRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
-
-    switch (self.networkReachabilityAssociation) {
-        case AFNetworkReachabilityForName:
-            break;
-        case AFNetworkReachabilityForAddress:
-        case AFNetworkReachabilityForAddressPair:
-        default: {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
-                SCNetworkReachabilityFlags flags;
-                SCNetworkReachabilityGetFlags(self.networkReachability, &flags);
-                AFNetworkReachabilityStatus status = AFNetworkReachabilityStatusForFlags(flags);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    callback(status);
-                    
-                    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-                    [notificationCenter postNotificationName:AFNetworkingReachabilityDidChangeNotification object:nil userInfo:@{ AFNetworkingReachabilityNotificationStatusItem: @(status) }];
-
-                    
-                });
-            });
-        }
-            break;
-    }
 }
 
 - (void)stopMonitoring {

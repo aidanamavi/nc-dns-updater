@@ -338,12 +338,12 @@
     if (self.activityLoggingState) {
         NSRect newFrame = self.activityLoggingButtonImageView.frame;
         newFrame.origin.x = CGRectGetMaxX(self.activityLoggingBackgroundButton.frame) - self.activityLoggingButtonImageView.frame.size.width;
-        self.activityLoggingButtonImageView.animator.frame = newFrame;
+        [self.activityLoggingButtonImageView.animator setFrame:newFrame];
     }
     else {
         NSRect newFrame = self.activityLoggingButtonImageView.frame;
         newFrame.origin = self.activityLoggingBackgroundButton.frame.origin;
-        self.activityLoggingButtonImageView.animator.frame = newFrame;
+        [self.activityLoggingButtonImageView.animator setFrame:newFrame];
     }
 }
 
@@ -351,12 +351,12 @@
     if (self.masterSwitchState) {
         NSRect newFrame = self.masterSwitchButtonImageView.frame;
         newFrame.origin.x = CGRectGetMaxX(self.masterSwitchBackgroundButton.frame) - self.masterSwitchButtonImageView.frame.size.width;
-        self.masterSwitchButtonImageView.animator.frame = newFrame;
+        [self.masterSwitchButtonImageView.animator setFrame:newFrame];
     }
     else {
         NSRect newFrame = self.masterSwitchButtonImageView.frame;
         newFrame.origin = self.masterSwitchBackgroundButton.frame.origin;
-        self.masterSwitchButtonImageView.animator.frame = newFrame;
+        [self.masterSwitchButtonImageView.animator setFrame:newFrame];
     }
 }
 
