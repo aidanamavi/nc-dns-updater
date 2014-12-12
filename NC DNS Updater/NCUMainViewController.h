@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "NCUNamecheapDomain.h"
 
-@interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
+@interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate, NSComboBoxDelegate>
 
 @property NSMutableArray *namecheapDomains;
 @property NSMutableDictionary *updateTimers;
@@ -24,6 +24,7 @@
 @property IBOutlet NSTextField *domainDomainTextField;
 @property IBOutlet NSTextField *domainPasswordTextField;
 @property IBOutlet NSTextField *domainIntervalTextField;
+@property IBOutlet NSComboBox *domainIpSourceComboBox;
 @property IBOutlet NSButton *domainEnabledButton;
 @property IBOutlet NSTextField *domainCurrentIPTextField;
 @property IBOutlet NSImageView *masterSwitchButtonImageView;

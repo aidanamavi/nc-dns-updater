@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
@@ -13,6 +14,7 @@
                 <outlet property="domainEnabledButton" destination="C8z-nc-cHo" id="g8A-43-5Ju"/>
                 <outlet property="domainHostTextField" destination="frf-WO-rxn" id="JQF-Q1-C3c"/>
                 <outlet property="domainIntervalTextField" destination="8t3-P5-SoD" id="VHf-4O-CBa"/>
+                <outlet property="domainIpSourceComboBox" destination="QAF-jB-SDx" id="Y2K-xF-s2p"/>
                 <outlet property="domainNameTextField" destination="EKj-vB-zwP" id="ygA-z1-Yve"/>
                 <outlet property="domainPasswordTextField" destination="ueR-pH-MiV" id="tkP-Zm-Evr"/>
                 <outlet property="domainsTableView" destination="BmM-xj-hS5" id="bIo-Lf-2Yn"/>
@@ -156,7 +158,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7B-j9-CCi">
-                                        <rect key="frame" x="18" y="114" width="127" height="17"/>
+                                        <rect key="frame" x="18" y="82" width="127" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Enabled:" id="GvZ-ot-qv1">
                                             <font key="font" metaFont="system"/>
@@ -164,8 +166,17 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="flY-26-I12">
+                                        <rect key="frame" x="18" y="114" width="127" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="IP Source:" id="9SW-34-brx">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8z-nc-cHo">
-                                        <rect key="frame" x="149" y="113" width="61" height="18"/>
+                                        <rect key="frame" x="149" y="81" width="61" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JYN-AR-Rba">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -281,7 +292,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kii-N1-fOx">
-                                        <rect key="frame" x="18" y="82" width="127" height="17"/>
+                                        <rect key="frame" x="18" y="54" width="127" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Current IP:" id="FcY-Ze-XlE">
                                             <font key="font" metaFont="system"/>
@@ -290,9 +301,9 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvP-zP-3SD">
-                                        <rect key="frame" x="151" y="82" width="244" height="17"/>
+                                        <rect key="frame" x="151" y="54" width="244" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="vCk-U3-kGn">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-" id="vCk-U3-kGn">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -309,6 +320,22 @@
                                             <action selector="updateNow_Clicked:" target="-2" id="21z-bE-eE6"/>
                                         </connections>
                                     </button>
+                                    <comboBox appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAF-jB-SDx">
+                                        <rect key="frame" x="151" y="109" width="245" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="lEj-vk-meU">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <objectValues>
+                                                <string>External (internet IP address)</string>
+                                                <string>Internal (network IP address)</string>
+                                            </objectValues>
+                                        </comboBoxCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="-2" id="rMm-0i-eT5"/>
+                                        </connections>
+                                    </comboBox>
                                 </subviews>
                             </customView>
                         </subviews>
@@ -390,9 +417,9 @@
         </customView>
     </objects>
     <resources>
-        <image name="NSAddTemplate" width="8" height="8"/>
-        <image name="NSGoRightTemplate" width="9" height="9"/>
-        <image name="NSRemoveTemplate" width="8" height="8"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="SwitchBackground" width="77" height="28"/>
         <image name="SwitchButton" width="39" height="28"/>

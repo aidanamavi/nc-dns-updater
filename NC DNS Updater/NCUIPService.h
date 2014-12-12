@@ -13,6 +13,7 @@
 @interface NCUIPService : NSObject
 
 + (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString * ipAddress, NSError* error))completionBlock;
++ (NSString *)getInternalIPAddress;
 + (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip;
 + (BOOL)isStringAnIP:(NSString *)stringValue;
 

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef NS_ENUM(NSInteger, NCUIpSource) {
+    NCUIpSourceExternal = 0,
+    NCUIpSourceInternal = 1
+};
 
 @interface NCUNamecheapDomain : NSManagedObject
 
@@ -20,5 +24,6 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * currentIP;
+@property (nonatomic, retain) NSNumber * ipSource;
 
 @end

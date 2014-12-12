@@ -84,6 +84,7 @@
 		0FAE69AD19ED72C4007B3222 /* NCUVersionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUVersionService.m; sourceTree = "<group>"; };
 		0FAE69AF19ED734C007B3222 /* NCUVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUVersion.h; sourceTree = "<group>"; };
 		0FAE69B019ED734C007B3222 /* NCUVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUVersion.m; sourceTree = "<group>"; };
+		0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.5.xcdatamodel; sourceTree = "<group>"; };
 		171452A43C9F4D53B8DAB49B /* libPods-NC DNS Updater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NC DNS Updater.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A596291036BF0956ADBDFBC /* Pods-NC DNS Updater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NC DNS Updater.release.xcconfig"; path = "Pods/Target Support Files/Pods-NC DNS Updater/Pods-NC DNS Updater.release.xcconfig"; sourceTree = "<group>"; };
 		CCD946025981B626F1F01357 /* Pods-NC DNS Updater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NC DNS Updater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NC DNS Updater/Pods-NC DNS Updater.debug.xcconfig"; sourceTree = "<group>"; };
@@ -600,9 +601,10 @@
 		0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */,
 				0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */,
 			);
-			currentVersion = 0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */;
+			currentVersion = 0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */;
 			path = NC_DNS_Updater.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
