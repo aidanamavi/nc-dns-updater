@@ -16,6 +16,7 @@
 @dynamic host;
 @dynamic identifier;
 @dynamic interval;
+@dynamic ipSource;
 @dynamic name;
 @dynamic password;
 @dynamic currentIP;
