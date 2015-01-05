@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2A51901A5B1FAD00D0A687 /* Roadmap.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Roadmap.rtf; sourceTree = "<group>"; };
 		0F7C4AEC19EC3F52002BE4CC /* NCUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUApplication.h; sourceTree = "<group>"; };
 		0F7C4AED19EC3F52002BE4CC /* NCUApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUApplication.m; sourceTree = "<group>"; };
 		0F7C4B0419EC7374002BE4CC /* NCULogViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCULogViewerWindowController.h; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 				0FAE69AD19ED72C4007B3222 /* NCUVersionService.m */,
 				0FAE69AF19ED734C007B3222 /* NCUVersion.h */,
 				0FAE69B019ED734C007B3222 /* NCUVersion.m */,
+				0F2A51901A5B1FAD00D0A687 /* Roadmap.rtf */,
 			);
 			path = "NC DNS Updater";
 			sourceTree = "<group>";
