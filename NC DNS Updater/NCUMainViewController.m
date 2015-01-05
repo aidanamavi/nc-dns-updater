@@ -19,6 +19,7 @@
 
 @property NCULogViewerWindowController *logViewerWindow;
 @property NSTimer *checkForUpdateTimer;
+@property BOOL formLoaded;
 
 
 @end
@@ -260,6 +261,8 @@
 }
 
 - (void)loadForm {
+    self.formLoaded = NO;
+    
     if (self.selectedNamecheapDomain) {
         [self.formView setHidden:NO];
         [self.domainNameTextField setStringValue:self.selectedNamecheapDomain.name];
@@ -274,6 +277,8 @@
     else {
         [self.formView setHidden:YES];
     }
+    
+    self.formLoaded = YES;
 }
 
 - (IBAction)activityLogging_Clicked:(id)sender {
@@ -390,27 +395,29 @@
 }
 
 - (void)saveChanges {
-    if (self.selectedNamecheapDomain) {
-        if (self.domainNameTextField.stringValue.length == 0) {
-            self.domainNameTextField.stringValue = @"<< NO NAME >>";
-        }
-        
-        if (self.domainIntervalTextField.stringValue.length == 0) {
-            self.domainIntervalTextField.stringValue = @"5";
-        }
-        
-        self.selectedNamecheapDomain.name = self.domainNameTextField.stringValue;
-        self.selectedNamecheapDomain.host = self.domainHostTextField.stringValue;
-        self.selectedNamecheapDomain.domain = self.domainDomainTextField.stringValue;
-        self.selectedNamecheapDomain.password = self.domainPasswordTextField.stringValue;
-        self.selectedNamecheapDomain.interval = @(self.domainIntervalTextField.integerValue);
-        self.selectedNamecheapDomain.ipSource = @(self.domainIpSourceComboBox.indexOfSelectedItem);
-        self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
-        self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;
-        
-        NSError *error;
-        if (![[self getDataContext] save:&error]) {
-            NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
+    if (self.formLoaded) {
+        if (self.selectedNamecheapDomain) {
+            if (self.domainNameTextField.stringValue.length == 0) {
+                self.domainNameTextField.stringValue = @"<< NO NAME >>";
+            }
+            
+            if (self.domainIntervalTextField.stringValue.length == 0) {
+                self.domainIntervalTextField.stringValue = @"5";
+            }
+            
+            self.selectedNamecheapDomain.name = self.domainNameTextField.stringValue;
+            self.selectedNamecheapDomain.host = self.domainHostTextField.stringValue;
+            self.selectedNamecheapDomain.domain = self.domainDomainTextField.stringValue;
+            self.selectedNamecheapDomain.password = self.domainPasswordTextField.stringValue;
+            self.selectedNamecheapDomain.interval = @(self.domainIntervalTextField.integerValue);
+            self.selectedNamecheapDomain.ipSource = @(self.domainIpSourceComboBox.indexOfSelectedItem);
+            self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
+            self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;
+            
+            NSError *error;
+            if (![[self getDataContext] save:&error]) {
+                NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
+            }
         }
     }
 }
@@ -446,7 +453,13 @@
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
             [self removeTimerForNamecheapDomain:self.selectedNamecheapDomain];
+            
             [[self getDataContext] deleteObject:self.selectedNamecheapDomain];
+            NSError *error;
+            if (![[self getDataContext] save:&error]) {
+                NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
+            }
+            
             self.selectedNamecheapDomain = nil;
             [self loadDomains];
             [self.domainsTableView reloadData];
