@@ -37,6 +37,24 @@
 
     [self.statusItem setMenu:self.menu];
     [self.statusItem setHighlightMode:YES];
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUNamecheapDomain"];
+    NSError *error;
+    
+    
+    NSArray *domains = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    } else {
+        NSArray *enabledDomains = [domains filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"enabled == YES"]];
+        
+        if (!enabledDomains || [enabledDomains count] == 0) {
+            [self.window setIsVisible:YES];
+            [NSApp activateIgnoringOtherApps:YES];
+        }
+    }
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.laratech.NC_DNS_Updater" in the user's Application Support directory.
