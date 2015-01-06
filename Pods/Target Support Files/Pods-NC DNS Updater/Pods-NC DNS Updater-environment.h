@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_Serialization 0
 #define COCOAPODS_VERSION_PATCH_AFNetworking_Serialization 0
 
+// NOSwitch
+#define COCOAPODS_POD_AVAILABLE_NOSwitch
+#define COCOAPODS_VERSION_MAJOR_NOSwitch 0
+#define COCOAPODS_VERSION_MINOR_NOSwitch 1
+#define COCOAPODS_VERSION_PATCH_NOSwitch 0
+
 // NWLogging
 #define COCOAPODS_POD_AVAILABLE_NWLogging
 #define COCOAPODS_VERSION_MAJOR_NWLogging 1

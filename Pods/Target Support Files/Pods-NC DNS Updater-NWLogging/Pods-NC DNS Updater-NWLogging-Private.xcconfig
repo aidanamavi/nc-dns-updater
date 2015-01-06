@@ -1,5 +1,5 @@
 #include "Pods-NC DNS Updater-NWLogging.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/NWLogging" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/NWLogging"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/NWLogging" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/NOSwitch" "${PODS_ROOT}/Headers/Public/NWLogging"
 OTHER_LDFLAGS = ${PODS_NC_DNS_UPDATER_NWLOGGING_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}

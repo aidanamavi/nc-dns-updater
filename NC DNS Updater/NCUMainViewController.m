@@ -14,6 +14,7 @@
 #import "NCULogViewerWindowController.h"
 #import "NCUVersionService.h"
 #import "NCUVersion.h"
+#import <NOSwitch/NOSwitchButton.h>
 
 @interface NCUMainViewController ()
 
@@ -285,11 +286,6 @@
     self.activityLoggingState = !self.activityLoggingState;
     [[NSUserDefaults standardUserDefaults] setBool:self.activityLoggingState forKey:@"ACTIVITY_LOGGING"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [NSAnimationContext beginGrouping];
-    [self updateActivityLoggingPosition];
-    [NSAnimationContext endGrouping];
-    
     [self setLoggingEnabledTo:self.activityLoggingState];
 }
 
@@ -297,10 +293,6 @@
     self.masterSwitchState = !self.masterSwitchState;
     [[NSUserDefaults standardUserDefaults] setBool:self.masterSwitchState forKey:@"MASTER_SWITCH"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [NSAnimationContext beginGrouping];
-    [self updateMasterSwitchPosition];
-    [NSAnimationContext endGrouping];
     
     if (self.masterSwitchState) {
         [self loadUpdateTimers];
@@ -370,27 +362,19 @@
 
 - (void)updateActivityLoggingPosition {
     if (self.activityLoggingState) {
-        NSRect newFrame = self.activityLoggingButtonImageView.frame;
-        newFrame.origin.x = CGRectGetMaxX(self.activityLoggingBackgroundButton.frame) - self.activityLoggingButtonImageView.frame.size.width;
-        [self.activityLoggingButtonImageView.animator setFrame:newFrame];
+        [self.loggingSwitchButton setState:NSOnState];
     }
     else {
-        NSRect newFrame = self.activityLoggingButtonImageView.frame;
-        newFrame.origin = self.activityLoggingBackgroundButton.frame.origin;
-        [self.activityLoggingButtonImageView.animator setFrame:newFrame];
+        [self.loggingSwitchButton setState:NSOffState];
     }
 }
 
 - (void)updateMasterSwitchPosition {
     if (self.masterSwitchState) {
-        NSRect newFrame = self.masterSwitchButtonImageView.frame;
-        newFrame.origin.x = CGRectGetMaxX(self.masterSwitchBackgroundButton.frame) - self.masterSwitchButtonImageView.frame.size.width;
-        [self.masterSwitchButtonImageView.animator setFrame:newFrame];
+        [self.masterSwitchButton setState:NSOnState];
     }
     else {
-        NSRect newFrame = self.masterSwitchButtonImageView.frame;
-        newFrame.origin = self.masterSwitchBackgroundButton.frame.origin;
-        [self.masterSwitchButtonImageView.animator setFrame:newFrame];
+        [self.masterSwitchButton setState:NSOffState];
     }
 }
 

@@ -13,14 +13,17 @@ PODS:
   - AFNetworking/Reachability (2.0.0)
   - AFNetworking/Security (2.0.0)
   - AFNetworking/Serialization (2.0.0)
+  - NOSwitch (0.1.0)
   - NWLogging (1.2.5)
 
 DEPENDENCIES:
   - AFNetworking (= 2.0)
+  - NOSwitch
   - NWLogging
 
 SPEC CHECKSUMS:
   AFNetworking: 6d4a33f2a7edf1d394455c543b446fdfae6b4082
+  NOSwitch: ec18f632d7d218d0c7880922707a0d75e699b2b9
   NWLogging: 3ef1c10fbba37df0396b3d3b23df563bc48c4f6b
 
 COCOAPODS: 0.34.4

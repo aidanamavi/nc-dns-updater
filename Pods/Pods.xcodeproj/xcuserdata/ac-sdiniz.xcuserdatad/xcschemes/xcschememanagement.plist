@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-NC DNS Updater-NOSwitch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NC DNS Updater-NWLogging.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4C2E26B8760E04EE640191CD</key>
+		<key>034DFBBAEADE1A9C0672250E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1F45B4CB0E86260DA18F214</key>
+		<key>129BDA0E4E2B2399D974618B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6F7AE69ABFE0B6FC0C2D01F</key>
+		<key>161B2FCA609557304D903564</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2EA0B25962B25B00139BD642</key>
 		<dict>
 			<key>primary</key>
 			<true/>

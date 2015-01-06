@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "NCUNamecheapDomain.h"
 
+@class NOSwitchButton;
+
 @interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate, NSComboBoxDelegate>
 
 @property NSMutableArray *namecheapDomains;
@@ -27,10 +29,10 @@
 @property IBOutlet NSComboBox *domainIpSourceComboBox;
 @property IBOutlet NSButton *domainEnabledButton;
 @property IBOutlet NSTextField *domainCurrentIPTextField;
-@property IBOutlet NSImageView *masterSwitchButtonImageView;
-@property IBOutlet NSButton *masterSwitchBackgroundButton;
-@property IBOutlet NSImageView *activityLoggingButtonImageView;
-@property IBOutlet NSButton *activityLoggingBackgroundButton;
+
+@property IBOutlet NOSwitchButton *masterSwitchButton;
+@property IBOutlet NOSwitchButton *loggingSwitchButton;
+
 @property IBOutlet NSTextField *messageTextField;
 
 - (IBAction)addDomain_Clicked:(id)sender;
