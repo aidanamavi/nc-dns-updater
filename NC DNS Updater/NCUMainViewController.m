@@ -141,7 +141,7 @@
             }
             
             if (self.selectedNamecheapDomain == namecheapDomain) {
-                [self.domainCurrentIPTextField setStringValue:ipAddress];
+                [self.domainCurrentIPTextField setStringValue:currentIP];
             }
             
             NSString *referenceIP;
