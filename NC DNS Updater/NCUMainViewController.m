@@ -158,16 +158,13 @@
             if (cell) {
                 if ([namecheapDomain.enabled boolValue]) {
                     if ([namecheapDomain.currentIP isEqualToString:referenceIP]) {
-                        NWLog(@"%@ EQUAL", namecheapDomain.name);
                         cell.status = NCUMainTableCellViewStatusUpdated;
                     }
                     else {
-                        NWLog(@"%@ DIFFERENT", namecheapDomain.name);
                         cell.status = NCUMainTableCellViewStatusOutdated;
                     }
                 }
                 else {
-                    NWLog(@"%@ DISABLED", namecheapDomain.name);
                     cell.status = NCUMainTableCellViewStatusDisabled;
                 }
             }
@@ -269,7 +266,7 @@
 }
 
 - (void)createTimerForCurrentIPCheck {
-    self.currentIpCheckTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timer_Ticked:) userInfo:nil repeats:YES];
+    self.currentIpCheckTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timer_Ticked:) userInfo:nil repeats:YES];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
