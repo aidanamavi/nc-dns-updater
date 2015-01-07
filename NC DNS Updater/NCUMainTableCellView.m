@@ -26,15 +26,24 @@
     // Drawing code here.
 }
 
-- (void)setDomainEnabled:(BOOL)domainEnabled {
-    _domainEnabled = domainEnabled;
+- (void)setStatus:(NCUMainTableCellViewStatus)status {
+    _status = status;
     
-    if (_domainEnabled) {
-        self.imageView.image = [NSImage imageNamed:NSImageNameStatusAvailable];
+    switch (status) {
+        case NCUMainTableCellViewStatusDisabled:
+            self.imageView.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+            break;
+        case NCUMainTableCellViewStatusUpdated:
+            self.imageView.image = [NSImage imageNamed:NSImageNameStatusAvailable];
+            break;
+        case NCUMainTableCellViewStatusOutdated:
+            self.imageView.image = [NSImage imageNamed:NSImageNameStatusPartiallyAvailable];
+            break;
+        default:
+            self.imageView.image = [NSImage imageNamed:NSImageNameStatusNone];
+            break;
+            
     }
-    else {
-        self.imageView.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
-    }    
 }
 
 - (void)setShowDisclosureArrow:(BOOL)showDisclosureArrow {

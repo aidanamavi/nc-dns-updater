@@ -10,6 +10,7 @@
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import "NCUNamecheapDomain.h"
 #import <ifaddrs.h>
+#import <netdb.h>
 #import <arpa/inet.h>
 #import <net/if.h>
 
@@ -20,7 +21,7 @@
 
 @implementation NCUIPService
 
-+ (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString * ipAddress, NSError* error))completionBlock {
++ (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString *ipAddress, NSError *error))completionBlock {
 
     
     AFHTTPRequestOperationManager *echoIPSession = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://echoip.gosmd.net"]];
@@ -29,13 +30,13 @@
     
     [echoIPSession GET:@"" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *detectedIpAddress = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"IP: %@", detectedIpAddress);
+//        NSLog(@"IP: %@", detectedIpAddress);
         
         if (completionBlock) {
             completionBlock(detectedIpAddress, nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"FAIL: %@", error.localizedDescription);
+//        NSLog(@"FAIL: %@", error.localizedDescription);
         
         if (completionBlock) {
             completionBlock(nil, error);
@@ -43,15 +44,33 @@
     }];
 }
 
-+ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip{
++ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock {
+    NSString *currentIpAddress = [self getIPAddressForURL:[namecheapDomain httpUrl]];
+    NWLog(@"Current IP for %@ is %@.", [namecheapDomain completeHostName], currentIpAddress);
+    
+    if ([currentIpAddress isEqualToString:ip]) {
+        NWLog(@"New IP address (%@) is the same as current IP address (%@). Skipping IP update.", ip, currentIpAddress);
+        return;
+    }
+    
     AFHTTPRequestOperationManager *namecheapSession = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://dynamicdns.park-your-domain.com"]];
     
     namecheapSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
     [namecheapSession GET:@"/update" parameters:@{@"host":namecheapDomain.host, @"domain":namecheapDomain.domain, @"password":namecheapDomain.password, @"ip":ip} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NWLog(@"Successfully update %@.%@ with to %@.", namecheapDomain.host, namecheapDomain.domain, ip);
+        NWLog(@"Successfully updated %@ to %@.", [namecheapDomain completeHostName], ip);
+        
+        namecheapDomain.currentIP = ip;
+        
+        if (completionBlock) {
+            completionBlock(namecheapDomain, nil);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"ERROR UPDATING %@.%@ to %@: %@", namecheapDomain.host, namecheapDomain.domain, ip, error.localizedDescription);
+        NWLog(@"ERROR UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, error.localizedDescription);
+        
+        if (completionBlock) {
+            completionBlock(namecheapDomain, error);
+        }
     }];    
 }
 
@@ -66,7 +85,6 @@
     NSArray *searchArray = @[NETWORK_ADAPTER0 @"/" IP_ADDR_IPv4, NETWORK_ADAPTER1 @"/" IP_ADDR_IPv4];
     
     NSDictionary *addresses = [self getInternalIPAddresses];
-    NSLog(@"addresses: %@", addresses);
     
     __block NSString *address;
     [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop)
@@ -116,6 +134,23 @@
         freeifaddrs(interfaces);
     }
     return [addresses count] ? addresses : nil;
+}
+
++ (NSString*)getIPAddressForURL:(NSURL*)url
+{
+    struct hostent *remoteHostEnt = gethostbyname([[url host] UTF8String]);
+    if (remoteHostEnt) {
+        struct in_addr *remoteInAddr = (struct in_addr *) remoteHostEnt->h_addr_list[0];
+        if (remoteInAddr) {
+            char *sRemoteInAddr = inet_ntoa(*remoteInAddr);
+            if (sRemoteInAddr) {
+                NSString* hostIP = [NSString stringWithUTF8String:sRemoteInAddr];
+                return hostIP;
+            }
+        }
+    }
+    
+    return nil;
 }
 
 @end

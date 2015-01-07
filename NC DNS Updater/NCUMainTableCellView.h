@@ -8,12 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef NS_ENUM(NSInteger, NCUMainTableCellViewStatus) {
+    NCUMainTableCellViewStatusDisabled = 0,
+    NCUMainTableCellViewStatusUpdated = 1,
+    NCUMainTableCellViewStatusOutdated = 2
+};
+
 @interface NCUMainTableCellView : NSTableCellView
 
 @property IBOutlet NSTextField *detailTextField;
 @property IBOutlet NSImageView *disclosureArrowImageView;
 
-@property (nonatomic) BOOL domainEnabled;
+@property (nonatomic) NCUMainTableCellViewStatus status;
 @property (nonatomic) BOOL showDisclosureArrow;
 
 @end

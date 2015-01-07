@@ -21,4 +21,12 @@
 @dynamic password;
 @dynamic currentIP;
 
+- (NSString *)completeHostName {
+    return [NSString stringWithFormat:@"%@.%@", self.host, self.domain];
+}
+
+- (NSURL *)httpUrl {
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", [self completeHostName]]];
+}
+
 @end

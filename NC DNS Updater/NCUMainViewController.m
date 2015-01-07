@@ -20,6 +20,7 @@
 
 @property NCULogViewerWindowController *logViewerWindow;
 @property NSTimer *checkForUpdateTimer;
+@property NSTimer *currentIpCheckTimer;
 @property BOOL formLoaded;
 
 
@@ -73,7 +74,10 @@
     }
     
     [self checkForNewVersion];
+    [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
+    
+    [self refreshDomainsIPStatus];
 }
 
 - (void)loadDomains {
@@ -110,6 +114,9 @@
     if (timer == self.checkForUpdateTimer) {
         [self checkForNewVersion];
     }
+    else if (timer == self.currentIpCheckTimer) {
+        [self refreshDomainsIPStatus];
+    }
     else {
         NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
         
@@ -120,58 +127,110 @@
     }
 }
 
+- (void)refreshDomainsIPStatus {
+    [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
+        NSString *internalIP = [NCUIPService getInternalIPAddress];
+        
+        for (NCUNamecheapDomain *namecheapDomain in self.namecheapDomains) {
+            NSString *currentIP = [NCUIPService getIPAddressForURL:namecheapDomain.httpUrl];
+            if ([NCUIPService isStringAnIP:currentIP]) {
+                namecheapDomain.currentIP = currentIP;
+            }
+            else {
+                namecheapDomain.currentIP = nil;
+            }
+            
+            if (self.selectedNamecheapDomain == namecheapDomain) {
+                [self.domainCurrentIPTextField setStringValue:ipAddress];
+            }
+            
+            NSString *referenceIP;
+            
+            if ([namecheapDomain.ipSource integerValue] == NCUIpSourceExternal) {
+                referenceIP = ipAddress;
+            }
+            else {
+                referenceIP = internalIP;
+            }
+            
+            NCUMainTableCellView *cell = [self.domainsTableView viewAtColumn:0 row:[self.namecheapDomains indexOfObject:namecheapDomain] makeIfNecessary:NO];
+            
+            if (cell) {
+                if ([namecheapDomain.enabled boolValue]) {
+                    if ([namecheapDomain.currentIP isEqualToString:referenceIP]) {
+                        NWLog(@"%@ EQUAL", namecheapDomain.name);
+                        cell.status = NCUMainTableCellViewStatusUpdated;
+                    }
+                    else {
+                        NWLog(@"%@ DIFFERENT", namecheapDomain.name);
+                        cell.status = NCUMainTableCellViewStatusOutdated;
+                    }
+                }
+                else {
+                    NWLog(@"%@ DISABLED", namecheapDomain.name);
+                    cell.status = NCUMainTableCellViewStatusDisabled;
+                }
+            }
+        }
+    }];
+}
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
-    NWLog(@"Updating %@.%@.", namecheapDomain.host, namecheapDomain.domain);
-    NWLog(@"Fetching current IP address.");
-    
+    NWLog(@"Processing %@", [namecheapDomain completeHostName]);
+
     if ([namecheapDomain.ipSource integerValue] == NCUIpSourceExternal) {
+        NWLog(@"Determining external IP address.");
         [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
             if (error) {
-                NWLog(@"ERROR FETCHING CURRENT IP ADDRESS: %@", error.localizedDescription);
+                NWLog(@"ERROR determining external IP address. %@", error.localizedDescription);
             }
             else {
                 if (ipAddress) {
+                    NWLog(@"External IP address is %@.", ipAddress);
                     if ([NCUIPService isStringAnIP:ipAddress]) {
-                        NWLog(@"Current IP address is %@.", ipAddress);
                         namecheapDomain.currentIP = ipAddress;
                         NSError *error;
                         [[self getDataContext] save:&error];
-                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress];
                         
-                        if (self.selectedNamecheapDomain == namecheapDomain) {
-                            [self.domainCurrentIPTextField setStringValue:ipAddress];
-                        }
+                        NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
+                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                            if (self.selectedNamecheapDomain == namecheapDomain) {
+                                [self.domainCurrentIPTextField setStringValue:ipAddress];
+                            }
+                        }];
                     }
                     else {
                         NWLog(@"%@ is not a valid IP address.", ipAddress);
                     }
                 }
                 else {
-                    NWLog(@"Could not determine IP address.");
+                    NWLog(@"Could not determine external IP address.");
                 }
             }
         }];
     }
     else {
+        NWLog(@"Determining internal IP address.");
         id ipAddress = [NCUIPService getInternalIPAddress];
         if (ipAddress) {
+            NWLog(@"Internal IP address is %@.", ipAddress);
             if ([NCUIPService isStringAnIP:ipAddress]) {
-                NWLog(@"Current IP address is %@.", ipAddress);
                 namecheapDomain.currentIP = ipAddress;
                 NSError *error;
                 [[self getDataContext] save:&error];
-                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress];
                 
-                if (self.selectedNamecheapDomain == namecheapDomain) {
-                    [self.domainCurrentIPTextField setStringValue:ipAddress];
-                }
+                NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
+                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                    if (self.selectedNamecheapDomain == namecheapDomain) {
+                        [self.domainCurrentIPTextField setStringValue:ipAddress];
+                    }
+                }];
             }
             else {
                 NWLog(@"%@ is not a valid IP address.", ipAddress);
             }
         }
         else {
-            NWLog(@"Could not determine IP address.");
+            NWLog(@"Could not determine internal IP address.");
         }
     }
 }
@@ -209,6 +268,10 @@
     }
 }
 
+- (void)createTimerForCurrentIPCheck {
+    self.currentIpCheckTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timer_Ticked:) userInfo:nil repeats:YES];
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return [self.namecheapDomains count];
 }
@@ -216,10 +279,10 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NCUMainTableCellView *cell = [tableView makeViewWithIdentifier:@"MainTableCellView" owner:self];
     NCUNamecheapDomain *namecheapDomain = [self.namecheapDomains objectAtIndex:row];
-    cell.domainEnabled = [namecheapDomain.enabled boolValue];
+    cell.status = [namecheapDomain.enabled boolValue] ? NCUMainTableCellViewStatusOutdated : NCUMainTableCellViewStatusDisabled;
     cell.showDisclosureArrow = (namecheapDomain == self.selectedNamecheapDomain);
     cell.textField.stringValue = namecheapDomain.name;
-    cell.detailTextField.stringValue = [NSString stringWithFormat:@"%@.%@", namecheapDomain.host, namecheapDomain.domain];
+    cell.detailTextField.stringValue = [NSString stringWithFormat:@"%@", [namecheapDomain completeHostName]];
     return cell;
 }
 
