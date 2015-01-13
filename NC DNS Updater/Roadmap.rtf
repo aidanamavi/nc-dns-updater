@@ -187,4 +187,58 @@ Possible solutions\
 \ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
 Offer the user the possibility to select which ethernet interface should be used for the configured DDNS.\
 \ls1\ilvl4\kerning1\expnd0\expndtw0 {\listtext	b	}\expnd0\expndtw0\kerning0
-Additionally for mobile machines the interface could be indicated a preferred interface with a fallback to an other interface when the primary interface is not connected.}
+Additionally for mobile machines the interface could be indicated a preferred interface with a fallback to an other interface when the primary interface is not connected.\
+\pard\tx1660\tx2160\tx2240\tx2800\tx3360\pardeftab720\li2160\fi-2160
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	iv	}\expnd0\expndtw0\kerning0
+Provide the current IP address/es and the registered DNS address side by side from start\
+\pard\tx2380\tx2880\tx3360\pardeftab720\li2880\fi-2880
+\ls1\ilvl3\cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Description\
+\pard\tx3100\tx3600\pardeftab720\li3600\fi-3600
+\ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
+When starting NC and entering the Setup screen no IP information is provided, neither for the workstation local ip addresses, nor the machine internet address or the address registered with the DDNS Provider\
+\ls1\ilvl4\kerning1\expnd0\expndtw0 {\listtext	b	}\expnd0\expndtw0\kerning0
+It would be very informative and sometime very useful for problem resolution to see :\
+\pard\tx3820\tx4320\pardeftab720\li4320\fi-4320
+\ls1\ilvl5\cf0 \kerning1\expnd0\expndtw0 {\listtext	i	}\expnd0\expndtw0\kerning0
+The 1 or more local addresses\
+\ls1\ilvl5\kerning1\expnd0\expndtw0 {\listtext	ii	}\expnd0\expndtw0\kerning0
+The Internet address (Address behind the Internet\'a0modem/router/etc...\
+\ls1\ilvl5\kerning1\expnd0\expndtw0 {\listtext	iii	}\expnd0\expndtw0\kerning0
+The internet address registered with the DDNS service provider\
+\ls1\ilvl5\kerning1\expnd0\expndtw0 {\listtext	iv	}\expnd0\expndtw0\kerning0
+This information could also be relayed in the NC menu for quick info or debug without having to enter te setup screen.\
+\pard\tx1660\tx2160\tx2240\tx2800\tx3360\tx3920\pardeftab720\li2160\fi-2160
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	v	}\expnd0\expndtw0\kerning0
+A proper installation procedure should be implemented\
+\pard\tx2380\tx2880\tx3360\tx3920\pardeftab720\li2880\fi-2880
+\ls1\ilvl3\cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Description\
+\pard\tx3100\tx3600\pardeftab720\li3600\fi-3600
+\ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
+NC installation is done trough distribution of a zip archive, this is very different from the usual OS X installation procedure.\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880
+\ls1\ilvl3\cf0 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Possible improvements\
+\pard\tx3100\tx3600\pardeftab720\li3600\fi-3600
+\ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
+Distribute NC as a disk image with the Application folder available in the archive and instructions (Arrow) explaining how to install it in the application. Ensure that at installation time the old version of NC is stopped.\
+\ls1\ilvl4\kerning1\expnd0\expndtw0 {\listtext	b	}\expnd0\expndtw0\kerning0
+Distribute the application thought eh App store.\
+\pard\tx1660\tx2160\tx2240\tx2800\pardeftab720\li2160\fi-2160
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	vi	}\expnd0\expndtw0\kerning0
+The address is not checked when NC start\
+\pard\tx2380\tx2880\pardeftab720\li2880\fi-2880
+\ls1\ilvl3\cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Description\
+\pard\tx3100\tx3600\pardeftab720\li3600\fi-3600
+\ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
+Whenever NC start, NC start the address refresh counter and wait\'a0until the counter expired before checking the address validity, this might result in minutes of unavailable DDNS at startup.\
+\pard\tx2380\tx2880\tx3360\pardeftab720\li2880\fi-2880
+\ls1\ilvl3\cf0 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Expected behaviour\
+\pard\tx3100\tx3600\pardeftab720\li3600\fi-3600
+\ls1\ilvl4\cf0 \kerning1\expnd0\expndtw0 {\listtext	a	}\expnd0\expndtw0\kerning0
+At startup NC should check immediately the address validity and if required refresh the addresses. This could be done by having NC save the time it last refreshed the address and if more than the interval time has expired refresh the address ASAP. The feature would be beneficial to mobile users that change location and network regularly\expnd0\expndtw0\kerning0
+\
+}
