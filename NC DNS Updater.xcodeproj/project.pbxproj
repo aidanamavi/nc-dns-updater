@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2190F21A6D421A003EF305 /* NC_DNS_Updater_1.8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.8.xcdatamodel; sourceTree = "<group>"; };
 		0F2A51901A5B1FAD00D0A687 /* Roadmap.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Roadmap.rtf; sourceTree = "<group>"; };
 		0F7C4AEC19EC3F52002BE4CC /* NCUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUApplication.h; sourceTree = "<group>"; };
 		0F7C4AED19EC3F52002BE4CC /* NCUApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUApplication.m; sourceTree = "<group>"; };
@@ -603,10 +604,11 @@
 		0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0F2190F21A6D421A003EF305 /* NC_DNS_Updater_1.8.xcdatamodel */,
 				0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */,
 				0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */,
 			);
-			currentVersion = 0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */;
+			currentVersion = 0F2190F21A6D421A003EF305 /* NC_DNS_Updater_1.8.xcdatamodel */;
 			path = NC_DNS_Updater.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

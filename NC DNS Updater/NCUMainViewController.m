@@ -184,15 +184,20 @@
                 if (ipAddress) {
                     NWLog(@"External IP address is %@.", ipAddress);
                     if ([NCUIPService isStringAnIP:ipAddress]) {
-                        namecheapDomain.currentIP = ipAddress;
-                        NSError *error;
-                        [[self getDataContext] save:&error];
-                        
                         NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
                         [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                             if (self.selectedNamecheapDomain == namecheapDomain) {
                                 [self.domainCurrentIPTextField setStringValue:ipAddress];
+                                if (error) {
+                                    [self.domainComments setStringValue:[error localizedDescription]];
+                                }
+                                else {
+                                    [self.domainComments setStringValue:@"Host updated successfully."];
+                                }
                             }
+
+                            NSError *dbError;
+                            [[self getDataContext] save:&dbError];
                         }];
                     }
                     else {
@@ -211,15 +216,20 @@
         if (ipAddress) {
             NWLog(@"Internal IP address is %@.", ipAddress);
             if ([NCUIPService isStringAnIP:ipAddress]) {
-                namecheapDomain.currentIP = ipAddress;
-                NSError *error;
-                [[self getDataContext] save:&error];
-                
                 NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
                 [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                     if (self.selectedNamecheapDomain == namecheapDomain) {
                         [self.domainCurrentIPTextField setStringValue:ipAddress];
+                        if (error) {
+                            [self.domainComments setStringValue:[error localizedDescription]];
+                        }
+                        else {
+                            [self.domainComments setStringValue:@"Host updated successfully."];
+                        }
                     }
+                    
+                    NSError *dbError;
+                    [[self getDataContext] save:&dbError];
                 }];
             }
             else {
@@ -333,7 +343,8 @@
         [self.domainIntervalTextField setStringValue:[NSString stringWithFormat:@"%@", self.selectedNamecheapDomain.interval]];
         [self.domainIpSourceComboBox selectItemAtIndex:[self.selectedNamecheapDomain.ipSource integerValue]];
         [self.domainEnabledButton setState:[self.selectedNamecheapDomain.enabled integerValue]];
-        [self.domainCurrentIPTextField setStringValue:self.selectedNamecheapDomain.currentIP];
+        [self.domainCurrentIPTextField setStringValue:self.selectedNamecheapDomain.currentIP ?: @"-"];
+        [self.domainComments setStringValue:self.selectedNamecheapDomain.comment ?: @"-"];
     }
     else {
         [self.formView setHidden:YES];
@@ -457,6 +468,7 @@
             self.selectedNamecheapDomain.ipSource = @(self.domainIpSourceComboBox.indexOfSelectedItem);
             self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
             self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;
+            self.selectedNamecheapDomain.comment = self.domainComments.stringValue;
             
             NSError *error;
             if (![[self getDataContext] save:&error]) {

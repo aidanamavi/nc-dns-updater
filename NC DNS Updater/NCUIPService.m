@@ -13,6 +13,7 @@
 #import <netdb.h>
 #import <arpa/inet.h>
 #import <net/if.h>
+#import <XMLReader-PPTV/XMLReader.h>
 
 #define NETWORK_ADAPTER0 @"en0"
 #define NETWORK_ADAPTER1 @"en1"
@@ -58,16 +59,49 @@
     namecheapSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
     [namecheapSession GET:@"/update" parameters:@{@"host":namecheapDomain.host, @"domain":namecheapDomain.domain, @"password":namecheapDomain.password, @"ip":ip} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NWLog(@"Successfully updated %@ to %@.", [namecheapDomain completeHostName], ip);
         
-        namecheapDomain.currentIP = ip;
+        NSError *xmlError;
+        id xmlResponse = [XMLReader dictionaryForXMLData:responseObject error:&xmlError];
         
-        if (completionBlock) {
-            completionBlock(namecheapDomain, nil);
+        if (xmlError) {
+            NWLog(@"XML ERROR WHEN UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, xmlError.localizedDescription);
+
+            namecheapDomain.comment = [xmlError localizedDescription];
+            
+            if (completionBlock) {
+                completionBlock(namecheapDomain, xmlError);
+            }
+        }
+        else {
+            NSInteger errorCount = [xmlResponse[@"interface-response"][@"ErrCount"][@"text"] integerValue];
+            if (errorCount) {
+                NSString *errorMessage = xmlResponse[@"interface-response"][@"errors"][@"Err1"][@"text"];
+                NSError *error = [NSError errorWithDomain:@"NCDNSUPDATER" code:-1 userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
+
+                NWLog(@"ERROR OCCURRED WHEN UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, error.localizedDescription);
+                
+                namecheapDomain.comment = [error localizedDescription];
+
+                if (completionBlock) {
+                    completionBlock(namecheapDomain, error);
+                }
+            }
+            else {
+                NWLog(@"Successfully updated %@ to %@.", [namecheapDomain completeHostName], ip);
+                
+                namecheapDomain.currentIP = ip;
+                namecheapDomain.comment = @"Host updated successfully.";
+                
+                if (completionBlock) {
+                    completionBlock(namecheapDomain, nil);
+                }
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NWLog(@"ERROR UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, error.localizedDescription);
         
+        namecheapDomain.comment = [error localizedDescription];
+
         if (completionBlock) {
             completionBlock(namecheapDomain, error);
         }

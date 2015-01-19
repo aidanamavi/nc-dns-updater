@@ -29,6 +29,7 @@
 @property IBOutlet NSComboBox *domainIpSourceComboBox;
 @property IBOutlet NSButton *domainEnabledButton;
 @property IBOutlet NSTextField *domainCurrentIPTextField;
+@property IBOutlet NSTextField *domainComments;
 
 @property IBOutlet NOSwitchButton *masterSwitchButton;
 @property IBOutlet NOSwitchButton *loggingSwitchButton;

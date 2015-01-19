@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, NCUIpSource) {
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * currentIP;
 @property (nonatomic, retain) NSNumber * ipSource;
+@property (nonatomic, retain) NSString * comment;
 
 - (NSString *)completeHostName;
 - (NSURL *)httpUrl;

@@ -20,6 +20,7 @@
 @dynamic name;
 @dynamic password;
 @dynamic currentIP;
+@dynamic comment;
 
 - (NSString *)completeHostName {
     return [NSString stringWithFormat:@"%@.%@", self.host, self.domain];
