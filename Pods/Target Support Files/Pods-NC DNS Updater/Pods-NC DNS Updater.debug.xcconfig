@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/NOSwitch" "${PODS_ROOT}/Headers/Public/NWLogging"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/NOSwitch" -isystem "${PODS_ROOT}/Headers/Public/NWLogging"
-OTHER_LDFLAGS = -ObjC -l"Pods-NC DNS Updater-AFNetworking" -l"Pods-NC DNS Updater-NOSwitch" -l"Pods-NC DNS Updater-NWLogging" -l"z" -framework "CoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/NOSwitch" "${PODS_ROOT}/Headers/Public/NWLogging" "${PODS_ROOT}/Headers/Public/XMLReader-PPTV"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/NOSwitch" -isystem "${PODS_ROOT}/Headers/Public/NWLogging" -isystem "${PODS_ROOT}/Headers/Public/XMLReader-PPTV"
+OTHER_LDFLAGS = -ObjC -l"Pods-NC DNS Updater-AFNetworking" -l"Pods-NC DNS Updater-NOSwitch" -l"Pods-NC DNS Updater-NWLogging" -l"Pods-NC DNS Updater-XMLReader-PPTV" -l"z" -framework "CoreServices" -framework "Security" -framework "SystemConfiguration"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-NC DNS Updater-XMLReader-PPTV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NC DNS Updater.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>034DFBBAEADE1A9C0672250E</key>
+		<key>2405AF607D1688EA88EC7E92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>129BDA0E4E2B2399D974618B</key>
+		<key>63F7FB3CB75A32EDE9D55E3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>161B2FCA609557304D903564</key>
+		<key>67A1BB034F428CFFD8EDFD64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EA0B25962B25B00139BD642</key>
+		<key>689EFF15C72E585FB35EE3BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1E56181B9E83E7839DE031A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
