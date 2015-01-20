@@ -33,6 +33,8 @@
 @property IBOutlet NOSwitchButton *masterSwitchButton;
 @property IBOutlet NOSwitchButton *loggingSwitchButton;
 
+@property IBOutlet NSTextField *currentInternalIpTextField;
+@property IBOutlet NSTextField *currentExternalIpTextField;
 @property IBOutlet NSTextField *messageTextField;
 
 - (IBAction)addDomain_Clicked:(id)sender;

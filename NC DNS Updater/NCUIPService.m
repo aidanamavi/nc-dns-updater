@@ -65,8 +65,6 @@
         if (xmlError) {
             NWLog(@"XML ERROR WHEN UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, xmlError.localizedDescription);
 
-            namecheapDomain.comment = [xmlError localizedDescription];
-            
             if (completionBlock) {
                 completionBlock(namecheapDomain, xmlError);
             }
@@ -79,17 +77,12 @@
 
                 NWLog(@"ERROR OCCURRED WHEN UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, error.localizedDescription);
                 
-                namecheapDomain.comment = [error localizedDescription];
-
                 if (completionBlock) {
                     completionBlock(namecheapDomain, error);
                 }
             }
             else {
                 NWLog(@"Successfully updated %@ to %@.", [namecheapDomain completeHostName], ip);
-                
-                namecheapDomain.currentIP = ip;
-                namecheapDomain.comment = @"Host updated successfully.";
                 
                 if (completionBlock) {
                     completionBlock(namecheapDomain, nil);
@@ -99,8 +92,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NWLog(@"ERROR UPDATING %@ to %@: %@", [namecheapDomain completeHostName], ip, error.localizedDescription);
         
-        namecheapDomain.comment = [error localizedDescription];
-
         if (completionBlock) {
             completionBlock(namecheapDomain, error);
         }
