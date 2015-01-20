@@ -14,6 +14,8 @@
 #import <arpa/inet.h>
 #import <net/if.h>
 #import <XMLReader-PPTV/XMLReader.h>
+#import "NCUVersionService.h"
+#import "NCUVersion.h"
 
 #define NETWORK_ADAPTER0 @"en0"
 #define NETWORK_ADAPTER1 @"en1"
@@ -29,16 +31,13 @@
 
     echoIPSession.responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     
-    [echoIPSession GET:@"" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [echoIPSession GET:@"" parameters:@{@"appVersion": [NCUVersionService getCurrentVersion].versionNumber} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *detectedIpAddress = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//        NSLog(@"IP: %@", detectedIpAddress);
-        
+
         if (completionBlock) {
             completionBlock(detectedIpAddress, nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"FAIL: %@", error.localizedDescription);
-        
         if (completionBlock) {
             completionBlock(nil, error);
         }
