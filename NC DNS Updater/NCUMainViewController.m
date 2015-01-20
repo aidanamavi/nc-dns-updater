@@ -141,7 +141,7 @@
             }
             
             if (self.selectedNamecheapDomain == namecheapDomain) {
-                [self.domainCurrentIPTextField setStringValue:currentIP];
+                [self.domainCurrentIPTextField setStringValue:currentIP ?: @"-"];
             }
             
             NSString *referenceIP;
@@ -187,7 +187,7 @@
                         NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
                         [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                             if (self.selectedNamecheapDomain == namecheapDomain) {
-                                [self.domainCurrentIPTextField setStringValue:ipAddress];
+                                [self.domainCurrentIPTextField setStringValue:ipAddress ?: @"-"];
                                 if (error) {
                                     [self.domainComments setStringValue:[error localizedDescription]];
                                 }
@@ -219,7 +219,7 @@
                 NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
                 [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                     if (self.selectedNamecheapDomain == namecheapDomain) {
-                        [self.domainCurrentIPTextField setStringValue:ipAddress];
+                        [self.domainCurrentIPTextField setStringValue:ipAddress ?: @"-"];
                         if (error) {
                             [self.domainComments setStringValue:[error localizedDescription]];
                         }
