@@ -20,7 +20,6 @@ typedef NS_ENUM(NSInteger, NCUIpSource) {
 @property (nonatomic, retain) NSNumber * enabled;
 @property (nonatomic, retain) NSString * host;
 @property (nonatomic, retain) NSString * identifier;
-@property (nonatomic, retain) NSNumber * interval;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * currentIP;

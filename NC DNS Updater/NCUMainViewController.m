@@ -50,15 +50,13 @@
     self.domainNameTextField.nextKeyView = self.domainHostTextField;
     self.domainHostTextField.nextKeyView = self.domainDomainTextField;
     self.domainDomainTextField.nextKeyView = self.domainPasswordTextField;
-    self.domainPasswordTextField.nextKeyView = self.domainIntervalTextField;
-    self.domainIntervalTextField.nextKeyView = self.domainIpSourceComboBox;
+    self.domainPasswordTextField.nextKeyView = self.domainIpSourceComboBox;
     self.domainIpSourceComboBox.nextKeyView = self.domainEnabledButton;
     self.domainEnabledButton.nextKeyView = self.domainsTableView;
     self.domainsTableView.nextKeyView = self.domainNameTextField;
     
     [self updateActivityLoggingPosition];
     [self updateMasterSwitchPosition];
-    self.domainIntervalTextField.formatter = [[NCUOnlyIntegerValueFormatter alloc] init];
     
     NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
 
@@ -254,11 +252,12 @@
     [self.updateTimers removeAllObjects];
 }
 
+//TODO: Refactor to work without interval
 - (NSTimer *)createTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
     NSTimer *timer;
     
     if ([namecheapDomain.enabled boolValue]) {
-        timer = [NSTimer scheduledTimerWithTimeInterval:namecheapDomain.interval.integerValue * 60 target:self selector:@selector(timer_Ticked:) userInfo:namecheapDomain repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timer_Ticked:) userInfo:namecheapDomain repeats:YES];
         
         [self.updateTimers setObject:timer forKey:namecheapDomain.identifier];
     }
@@ -320,7 +319,6 @@
     namecheapDomain.host = @"";
     namecheapDomain.domain = @"";
     namecheapDomain.password = @"";
-    namecheapDomain.interval = @5;
     namecheapDomain.ipSource = NCUIpSourceExternal;
     namecheapDomain.enabled = @NO;
     namecheapDomain.currentIP = @"";
@@ -340,7 +338,6 @@
         [self.domainHostTextField setStringValue:self.selectedNamecheapDomain.host];
         [self.domainDomainTextField setStringValue:self.selectedNamecheapDomain.domain];
         [self.domainPasswordTextField setStringValue:self.selectedNamecheapDomain.password];
-        [self.domainIntervalTextField setStringValue:[NSString stringWithFormat:@"%@", self.selectedNamecheapDomain.interval]];
         [self.domainIpSourceComboBox selectItemAtIndex:[self.selectedNamecheapDomain.ipSource integerValue]];
         [self.domainEnabledButton setState:[self.selectedNamecheapDomain.enabled integerValue]];
         [self.domainCurrentIPTextField setStringValue:self.selectedNamecheapDomain.currentIP ?: @"-"];
@@ -415,11 +412,6 @@
         isValid = NO;
     }
     
-    if (self.domainIntervalTextField.stringValue.length <= 0) {
-        [missingInfo addObject:@"  - INTERVAL"];
-        isValid = NO;
-    }
-    
     if (!isValid) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
@@ -456,15 +448,10 @@
                 self.domainNameTextField.stringValue = @"<< NO NAME >>";
             }
             
-            if (self.domainIntervalTextField.stringValue.length == 0) {
-                self.domainIntervalTextField.stringValue = @"5";
-            }
-            
             self.selectedNamecheapDomain.name = self.domainNameTextField.stringValue;
             self.selectedNamecheapDomain.host = self.domainHostTextField.stringValue;
             self.selectedNamecheapDomain.domain = self.domainDomainTextField.stringValue;
             self.selectedNamecheapDomain.password = self.domainPasswordTextField.stringValue;
-            self.selectedNamecheapDomain.interval = @(self.domainIntervalTextField.integerValue);
             self.selectedNamecheapDomain.ipSource = @(self.domainIpSourceComboBox.indexOfSelectedItem);
             self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
             self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;

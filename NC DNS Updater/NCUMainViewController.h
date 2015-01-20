@@ -25,7 +25,6 @@
 @property IBOutlet NSTextField *domainHostTextField;
 @property IBOutlet NSTextField *domainDomainTextField;
 @property IBOutlet NSTextField *domainPasswordTextField;
-@property IBOutlet NSTextField *domainIntervalTextField;
 @property IBOutlet NSComboBox *domainIpSourceComboBox;
 @property IBOutlet NSButton *domainEnabledButton;
 @property IBOutlet NSTextField *domainCurrentIPTextField;
