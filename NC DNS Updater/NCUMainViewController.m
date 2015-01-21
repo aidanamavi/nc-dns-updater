@@ -23,7 +23,6 @@
 @property NSTimer *currentIpCheckTimer;
 @property BOOL formLoaded;
 
-
 @end
 
 @implementation NCUMainViewController
@@ -67,14 +66,9 @@
     [appDelegate.window makeFirstResponder:self.domainsTableView];
     
     [self setLoggingEnabledTo:self.activityLoggingState];
-    if (self.masterSwitchState) {
-//        [self loadUpdateTimers];
-        [self createTimerForCurrentIPCheck];
-    }
-    
     [self checkForNewVersion];
+    [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
-    
     [self updateDomain:nil];
 }
 
@@ -94,19 +88,6 @@
         NWLog(@"Domain configuration loaded successfully.");
     }
 }
-
-//- (void)loadUpdateTimers {
-//    NWLog(@"Loading update timers.");
-//    [self resetUpdateTimers];
-//    
-//    for (NCUNamecheapDomain *namecheapDomain in self.namecheapDomains) {
-//        if ([namecheapDomain.enabled boolValue]) {
-//            [self createTimerForNamecheapDomain:namecheapDomain];
-//        }
-//    }
-//    
-//    NWLog(@"Update timers loaded successfully.");
-//}
 
 - (void)timer_Ticked:(NSTimer *)timer {
     if (timer == self.checkForUpdateTimer) {
@@ -156,18 +137,17 @@
             
             NCUMainTableCellViewStatus status = NCUMainTableCellViewStatusDisabled;
             
-            if ([namecheapDomain.enabled boolValue]) {
-                if ([namecheapDomain.currentIP isEqualToString:referenceIP]) {
-                    status = NCUMainTableCellViewStatusUpdated;
-                    namecheapDomain.comment = @"Host updated successfully.";
-                }
-                else {
-                    status = NCUMainTableCellViewStatusOutdated;
-                    namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] ? @" Update request will be issued." : @"Updates are disabled for this host."];
-                }
+            if ([namecheapDomain.currentIP isEqualToString:referenceIP]) {
+                status = NCUMainTableCellViewStatusUpdated;
+                namecheapDomain.comment = @"IP is up to date.";
             }
             else {
-                namecheapDomain.comment = @"Updates are disabled for this host.";
+                status = NCUMainTableCellViewStatusOutdated;
+                namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] && self.masterSwitchState ? @" Update request will be issued." : [NSString stringWithFormat:@" Automatic updates are disabled.%@", self.masterSwitchState ? @" Enable this host for automatic updates." : @" Turn on the Master Switch to enable automatic updates."]];
+            }
+            
+            if (![namecheapDomain.enabled boolValue]) {
+                status = NCUMainTableCellViewStatusDisabled;
             }
 
             NCUMainTableCellView *cell = [self.domainsTableView viewAtColumn:0 row:[self.namecheapDomains indexOfObject:namecheapDomain] makeIfNecessary:NO];
@@ -176,7 +156,7 @@
                 cell.status = status;
             }
             
-            if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue]) {
+            if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue] && self.masterSwitchState) {
                 [self updateDnsWithNamecheapDomain:namecheapDomain];
             }
             
@@ -240,31 +220,6 @@
         }
     }
 }
-
-//- (void)resetUpdateTimers {
-//    if (!self.updateTimers) {
-//        self.updateTimers = [NSMutableDictionary dictionary];
-//    }
-//    
-//    for (NSTimer *updateTimer in self.updateTimers.objectEnumerator) {
-//        [updateTimer invalidate];
-//    }
-//    
-//    [self.updateTimers removeAllObjects];
-//}
-
-//TODO: Refactor to work without interval
-//- (NSTimer *)createTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
-//    NSTimer *timer;
-//    
-//    if ([namecheapDomain.enabled boolValue]) {
-//        timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timer_Ticked:) userInfo:namecheapDomain repeats:YES];
-//        
-//        [self.updateTimers setObject:timer forKey:namecheapDomain.identifier];
-//    }
-//    
-//    return timer;
-//}
 
 - (void)removeTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
     NSTimer *timer = [self.updateTimers objectForKey:namecheapDomain.identifier];
@@ -368,13 +323,13 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     if (self.masterSwitchState) {
-//        [self loadUpdateTimers];
         [self createTimerForCurrentIPCheck];
     }
     else {
-//        [self resetUpdateTimers];
         [self.currentIpCheckTimer invalidate];
     }
+
+    [self updateDomain:nil];
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
