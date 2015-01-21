@@ -1,0 +1,11 @@
+//
+//  NC DNS Updater Daemon-Prefix.pch
+//  NC DNS Updater Daemon
+//
+//  Created by Spencer Müller Diniz on 21/01/15.
+//  Copyright (c) 2015 LARATECH. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif

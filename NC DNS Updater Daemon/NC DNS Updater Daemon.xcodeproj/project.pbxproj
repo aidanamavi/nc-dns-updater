@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0FCA057D1A701132000C01D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA057C1A701132000C01D0 /* main.m */; };
+		0FCA05881A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */; };
+		0FCA058B1A701750000C01D0 /* NCUDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA058A1A701750000C01D0 /* NCUDbManager.m */; };
+		0FCA058D1A7017B8000C01D0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCA058C1A7017B8000C01D0 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,14 @@
 /* Begin PBXFileReference section */
 		0FCA05791A701132000C01D0 /* NC DNS Updater Daemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NC DNS Updater Daemon"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCA057C1A701132000C01D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0FCA05841A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater.xcdatamodel; sourceTree = "<group>"; };
+		0FCA05851A7015C9000C01D0 /* NC_DNS_Updater_1.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.5.xcdatamodel; sourceTree = "<group>"; };
+		0FCA05861A7015C9000C01D0 /* NC_DNS_Updater_1.8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.8.xcdatamodel; sourceTree = "<group>"; };
+		0FCA05871A7015C9000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.9.xcdatamodel; sourceTree = "<group>"; };
+		0FCA05891A701750000C01D0 /* NCUDbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUDbManager.h; sourceTree = "<group>"; };
+		0FCA058A1A701750000C01D0 /* NCUDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUDbManager.m; sourceTree = "<group>"; };
+		0FCA058C1A7017B8000C01D0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NC DNS Updater Daemon-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCA058D1A7017B8000C01D0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +53,9 @@
 		0FCA05701A701132000C01D0 = {
 			isa = PBXGroup;
 			children = (
+				0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */,
+				0FCA058C1A7017B8000C01D0 /* Cocoa.framework */,
+				0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */,
 				0FCA057B1A701132000C01D0 /* NC DNS Updater Daemon */,
 				0FCA057A1A701132000C01D0 /* Products */,
 			);
@@ -58,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				0FCA057C1A701132000C01D0 /* main.m */,
+				0FCA05891A701750000C01D0 /* NCUDbManager.h */,
+				0FCA058A1A701750000C01D0 /* NCUDbManager.m */,
 			);
 			path = "NC DNS Updater Daemon";
 			sourceTree = "<group>";
@@ -118,6 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCA058B1A701750000C01D0 /* NCUDbManager.m in Sources */,
+				0FCA05881A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld in Sources */,
 				0FCA057D1A701132000C01D0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +221,8 @@
 		0FCA05811A701132000C01D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NC DNS Updater Daemon-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +230,8 @@
 		0FCA05821A701132000C01D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NC DNS Updater Daemon-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -234,6 +257,23 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0FCA05841A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodel */,
+				0FCA05851A7015C9000C01D0 /* NC_DNS_Updater_1.5.xcdatamodel */,
+				0FCA05861A7015C9000C01D0 /* NC_DNS_Updater_1.8.xcdatamodel */,
+				0FCA05871A7015C9000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */,
+			);
+			currentVersion = 0FCA05871A7015C9000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */;
+			name = NC_DNS_Updater.xcdatamodeld;
+			path = "../NC DNS Updater/NC_DNS_Updater.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0FCA05711A701132000C01D0 /* Project object */;
 }

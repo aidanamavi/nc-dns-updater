@@ -8,6 +8,12 @@ target "NC DNS Updater" do
     pod 'XMLReader-PPTV'
 end
 
+target "NC DNS Updater Daemon" do
+    pod 'AFNetworking', '2.0'
+    pod 'NWLogging'
+    pod 'XMLReader-PPTV'
+end
+
 target "NC DNS UpdaterTests" do
     
 end
