@@ -10,231 +10,23 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>012758A5974945C202AC5AB1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NOSwitch-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>028E50B660B0A1113B234317</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04137FA4C22ABE8FFC6E0017</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>XMLReader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0458D2CAB8A9954EB57D8C7B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NWLFilePrinter.m</string>
-			<key>path</key>
-			<string>Library/Printers/NWLFilePrinter.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>07C3D116EDD137BA372FCC1A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AD938E5A3A9B0C31DC95974D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>084BC73FD87DD6A43F48B49A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AFURLResponseSerialization.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFURLResponseSerialization.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08F76900A4F67C99AD2D96D4</key>
+		<key>00009B0D0F063FB324037455</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>34B64660ABD8CAD8D81A26A6</string>
+				<string>908A36010E17F2EC15CE84B0</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>09DA4AA6DBBCFE5C9F4F99F1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperationManager.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFHTTPRequestOperationManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0AC3DDBD2FCC5D303D6E7283</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E47F43ABE796743F5ADB5667</string>
-				<string>58234EE01B72ED4215AC9F6F</string>
-				<string>F6D798954DD157C394F3C133</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0B44A68AF6A8236D9BA41944</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>21F57C4FDA3165DA4757469B</string>
-				<string>E4A7C8EF927E26C76E8D1804</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>0B98130B8E205F16BC5D7AC7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>67A1BB034F428CFFD8EDFD64</string>
-			<key>targetProxy</key>
-			<string>2431CFF061803682DF003DD9</string>
-		</dict>
-		<key>0C654B4B0198A5FF0E0E59A7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0E877841A20CFC3AF94033E9</string>
-				<string>E55D56E77D65552C15286442</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0E877841A20CFC3AF94033E9</key>
+		<key>0016C695E16CCD8AF64897CB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>028E50B660B0A1113B234317</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0FD4407F2B89DDA8B6E1BAAB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DE4AC04B35D48A5E9844B5F7</string>
-				<string>F056D56E90B69BF894D1F44F</string>
-				<string>9646E153907458164F5E5B91</string>
-				<string>0458D2CAB8A9954EB57D8C7B</string>
-				<string>F68A926E1CBB52371B41A99B</string>
-				<string>3472893D188A60FF6876B4B1</string>
-				<string>E500A792477DBC328061669D</string>
-				<string>9018E2E4CF44FCD0DA7E3035</string>
-				<string>2609B8B979D91C8143574B30</string>
-				<string>B111ABCC20206F17990E7B03</string>
-				<string>2DCBAC318F1CC6CC7C9C8369</string>
-				<string>9EEBFA5DBB2BC1B2B56BAE17</string>
-				<string>D5E7A8039B2B147A8E3A2265</string>
-				<string>274E3AA48FD8880EDD69D762</string>
-				<string>34FFBAB0F5524F5DBC9456FA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NWLogging</string>
-			<key>path</key>
-			<string>NWLogging</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>11A6B6BB98F31479F7CE3108</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>63F7FB3CB75A32EDE9D55E3F</string>
-			<key>targetProxy</key>
-			<string>F133CE632FE5D2C2C73C8021</string>
-		</dict>
-		<key>1452D56E4635DEDCE44E98B1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F1A122F26C405BE534E8FA47</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D1E56181B9E83E7839DE031A</string>
-			<key>remoteInfo</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
-		</dict>
-		<key>1C0AA526D21B4360E656DBF8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA2944EF3125700F2A7C95D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1D67AB623322308D1A063546</key>
-		<dict>
-			<key>fileRef</key>
-			<string>09DA4AA6DBBCFE5C9F4F99F1</string>
+			<string>F007843D1A74812A1B2DF032</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -243,17 +35,388 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>1E1AF02A3B8661550437AB07</key>
+		<key>00A3CD77CB36512143897C72</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D8F71747036256D124DBEDF5</string>
+			<string>8691E90FBCF52B65DDE81E43</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>00DE7279184E784F41C9C23A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DEA1E68CBCEF7CAE4AA7488B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-AFNetworking/Pods-NC DNS Updater Daemon-AFNetworking-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0208260A3D055884D8D1C3F6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FB501C21BA3D1524071AA344</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>02604E0E3566157BACADB4D3</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E0D45F80AC918035E451C563</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FCC60E815AC66C6EFF2D4AD2</string>
+				<string>801BFA76162EEAD83B2242F6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4C3B0678AB5048597BCF91DC</string>
+				<string>85271521A765EA6ABFC5894D</string>
+				<string>19DA2BE5C9918607964FDEF0</string>
+				<string>4F0B093A49834F845845FE2D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater</string>
+			<key>productReference</key>
+			<string>A5E608A81C16C29D00654ACA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>027E00182C203C2293E929B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D77A12AD9ACEAC5F863C451A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>033C5E3BB6FDBDC0A0C1B850</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F4F59CA63E8F55534CBBE89</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>21F57C4FDA3165DA4757469B</key>
+		<key>035211217D857ED3D87062A9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV.xcconfig</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>037E2A451866A1AB43F83A79</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLMultiLogger.h</string>
+			<key>path</key>
+			<string>Library/Printers/NWLMultiLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>051A8545D19A81E5AC397D2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>057920C0C0D2121CEFBA4114</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>070316AB9EDA4E9DEB56230F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CA166E5236F152925A3E8E2</string>
+				<string>BD60E3B4D5000070E9B1C9C8</string>
+				<string>12E72680F2D8426C845B9035</string>
+				<string>6D98502E886A795A70D063F5</string>
+				<string>A231216A26DE3FEEC0815435</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AFNetworking</string>
+			<key>path</key>
+			<string>AFNetworking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08358602C27FF5A276738264</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>070316AB9EDA4E9DEB56230F</string>
+				<string>6C268EECD399FE6AEAE02859</string>
+				<string>54AE6192B281FD3289C4C3F3</string>
+				<string>A05496333FB4510BC458E441</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08EC1598716AEBE87E7C441D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE8F423D7248A95CA6D5A96E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>090F883E3EE6108B2AE7410D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D35A846F104CB874E97A50C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>0953A78220103781DDD1C988</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>28966054ABA7FEFBB1F0162D</string>
+				<string>F6464DF0421B471088CC58F1</string>
+				<string>08358602C27FF5A276738264</string>
+				<string>F2B667E59B7185F31F823AF2</string>
+				<string>4718B315E12F623E6D9867BD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0A3598A559D3A9409F48C7ED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C81FDEFBEB543668FE6936F1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0BDEB883C7BB8B1653F47330</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AAF35D3EB31DCAF167A2AC48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0C156A0EB5EC72E4C8988AE9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F007843D1A74812A1B2DF032</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>0E39DB5436BB117F907F3329</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F97916EE18AC4574D35BA11C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>638EF1578B4FBA61009B7D9C</string>
+				<string>00009B0D0F063FB324037455</string>
+				<string>C69B14CAD524E26C2D5FED4B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV</string>
+			<key>productReference</key>
+			<string>FBB78C297222EB2C9CCC98F4</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>10EC432B375D4A3F798E83AB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0BDEB883C7BB8B1653F47330</string>
+				<string>339E106EBB299108A7A6142C</string>
+				<string>B9B630E7DF2805A80711002F</string>
+				<string>9977BBF098B5E5F01D7355B2</string>
+				<string>45AED170EAF900F274D0255E</string>
+				<string>54EB6F88AEE07219F6CCFFD4</string>
+				<string>A743618C4A04592F74446377</string>
+				<string>1AB8D584C31A49448F28756A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>114B819FD497D681571A04FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2E33A18BDC1FCA8F84E5009</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1273AD3D5A5A735557A50749</key>
+		<dict>
+			<key>fileRef</key>
+			<string>893A02DC142C1A9AC3D843E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E72680F2D8426C845B9035</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C66CE76740059DC7731D3821</string>
+				<string>9282BBC767524157F63FFF44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Security</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13173A14D2264F780A20E91B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NWLogging-Private.xcconfig</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>142B75F2B2BB7DB7D020D5E9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFNetworkReachabilityManager.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworkReachabilityManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>14822C78815D7B7414B30F5A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2ACD5CE7B611A51486AAA6F2</string>
+			<string>32259DC5FDC89FBFD112C536</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -303,108 +466,88 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>2405AF607D1688EA88EC7E92</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0B44A68AF6A8236D9BA41944</string>
-			<key>buildPhases</key>
-			<array>
-				<string>863860E690FFB3FE8653EA3C</string>
-				<string>BC001DD39CF6BA548B208628</string>
-				<string>67C129812B5D2B247976D331</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater-AFNetworking</string>
-			<key>productName</key>
-			<string>Pods-NC DNS Updater-AFNetworking</string>
-			<key>productReference</key>
-			<string>84221C48758F7C5752B95662</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>2431CFF061803682DF003DD9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F1A122F26C405BE534E8FA47</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>67A1BB034F428CFFD8EDFD64</string>
-			<key>remoteInfo</key>
-			<string>Pods-NC DNS Updater-NWLogging</string>
-		</dict>
-		<key>246160F8F47056CFC932B167</key>
+		<key>166BD335B2C9244052526A56</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AF0DACA5540FDF5578ED368F</string>
+			<string>52FA90209078D87FA578F0B1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>2609B8B979D91C8143574B30</key>
+		<key>16F0F95CD91AD84886C4723D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>4F1F59DE4A5DE94FC1E8ED55</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>1928856F4644C16B7A8DF825</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9282BBC767524157F63FFF44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>19DA2BE5C9918607964FDEF0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>6C337B8E2CEA63F53C73F495</string>
+			<key>targetProxy</key>
+			<string>C9CD8DF4679FABDB1E94B6EA</string>
+		</dict>
+		<key>1A885A2FE0C6C2497F8A4780</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4004C44EFD7311F3AFA03BD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1AB8D584C31A49448F28756A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF9CB622ABA567FF2D554506</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F4F59CA63E8F55534CBBE89</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>NWLMultiLogger.h</string>
+			<string>SystemConfiguration.framework</string>
 			<key>path</key>
-			<string>Library/Printers/NWLMultiLogger.h</string>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>26259985736D4F54532672E0</key>
+		<key>2054919F3AE969A8AA889DDE</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>2707AF24DD93FC6A64104F20</key>
+		<key>206B100F9E213FE1417DA801</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>E94412365D78335CB0F24A63</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NOSwitch.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>274E3AA48FD8880EDD69D762</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLogging.h</string>
-			<key>path</key>
-			<string>Library/NWLogging.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2914F6256720E3E2D9681D52</key>
+		<key>20DA56707F2DA27A73674BD0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -413,13 +556,237 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>NOSwitchButtonCell.m</string>
+			<string>Pods-NC DNS Updater-AFNetworking-dummy.m</string>
 			<key>path</key>
-			<string>NOSwitch/NOSwitchButtonCell.m</string>
+			<string>../Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2ACD5CE7B611A51486AAA6F2</key>
+		<key>2183F79A62265FAF66047A11</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7792C27FBD42BB7830E3CCE5</string>
+				<string>E6ACAA5CF72549A83852E3EB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>23F741AD34B6F0C03203F33A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7674CE0D1B71825121478826</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2416E89994DB6742FFBDB7A5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>037E2A451866A1AB43F83A79</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24E6816A88359A1BE3923ED3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24F43A8B771A86378C41E97A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV-dummy.m</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>282313DC1735CE9A32FB2F18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28966054ABA7FEFBB1F0162D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>29D2C58B8B1911FF3732EEF8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>142B75F2B2BB7DB7D020D5E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>2A38326E6A07403253846F15</key>
+		<dict>
+			<key>fileRef</key>
+			<string>893A02DC142C1A9AC3D843E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2AA33737D41A129E6E44E3DF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLLineLogger.h</string>
+			<key>path</key>
+			<string>Library/Printers/NWLLineLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2C5D61A440043143D7F65613</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A42619C1CA07BABDAC584AA6</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater-NOSwitch</string>
+		</dict>
+		<key>2CE4F158AEDBA7809AF918E9</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D36216AF53445867FA97774D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6118709D1A1676E4DE68DB41</string>
+				<string>D987B30D54016A71A7DE4438</string>
+				<string>C3BF33231EFAF46982E58CED</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking</string>
+			<key>productReference</key>
+			<string>77D58DA65EB437F74FCF74E7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>2D3867F3CE092245496A2680</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DEA1E68CBCEF7CAE4AA7488B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-AFNetworking/Pods-NC DNS Updater Daemon-AFNetworking-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2E2BD7AD71F60F0FE6D969D0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8691E90FBCF52B65DDE81E43</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>2E553E4F68F78AD8CAB8E536</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -427,28 +794,200 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-AFNetworking.xcconfig</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-AFNetworking-Private.xcconfig</string>
+			<string>../Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2BDDFFA161976097CDD14088</key>
+		<key>2FB2DBA74F7890A87A8BF8D5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E1BD459E774FEC43860383EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>2FC5220EC7C7D217A5BD86B3</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>FA65D0852B3EC402989C0840</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging</string>
+		</dict>
+		<key>30F5C1F80BF36C24721AB789</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FB501C21BA3D1524071AA344</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>3178705E1118A54790632C33</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D35A846F104CB874E97A50C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>32259DC5FDC89FBFD112C536</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-AFNetworking-Private.xcconfig</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>33350603C881CDC93A3BA1C4</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5519E54EBB49D4DFCA54F783</string>
+				<string>51D95E3D6CE4ACEC66D8C519</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>339E106EBB299108A7A6142C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2D57A0116812194565554A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>33D104A3E4EA3EF64A4861A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7FC701992A72ACACC093FC6E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3427B4C1C9A3CD26D4317012</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3475B98AF5D040DA32ABFA06</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2183F79A62265FAF66047A11</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FAC425CBF42BFAFA833CC41D</string>
+				<string>A366AEAFDB8C4486C58EE7F9</string>
+				<string>70FECE53FD667C878FDF26DC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
+			<key>productReference</key>
+			<string>56B642AED4FEC8FBB5DBB7B9</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>3507EF90E5E016317F51C520</key>
+		<dict>
+			<key>fileRef</key>
+			<string>853E67CD7572364AFC3C3F52</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>360D3DA62D20BD5BFDA70025</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C56EC15D0389C17CAA4806AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>37A86B3EC619914829582A19</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>3DC77CA20297FC2DDC03C6D4</string>
-				<string>E9EFE769A6EB0C14FF514938</string>
-				<string>A1D3CD7CD3E6EE2531575085</string>
-				<string>084BC73FD87DD6A43F48B49A</string>
+				<string>881AFDB1A8D2EE0EA55E520E</string>
+				<string>4DE3510B4D741F9B7AA28B49</string>
+				<string>3427B4C1C9A3CD26D4317012</string>
+				<string>6354B1472C6EF98585DEED33</string>
+				<string>035211217D857ED3D87062A9</string>
+				<string>BC3C8EF6224598153EDF41E3</string>
+				<string>24F43A8B771A86378C41E97A</string>
+				<string>55176F9B9DF2B98EEB71075C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Serialization</string>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-NC DNS Updater Daemon-XMLReader-PPTV</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2CB7DAB67C36FA78EF19B5D3</key>
+		<key>37F927B04A33CF1C93BE4D6C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DC495D81C8C6739B5CD8E989</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>394DA34195FA9564EC8120CA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F4D22E547E9B98EEE638A0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3A75F6878B3445EC30473CBE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -457,11 +996,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-AFNetworking-prefix.pch</string>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2D868532639054FFDF0ACAA2</key>
+		<key>3B10D135A81F8FA25E48EF77</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -474,7 +1013,64 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2DCBAC318F1CC6CC7C9C8369</key>
+		<key>3DC24A4C65DD5682E8A6142B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D35B6D736E87AFCA6AF37F11</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>3DDD9EE60712291A90EE4B0A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E8DF5771292F6A5E90C1EBE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AEF03C58F59AF09B60EFDFA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>3EC19085EFDE43DE533DE8A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3FA64C5922269F450FA4EE50</key>
+		<dict>
+			<key>fileRef</key>
+			<string>512EEBEEFCD58036523DB971</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4004C44EFD7311F3AFA03BD2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -483,29 +1079,540 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>NWLPrinter.h</string>
+			<string>AFHTTPRequestOperation.h</string>
 			<key>path</key>
-			<string>Library/Printers/NWLPrinter.h</string>
+			<string>AFNetworking/AFHTTPRequestOperation.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>30E4F8564ED6A94FC361F99E</key>
+		<key>40991CD7FFE662CAAFA62A8C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text</string>
+			<string>text.script.sh</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-acknowledgements.markdown</string>
+			<string>Pods-NC DNS Updater Daemon-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>311CF426E9525D11CD11F667</key>
+		<key>42B02EAEAB8593AD7DCCD2D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFURLConnectionOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42DB676ECCA488AA37241C7F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>282313DC1735CE9A32FB2F18</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4325AE7DA2DDF464BBD6D352</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FC7C27BDCD04986B9DE09048</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>44CAAD12353DF4E8E747CA6C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater-NWLogging.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>45AED170EAF900F274D0255E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>037E2A451866A1AB43F83A79</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4718B315E12F623E6D9867BD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5C2B30F25AD3CC639C87474B</string>
+				<string>ADC1A4C3575BA3D02C90D7CF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>48BA417BE35787DE6E24568D</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>B5DADB56E600582201D02D6A</string>
+			<string>4DE3510B4D741F9B7AA28B49</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-XMLReader-PPTV/Pods-NC DNS Updater Daemon-XMLReader-PPTV-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>48F7941F6CA53950D23011C6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>59AD4F16E115DAA288D92226</string>
+				<string>206B100F9E213FE1417DA801</string>
+				<string>821C66A58C199DAB1B22B2C7</string>
+				<string>BE708C0022D1DC319D4B456A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>49F910C0951935F94B163F00</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4AD3D4B7843C5B69A39BC630</key>
+		<dict>
+			<key>fileRef</key>
+			<string>42B02EAEAB8593AD7DCCD2D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4C3B0678AB5048597BCF91DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>4FDFB25AFC1D521CD476F283</string>
+			<key>targetProxy</key>
+			<string>93B2DD9FF92778625D18CDB0</string>
+		</dict>
+		<key>4CA166E5236F152925A3E8E2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4004C44EFD7311F3AFA03BD2</string>
+				<string>EB20599CA0FC753CF92682C8</string>
+				<string>7F4D22E547E9B98EEE638A0A</string>
+				<string>7425B89FF57309A90724D430</string>
+				<string>42B02EAEAB8593AD7DCCD2D2</string>
+				<string>FC7C27BDCD04986B9DE09048</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>NSURLConnection</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4D6E7FA8A9CDB1F90E508462</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB20599CA0FC753CF92682C8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>4DE3510B4D741F9B7AA28B49</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F0B093A49834F845845FE2D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>3475B98AF5D040DA32ABFA06</string>
+			<key>targetProxy</key>
+			<string>BD3185680AEC2890983CE19D</string>
+		</dict>
+		<key>4F1F59DE4A5DE94FC1E8ED55</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFURLResponseSerialization.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFURLResponseSerialization.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FB7B05C5EFBDD8B21D5FF78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2D57A0116812194565554A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4FDFB25AFC1D521CD476F283</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DBA99E95C6C8EA617AF21AE7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>678E873BCB7423D39C13310A</string>
+				<string>48F7941F6CA53950D23011C6</string>
+				<string>F08B62901EEA28604E617CEF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-AFNetworking</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater-AFNetworking</string>
+			<key>productReference</key>
+			<string>91ACBA8A42748BDF80546338</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>50D27C13C2B5F6711985CAA5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5937DFE3F59628384C527FAC</string>
+				<string>9E50D11361C987985A845FBE</string>
+				<string>6360EC9B71BBFCD1E669FCE2</string>
+				<string>FEB01D3F13453D0D8D2D17BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-NC DNS Updater-NOSwitch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>50D6A3245D31213B4D6B85EC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>057920C0C0D2121CEFBA4114</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>512EEBEEFCD58036523DB971</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AFNetworkReachabilityManager.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworkReachabilityManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>516FAF34C2C82A99D6FEC18C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7425B89FF57309A90724D430</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>519D138715509D9F88CF5572</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>51D95E3D6CE4ACEC66D8C519</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BE6E641193EE6B0EC9206298</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>51FA266ACF8618B78DDC9037</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E94412365D78335CB0F24A63</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>524D3C6D04D5C295254A1682</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>52880B648AB106117B363FFC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F4D22E547E9B98EEE638A0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>52A2FF9E03DC1C1740D382F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>519D138715509D9F88CF5572</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>52FA90209078D87FA578F0B1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLLogView.h</string>
+			<key>path</key>
+			<string>Library/UI/NWLLogView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53018570972CB43D689F0DB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>54AE6192B281FD3289C4C3F3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8691E90FBCF52B65DDE81E43</string>
+				<string>AAF35D3EB31DCAF167A2AC48</string>
+				<string>F2D57A0116812194565554A7</string>
+				<string>FB501C21BA3D1524071AA344</string>
+				<string>2AA33737D41A129E6E44E3DF</string>
+				<string>FE8F423D7248A95CA6D5A96E</string>
+				<string>52FA90209078D87FA578F0B1</string>
+				<string>E1BD459E774FEC43860383EC</string>
+				<string>037E2A451866A1AB43F83A79</string>
+				<string>6D35A846F104CB874E97A50C</string>
+				<string>EAA956221085DCC5199E9A30</string>
+				<string>DC495D81C8C6739B5CD8E989</string>
+				<string>AEF03C58F59AF09B60EFDFA4</string>
+				<string>DF9CB622ABA567FF2D554506</string>
+				<string>7D3A6E294FDA2827A070F9B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>NWLogging</string>
+			<key>path</key>
+			<string>NWLogging</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>54D1E7E0E5F3206C3F693EF7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4004C44EFD7311F3AFA03BD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>54EB6F88AEE07219F6CCFFD4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA956221085DCC5199E9A30</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>55176F9B9DF2B98EEB71075C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5519E54EBB49D4DFCA54F783</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F548AA814BADA0847078267E</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -553,60 +1660,33 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>3472893D188A60FF6876B4B1</key>
+		<key>555BA2D456DD060765545CD9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NWLLineLogger.m</string>
+			<string>text</string>
 			<key>path</key>
-			<string>Library/Printers/NWLLineLogger.m</string>
+			<string>Pods-NC DNS Updater Daemon-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>34B64660ABD8CAD8D81A26A6</key>
+		<key>56B642AED4FEC8FBB5DBB7B9</key>
 		<dict>
-			<key>fileRef</key>
-			<string>FBB53C917C6179E9C1F1CC25</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>34FFBAB0F5524F5DBC9456FA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF1A51FB8C7F7606703D6B27</string>
-				<string>EBF96EAED3A6C3A6C6805C46</string>
-				<string>7751055AEEE2F04637AA1611</string>
-				<string>92152D14E68EC18DAA723127</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NC DNS Updater-NWLogging</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A580920348657AB1F17B400</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9721EDE2C34AC7F4656E0611</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
 			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater-XMLReader-PPTV.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>3A6DF72A65B783806B1D957E</key>
+		<key>5937DFE3F59628384C527FAC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -615,62 +1695,55 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater.release.xcconfig</string>
+			<string>Pods-NC DNS Updater-NOSwitch.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3B57EE2B1FDDC8BB81033A32</key>
+		<key>59AD4F16E115DAA288D92226</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AD20ECDFD210D64732B54F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C2B30F25AD3CC639C87474B</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>94556C2CDB9505FF2C68C593</string>
-				<string>84221C48758F7C5752B95662</string>
-				<string>96F63366016071DCACC1105B</string>
-				<string>5490C737CC691BB6E373776D</string>
-				<string>4C01FA7C5083ADD9106F8ACE</string>
+				<string>051A8545D19A81E5AC397D2A</string>
+				<string>3B10D135A81F8FA25E48EF77</string>
+				<string>999DF2BAE638C3539E7920EC</string>
+				<string>5AD20ECDFD210D64732B54F6</string>
+				<string>24E6816A88359A1BE3923ED3</string>
+				<string>524D3C6D04D5C295254A1682</string>
+				<string>3EC19085EFDE43DE533DE8A1</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Products</string>
+			<string>Pods-NC DNS Updater</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-NC DNS Updater</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3BCC831594196702F6C4A743</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D5E7A8039B2B147A8E3A2265</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>3C5E5E358C6897B1F453FE2C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9018E2E4CF44FCD0DA7E3035</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>3C839F1FBBB8E22B8CD184AD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2DCBAC318F1CC6CC7C9C8369</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3D8A8F0C3135C08712D45ECF</key>
+		<key>5F25EA176E469C86E225ECB1</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>EBF96EAED3A6C3A6C6805C46</string>
+			<string>D27DFA90C62BA164A3AB88F5</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -688,7 +1761,7 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-NWLogging/Pods-NC DNS Updater Daemon-NWLogging-prefix.pch</string>
 				<key>GCC_VERSION</key>
 				<string>com.apple.compilers.llvm.clang.1_0</string>
 				<key>INSTALL_PATH</key>
@@ -721,7 +1794,663 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>3DC77CA20297FC2DDC03C6D4</key>
+		<key>609F93AA6492444F92AAD451</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D355C4D29C088F4E9640DBFC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6118709D1A1676E4DE68DB41</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4D6E7FA8A9CDB1F90E508462</string>
+				<string>7E3EB5B0978EB6E9A5F977AB</string>
+				<string>29D2C58B8B1911FF3732EEF8</string>
+				<string>1928856F4644C16B7A8DF825</string>
+				<string>4325AE7DA2DDF464BBD6D352</string>
+				<string>0C156A0EB5EC72E4C8988AE9</string>
+				<string>16F0F95CD91AD84886C4723D</string>
+				<string>42DB676ECCA488AA37241C7F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>612866FB56495E72B3C13414</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D27DFA90C62BA164A3AB88F5</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-NWLogging/Pods-NC DNS Updater Daemon-NWLogging-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>62BA321AEDD53F26EB4684D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6354B1472C6EF98585DEED33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6360EC9B71BBFCD1E669FCE2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater-NOSwitch-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>638EF1578B4FBA61009B7D9C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CAEDD081CC3C2EEB71F2F742</string>
+				<string>027E00182C203C2293E929B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>65373949A6B40FEA67658CD3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>32259DC5FDC89FBFD112C536</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6681351DAC5E88316DE39459</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>678E873BCB7423D39C13310A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EC291EB1212ECC266A55B371</string>
+				<string>516FAF34C2C82A99D6FEC18C</string>
+				<string>A4F34CD55D66522CB5E4851D</string>
+				<string>FE6B0383BB9AFF76239C5912</string>
+				<string>B36A8FAE9BFB72B7FDC00D97</string>
+				<string>0016C695E16CCD8AF64897CB</string>
+				<string>B53FF9AA48453A9C6EDC30C9</string>
+				<string>CBB32109FDFBA6C4CBC40455</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6C268EECD399FE6AEAE02859</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C81FDEFBEB543668FE6936F1</string>
+				<string>D35B6D736E87AFCA6AF37F11</string>
+				<string>853E67CD7572364AFC3C3F52</string>
+				<string>A21C5E268D49BB5DE0F12B4C</string>
+				<string>50D27C13C2B5F6711985CAA5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>NOSwitch</string>
+			<key>path</key>
+			<string>NOSwitch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C337B8E2CEA63F53C73F495</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A73B15F9119B051FEF03409B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D933A0C1FE34A7F6BC566109</string>
+				<string>50D6A3245D31213B4D6B85EC</string>
+				<string>10EC432B375D4A3F798E83AB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NWLogging</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater-NWLogging</string>
+			<key>productReference</key>
+			<string>44CAAD12353DF4E8E747CA6C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>6D35A846F104CB874E97A50C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NWLMultiLogger.m</string>
+			<key>path</key>
+			<string>Library/Printers/NWLMultiLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6D98502E886A795A70D063F5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>893A02DC142C1A9AC3D843E6</string>
+				<string>F007843D1A74812A1B2DF032</string>
+				<string>7674CE0D1B71825121478826</string>
+				<string>4F1F59DE4A5DE94FC1E8ED55</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Serialization</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>701A614F0685453B0D3E6650</key>
+		<dict>
+			<key>fileRef</key>
+			<string>42B02EAEAB8593AD7DCCD2D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>70FECE53FD667C878FDF26DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E6DF86DD4427596E0D9932E9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>714C6D019EA4B6F5BF684D20</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A21C5E268D49BB5DE0F12B4C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>7373C44F9E90900223A42147</key>
+		<dict>
+			<key>fileRef</key>
+			<string>78CD6A63D415BEA58B480C8B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7425B89FF57309A90724D430</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFHTTPRequestOperationManager.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFHTTPRequestOperationManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7674CE0D1B71825121478826</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AFURLResponseSerialization.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFURLResponseSerialization.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7792C27FBD42BB7830E3CCE5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC3C8EF6224598153EDF41E3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>77D58DA65EB437F74FCF74E7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater Daemon-AFNetworking.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>78CD6A63D415BEA58B480C8B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>7CEFF48E1D850554E8E67EE7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>FA65D0852B3EC402989C0840</string>
+			<key>targetProxy</key>
+			<string>2FC5220EC7C7D217A5BD86B3</string>
+		</dict>
+		<key>7D3A6E294FDA2827A070F9B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F55F20B4A9C7C206D78C8980</string>
+				<string>D27DFA90C62BA164A3AB88F5</string>
+				<string>7FC701992A72ACACC093FC6E</string>
+				<string>3DDD9EE60712291A90EE4B0A</string>
+				<string>D4D9E8F596800168FD529B0C</string>
+				<string>13173A14D2264F780A20E91B</string>
+				<string>F2E33A18BDC1FCA8F84E5009</string>
+				<string>53018570972CB43D689F0DB7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-NC DNS Updater Daemon-NWLogging</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E3EB5B0978EB6E9A5F977AB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7425B89FF57309A90724D430</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>7F4D22E547E9B98EEE638A0A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AFHTTPRequestOperationManager.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFHTTPRequestOperationManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7FC701992A72ACACC093FC6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>801BFA76162EEAD83B2242F6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>62BA321AEDD53F26EB4684D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>81E141E3AB92478E89184283</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater Daemon.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>821C66A58C199DAB1B22B2C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>78CD6A63D415BEA58B480C8B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>85271521A765EA6ABFC5894D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>A42619C1CA07BABDAC584AA6</string>
+			<key>targetProxy</key>
+			<string>2C5D61A440043143D7F65613</string>
+		</dict>
+		<key>853E67CD7572364AFC3C3F52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NOSwitchButtonCell.h</string>
+			<key>path</key>
+			<string>NOSwitch/NOSwitchButtonCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85C663788FF6A25ED3E3FD11</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CD6AAF7DD59F30323F2F9098</string>
+				<string>4FB7B05C5EFBDD8B21D5FF78</string>
+				<string>A2B23B6EAB10881B6E9DC6F9</string>
+				<string>166BD335B2C9244052526A56</string>
+				<string>2416E89994DB6742FFBDB7A5</string>
+				<string>BE11C69608B1CACFDB018245</string>
+				<string>37F927B04A33CF1C93BE4D6C</string>
+				<string>DC2111942411AC2C520B0B89</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>86075289266E64C2FFFFD68E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-AFNetworking-prefix.pch</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8691E90FBCF52B65DDE81E43</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NWLCore.c</string>
+			<key>path</key>
+			<string>Library/Core/NWLCore.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>86A505E72F75A1D144475448</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DFA7F2ED5B2BB83BD070DDF3</string>
+				<string>ECB1D5B766B401C26F564CFF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>86ECDE3F182F3CC644CFB571</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater-NOSwitch.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>870D2593A5AD2CCEDADE564C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>0E39DB5436BB117F907F3329</string>
+			<key>targetProxy</key>
+			<string>A16251F5EE3A3A60B14851C8</string>
+		</dict>
+		<key>881AFDB1A8D2EE0EA55E520E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>893A02DC142C1A9AC3D843E6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -736,75 +2465,28 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>42D574BF8C86E08C6E47D2F7</key>
+		<key>8D6543A74BF599DA6486CA5C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FBB53C917C6179E9C1F1CC25</string>
+			<string>24F43A8B771A86378C41E97A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>47936738F22EC7CE4A5B7D7C</key>
+		<key>8F85665855323EB412781E5F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9EEBFA5DBB2BC1B2B56BAE17</string>
+			<string>C820A87770B3936E97BC1B7E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>49A0D7E02CBA50FE25AF6C55</key>
+		<key>908A36010E17F2EC15CE84B0</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>26259985736D4F54532672E0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>4C01FA7C5083ADD9106F8ACE</key>
+		<key>91ACBA8A42748BDF80546338</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -813,394 +2495,11 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>libPods-NC DNS Updater-XMLReader-PPTV.a</string>
+			<string>libPods-NC DNS Updater-AFNetworking.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>4D9778CBC28BC540CA33B8FE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5BDA06C750A61FABCB423079</string>
-				<string>AE060621C734A74A3CEC3412</string>
-				<string>6DDC884FD1D734B357F7DE64</string>
-				<string>3B57EE2B1FDDC8BB81033A32</string>
-				<string>AAD8EA4BD4F4448ADB4DC3A2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F4FF9241C0050ADA7035F08</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-AFNetworking.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5216CB6ECDD3627DA8B60404</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>96F51EAD26ED7F69CA2BD1B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5428C1C61588EFF2AAF23036</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3A6DF72A65B783806B1D957E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5490C737CC691BB6E373776D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NC DNS Updater-NWLogging.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>58234EE01B72ED4215AC9F6F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2914F6256720E3E2D9681D52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>58D5937767A643ABF0BEC65B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2707AF24DD93FC6A64104F20</string>
-				<string>8AD5469272925ED1D70579DE</string>
-				<string>64E73783D701052BB7731F7C</string>
-				<string>012758A5974945C202AC5AB1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NC DNS Updater-NOSwitch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5BDA06C750A61FABCB423079</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>5C51F9A0965E01C5A7F67335</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E9EFE769A6EB0C14FF514938</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>5C91A7F15E861A2F46865A9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AFURLConnectionOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFURLConnectionOperation.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E3FF5FB69663CA71562FE02</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9646E153907458164F5E5B91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>623EA3845DCC5065F53C1AA7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE27C56418E49AB9BE1867E2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>63F7FB3CB75A32EDE9D55E3F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D893EBF6551D0CD5BA5110B0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0AC3DDBD2FCC5D303D6E7283</string>
-				<string>7310F0A5C32C9AE646F729EE</string>
-				<string>6E93E8FD5BC4ED13770189E8</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater-NOSwitch</string>
-			<key>productName</key>
-			<string>Pods-NC DNS Updater-NOSwitch</string>
-			<key>productReference</key>
-			<string>96F63366016071DCACC1105B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>64E73783D701052BB7731F7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NOSwitch-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>669F39323621FBAD70D8A035</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3DC77CA20297FC2DDC03C6D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>670370BD0F0CC20C039DAF7B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A508136012C0B6412766F907</string>
-				<string>5E3FF5FB69663CA71562FE02</string>
-				<string>8E73B546CF767CBDD30BE8C3</string>
-				<string>FDC163CA6AAE2AFBC0BB8D11</string>
-				<string>7974C50300C84E3FD4B6AF8F</string>
-				<string>3C839F1FBBB8E22B8CD184AD</string>
-				<string>47936738F22EC7CE4A5B7D7C</string>
-				<string>F40A65671A58A4962A729855</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>67A1BB034F428CFFD8EDFD64</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A2446C6B51855090DE452B6F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>DDCF4B9BCFBBC3B1869238EB</string>
-				<string>DB5B465539377F73F83ADE45</string>
-				<string>670370BD0F0CC20C039DAF7B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater-NWLogging</string>
-			<key>productName</key>
-			<string>Pods-NC DNS Updater-NWLogging</string>
-			<key>productReference</key>
-			<string>5490C737CC691BB6E373776D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>67C129812B5D2B247976D331</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D4D52D912B5BEC6B650AAE85</string>
-				<string>CCBCCA994DBE1822507CA06A</string>
-				<string>A66691A329AA78EB296A3B88</string>
-				<string>80192F8F009E17FDD20A2D83</string>
-				<string>1C0AA526D21B4360E656DBF8</string>
-				<string>669F39323621FBAD70D8A035</string>
-				<string>71B10C3D0979FBAFBC6C05B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>689EFF15C72E585FB35EE3BF</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EF70B001774F0D5D08966E22</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5216CB6ECDD3627DA8B60404</string>
-				<string>08F76900A4F67C99AD2D96D4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>A455837215BC488CA6D83251</string>
-				<string>11A6B6BB98F31479F7CE3108</string>
-				<string>0B98130B8E205F16BC5D7AC7</string>
-				<string>A6B52EE309AC7F1057AEED8D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater</string>
-			<key>productName</key>
-			<string>Pods-NC DNS Updater</string>
-			<key>productReference</key>
-			<string>94556C2CDB9505FF2C68C593</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>6C5DB305AFF50DA8B6EC6921</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FBB53C917C6179E9C1F1CC25</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6DDC884FD1D734B357F7DE64</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B2981F6E9A6BD9BDD437D2A1</string>
-				<string>D580A0935F058A847869FBD0</string>
-				<string>0FD4407F2B89DDA8B6E1BAAB</string>
-				<string>B97AC30389C5996A382FDCF2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6E93E8FD5BC4ED13770189E8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>246160F8F47056CFC932B167</string>
-				<string>1E1AF02A3B8661550437AB07</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6EE0E35205D962DC2E159676</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8826933F9EBD3D9D7E9891D0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>71B10C3D0979FBAFBC6C05B7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1D3CD7CD3E6EE2531575085</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>71D3DF5FC7512089816B48B8</key>
+		<key>9282BBC767524157F63FFF44</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1215,36 +2514,102 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7310F0A5C32C9AE646F729EE</key>
+		<key>93B2DD9FF92778625D18CDB0</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>4FDFB25AFC1D521CD476F283</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater-AFNetworking</string>
+		</dict>
+		<key>95C930BA92B582B50C1284F0</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>13173A14D2264F780A20E91B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>96D709D1E7552500C2538F8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7674CE0D1B71825121478826</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>974157433048F0D444110892</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>6C5DB305AFF50DA8B6EC6921</string>
+				<string>2E2BD7AD71F60F0FE6D969D0</string>
+				<string>0208260A3D055884D8D1C3F6</string>
+				<string>E48204DB0F3E0D1833C5D750</string>
+				<string>2FB2DBA74F7890A87A8BF8D5</string>
+				<string>3178705E1118A54790632C33</string>
+				<string>9943825C36770C0A530A7A45</string>
+				<string>33D104A3E4EA3EF64A4861A0</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
+			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>7751055AEEE2F04637AA1611</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NWLogging-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78360C49C0DE2C6081B8A0D7</key>
+		<key>9943825C36770C0A530A7A45</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9ADA8A39EA7035A236E18058</string>
+			<string>AEF03C58F59AF09B60EFDFA4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1253,124 +2618,27 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>7974C50300C84E3FD4B6AF8F</key>
+		<key>9977BBF098B5E5F01D7355B2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2609B8B979D91C8143574B30</string>
+			<string>52FA90209078D87FA578F0B1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>79E01014C4B0E89EA765B21D</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7C3081F34F6DBB3CA52B6B06</key>
+		<key>999DF2BAE638C3539E7920EC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-environment.h</string>
+			<string>Pods-NC DNS Updater-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7C3E083FF95A1C595ED07232</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D2D364E09D64839D7909D5D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFHTTPRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>80192F8F009E17FDD20A2D83</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF09F200CF9A60A991408D46</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>84221C48758F7C5752B95662</key>
+		<key>9B00329EAF7B2BBA6B87A0BA</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1379,84 +2647,11 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>libPods-NC DNS Updater-AFNetworking.a</string>
+			<string>libPods-NC DNS Updater Daemon-NWLogging.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>863860E690FFB3FE8653EA3C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>78360C49C0DE2C6081B8A0D7</string>
-				<string>1D67AB623322308D1A063546</string>
-				<string>ABA01918097015C1DD02AFC3</string>
-				<string>FDAC97BBB79A6C02CFFE08AE</string>
-				<string>E9A5584F1893AA76299CAC62</string>
-				<string>5C51F9A0965E01C5A7F67335</string>
-				<string>B658754BDEEDA16304EA798D</string>
-				<string>623EA3845DCC5065F53C1AA7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>864AD67C4A84EB6B4362CFDF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NOSwitchButton.m</string>
-			<key>path</key>
-			<string>NOSwitch/NOSwitchButton.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>87F784B5C54EF59F83219D9A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8826933F9EBD3D9D7E9891D0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8914E247FB42B5F836A7E3ED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B111ABCC20206F17990E7B03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>8AD5469272925ED1D70579DE</key>
+		<key>9E50D11361C987985A845FBE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1469,10 +2664,189 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8B1043692456A92A8FC8141D</key>
+		<key>A05496333FB4510BC458E441</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D355C4D29C088F4E9640DBFC</string>
+				<string>D77A12AD9ACEAC5F863C451A</string>
+				<string>37A86B3EC619914829582A19</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>XMLReader-PPTV</string>
+			<key>path</key>
+			<string>XMLReader-PPTV</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A16251F5EE3A3A60B14851C8</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0E39DB5436BB117F907F3329</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater Daemon-XMLReader-PPTV</string>
+		</dict>
+		<key>A21C5E268D49BB5DE0F12B4C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NOSwitchButtonCell.m</string>
+			<key>path</key>
+			<string>NOSwitch/NOSwitchButtonCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A231216A26DE3FEEC0815435</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>49F910C0951935F94B163F00</string>
+				<string>DEA1E68CBCEF7CAE4AA7488B</string>
+				<string>282313DC1735CE9A32FB2F18</string>
+				<string>3A75F6878B3445EC30473CBE</string>
+				<string>2E553E4F68F78AD8CAB8E536</string>
+				<string>32259DC5FDC89FBFD112C536</string>
+				<string>20DA56707F2DA27A73674BD0</string>
+				<string>86075289266E64C2FFFFD68E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-NC DNS Updater Daemon-AFNetworking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A294EAA7493FB4D0C1F4F4A2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0A3598A559D3A9409F48C7ED</string>
+				<string>3507EF90E5E016317F51C520</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A2B23B6EAB10881B6E9DC6F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2AA33737D41A129E6E44E3DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A366AEAFDB8C4486C58EE7F9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8F85665855323EB412781E5F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A42619C1CA07BABDAC584AA6</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>EF7E15ED416570C87516E154</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EC90286D139E49BBEE978C18</string>
+				<string>360D3DA62D20BD5BFDA70025</string>
+				<string>A294EAA7493FB4D0C1F4F4A2</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NOSwitch</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater-NOSwitch</string>
+			<key>productReference</key>
+			<string>86ECDE3F182F3CC644CFB571</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>A4F34CD55D66522CB5E4851D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>142B75F2B2BB7DB7D020D5E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>A5C384F8FFE292DAE2D2793B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>33350603C881CDC93A3BA1C4</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A8694EF6FEB7C532AEC41BFB</string>
+				<string>B2E6164AB23C4D25AE40D379</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>F373B1788C0EF25CD0AC112B</string>
+				<string>7CEFF48E1D850554E8E67EE7</string>
+				<string>870D2593A5AD2CCEDADE564C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater Daemon</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater Daemon</string>
+			<key>productReference</key>
+			<string>81E141E3AB92478E89184283</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>A5E608A81C16C29D00654ACA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A65134A8E146BF316DF7CAD5</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>8AD5469272925ED1D70579DE</string>
+			<string>9E50D11361C987985A845FBE</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1522,14 +2896,213 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>8E73B546CF767CBDD30BE8C3</key>
+		<key>A684BDE9A11A35F723E464F9</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>86A505E72F75A1D144475448</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>0953A78220103781DDD1C988</string>
+			<key>productRefGroup</key>
+			<string>F2B667E59B7185F31F823AF2</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>02604E0E3566157BACADB4D3</string>
+				<string>A5C384F8FFE292DAE2D2793B</string>
+				<string>2CE4F158AEDBA7809AF918E9</string>
+				<string>FA65D0852B3EC402989C0840</string>
+				<string>0E39DB5436BB117F907F3329</string>
+				<string>4FDFB25AFC1D521CD476F283</string>
+				<string>A42619C1CA07BABDAC584AA6</string>
+				<string>6C337B8E2CEA63F53C73F495</string>
+				<string>3475B98AF5D040DA32ABFA06</string>
+			</array>
+		</dict>
+		<key>A701D000DC1C95DE4F9C8808</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>13173A14D2264F780A20E91B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A73B15F9119B051FEF03409B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>95C930BA92B582B50C1284F0</string>
+				<string>A701D000DC1C95DE4F9C8808</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A743618C4A04592F74446377</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F68A926E1CBB52371B41A99B</string>
+			<string>DC495D81C8C6739B5CD8E989</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9018E2E4CF44FCD0DA7E3035</key>
+		<key>A8142371662E9BC26C098F30</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D77A12AD9ACEAC5F863C451A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>A8694EF6FEB7C532AEC41BFB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>52A2FF9E03DC1C1740D382F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A93CA541555FA8F6F5E0977F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AA6ED9027F8F50A0C5AE4C91</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>2CE4F158AEDBA7809AF918E9</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking</string>
+		</dict>
+		<key>AAF35D3EB31DCAF167A2AC48</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLCore.h</string>
+			<key>path</key>
+			<string>Library/Core/NWLCore.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADC1A4C3575BA3D02C90D7CF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>555BA2D456DD060765545CD9</string>
+				<string>A93CA541555FA8F6F5E0977F</string>
+				<string>519D138715509D9F88CF5572</string>
+				<string>BBD296E4F97D05FB15532C64</string>
+				<string>40991CD7FFE662CAAFA62A8C</string>
+				<string>F548AA814BADA0847078267E</string>
+				<string>BE6E641193EE6B0EC9206298</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater Daemon</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-NC DNS Updater Daemon</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AEF03C58F59AF09B60EFDFA4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1538,267 +3111,36 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>NWLLogView.m</string>
+			<string>NWLTools.m</string>
 			<key>path</key>
-			<string>Library/UI/NWLLogView.m</string>
+			<string>Library/Printers/NWLTools.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>92152D14E68EC18DAA723127</key>
+		<key>B23723426E8DF11D452E6C8C</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NWLogging-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>94556C2CDB9505FF2C68C593</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NC DNS Updater.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>95130FCC2A363A40061361C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>XMLReader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95810D07EE1ECE5D941A083B</key>
+		<key>B2E6164AB23C4D25AE40D379</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>FE135CF8214A2A98DAA1A882</string>
+				<string>6681351DAC5E88316DE39459</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9609A7CBB06E1069E9D9E247</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D65C16A7FE1CE1DA6AE70F4A</string>
-				<string>79E01014C4B0E89EA765B21D</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>9646E153907458164F5E5B91</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLFilePrinter.h</string>
-			<key>path</key>
-			<string>Library/Printers/NWLFilePrinter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>965814CC92E27B731DD8E10E</key>
+		<key>B36A8FAE9BFB72B7FDC00D97</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FBB53C917C6179E9C1F1CC25</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96F51EAD26ED7F69CA2BD1B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C01CD66AF6F330D5FB277011</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96F63366016071DCACC1105B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-NC DNS Updater-NOSwitch.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9721EDE2C34AC7F4656E0611</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95130FCC2A363A40061361C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9ADA2D15C3E8C3510CC5AA7B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FF09F200CF9A60A991408D46</string>
-				<string>71D3DF5FC7512089816B48B8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Security</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9ADA8A39EA7035A236E18058</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFHTTPRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9EEBFA5DBB2BC1B2B56BAE17</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLTools.h</string>
-			<key>path</key>
-			<string>Library/Printers/NWLTools.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A10BB3944DB5F1D0FBCB8B73</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>87F784B5C54EF59F83219D9A</string>
-				<string>26259985736D4F54532672E0</string>
-				<string>028E50B660B0A1113B234317</string>
-				<string>C93CFA6010E757B9BD10E603</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NC DNS Updater-XMLReader-PPTV</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1D3CD7CD3E6EE2531575085</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AFURLResponseSerialization.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFURLResponseSerialization.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2446C6B51855090DE452B6F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B7989DDD44F0DBB45BBEC534</string>
-				<string>3D8A8F0C3135C08712D45ECF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A455837215BC488CA6D83251</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>2405AF607D1688EA88EC7E92</string>
-			<key>targetProxy</key>
-			<string>B3E74ADE6E62A7687B6E3CD5</string>
-		</dict>
-		<key>A508136012C0B6412766F907</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F056D56E90B69BF894D1F44F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A66691A329AA78EB296A3B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE82A5D838D1D37073CED06A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A6B52EE309AC7F1057AEED8D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>D1E56181B9E83E7839DE031A</string>
-			<key>targetProxy</key>
-			<string>1452D56E4635DEDCE44E98B1</string>
-		</dict>
-		<key>AAD8EA4BD4F4448ADB4DC3A2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C571B41C903FB927665F43E6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ABA01918097015C1DD02AFC3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B9690852BBA758AAB344E036</string>
+			<string>FC7C27BDCD04986B9DE09048</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1807,33 +3149,294 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>AD938E5A3A9B0C31DC95974D</key>
+		<key>B3F767FF5AC45EED51352C85</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9E50D11361C987985A845FBE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-NOSwitch/Pods-NC DNS Updater-NOSwitch-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B53FF9AA48453A9C6EDC30C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4F1F59DE4A5DE94FC1E8ED55</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>B9B630E7DF2805A80711002F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2AA33737D41A129E6E44E3DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BB4464EE0B669CB6143CFFC2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>512EEBEEFCD58036523DB971</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BBD296E4F97D05FB15532C64</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreServices.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework</string>
+			<string>Pods-NC DNS Updater Daemon-environment.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AE060621C734A74A3CEC3412</key>
+		<key>BC3C8EF6224598153EDF41E3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV-Private.xcconfig</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD3185680AEC2890983CE19D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>3475B98AF5D040DA32ABFA06</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
+		</dict>
+		<key>BD60E3B4D5000070E9B1C9C8</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>F12C0B78C500473950812849</string>
+				<string>512EEBEEFCD58036523DB971</string>
+				<string>142B75F2B2BB7DB7D020D5E9</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>Reachability</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AF0DACA5540FDF5578ED368F</key>
+		<key>BE11C69608B1CACFDB018245</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EAA956221085DCC5199E9A30</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6E641193EE6B0EC9206298</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE708C0022D1DC319D4B456A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F4F59CA63E8F55534CBBE89</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BECC499E8FCBC93CD9712B93</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E1BD459E774FEC43860383EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>C180DEF2BB15FB7EBD2E836E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3EC19085EFDE43DE533DE8A1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C3BF33231EFAF46982E58CED</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1A885A2FE0C6C2497F8A4780</string>
+				<string>394DA34195FA9564EC8120CA</string>
+				<string>3FA64C5922269F450FA4EE50</string>
+				<string>FC04E92613F5A3BB909D72AF</string>
+				<string>4AD3D4B7843C5B69A39BC630</string>
+				<string>1273AD3D5A5A735557A50749</string>
+				<string>96D709D1E7552500C2538F8C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C56EC15D0389C17CAA4806AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C820A87770B3936E97BC1B7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C66CE76740059DC7731D3821</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AFSecurityPolicy.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFSecurityPolicy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C69B14CAD524E26C2D5FED4B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>609F93AA6492444F92AAD451</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C742BFA33CF1BA1F2E97EDA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>999DF2BAE638C3539E7920EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C81FDEFBEB543668FE6936F1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1848,120 +3451,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B111ABCC20206F17990E7B03</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NWLMultiLogger.m</string>
-			<key>path</key>
-			<string>Library/Printers/NWLMultiLogger.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2462CE53D37C977484CFC56</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D2D364E09D64839D7909D5D</string>
-				<string>9ADA8A39EA7035A236E18058</string>
-				<string>E7957C3AD67206208D2B686E</string>
-				<string>09DA4AA6DBBCFE5C9F4F99F1</string>
-				<string>EA2944EF3125700F2A7C95D3</string>
-				<string>5C91A7F15E861A2F46865A9D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NSURLConnection</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2981F6E9A6BD9BDD437D2A1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B2462CE53D37C977484CFC56</string>
-				<string>C07F4DCD8DD220C87AEBE9DC</string>
-				<string>9ADA2D15C3E8C3510CC5AA7B</string>
-				<string>2BDDFFA161976097CDD14088</string>
-				<string>D1085B66350DAED44A0F7C36</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>AFNetworking</string>
-			<key>path</key>
-			<string>AFNetworking</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B36EA150E9671BD4DF3D41CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7751055AEEE2F04637AA1611</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3E74ADE6E62A7687B6E3CD5</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F1A122F26C405BE534E8FA47</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>2405AF607D1688EA88EC7E92</string>
-			<key>remoteInfo</key>
-			<string>Pods-NC DNS Updater-AFNetworking</string>
-		</dict>
-		<key>B5461F4F473F3732103DE4AB</key>
+		<key>C820A87770B3936E97BC1B7E</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Security.framework</string>
+			<string>Cocoa.framework</string>
 			<key>path</key>
-			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework</string>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>B5DADB56E600582201D02D6A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B658754BDEEDA16304EA798D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>084BC73FD87DD6A43F48B49A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>B7989DDD44F0DBB45BBEC534</key>
+		<key>C9B47AA23D432832D38468FE</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>EBF96EAED3A6C3A6C6805C46</string>
+			<string>4DE3510B4D741F9B7AA28B49</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1981,7 +3487,7 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-prefix.pch</string>
+				<string>Target Support Files/Pods-NC DNS Updater Daemon-XMLReader-PPTV/Pods-NC DNS Updater Daemon-XMLReader-PPTV-prefix.pch</string>
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<array>
 					<string>DEBUG=1</string>
@@ -2011,73 +3517,62 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>B9690852BBA758AAB344E036</key>
+		<key>C9CD8DF4679FABDB1E94B6EA</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>containerPortal</key>
+			<string>A684BDE9A11A35F723E464F9</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AFNetworkReachabilityManager.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworkReachabilityManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>6C337B8E2CEA63F53C73F495</string>
+			<key>remoteInfo</key>
+			<string>Pods-NC DNS Updater-NWLogging</string>
 		</dict>
-		<key>B97AC30389C5996A382FDCF2</key>
+		<key>CAEDD081CC3C2EEB71F2F742</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3427B4C1C9A3CD26D4317012</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CBB32109FDFBA6C4CBC40455</key>
+		<dict>
+			<key>fileRef</key>
+			<string>20DA56707F2DA27A73674BD0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CC64E5ADC1372D5779E5B600</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>95130FCC2A363A40061361C3</string>
-				<string>04137FA4C22ABE8FFC6E0017</string>
-				<string>A10BB3944DB5F1D0FBCB8B73</string>
+				<string>C820A87770B3936E97BC1B7E</string>
+				<string>E94412365D78335CB0F24A63</string>
+				<string>78CD6A63D415BEA58B480C8B</string>
+				<string>1F4F59CA63E8F55534CBBE89</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>XMLReader-PPTV</string>
-			<key>path</key>
-			<string>XMLReader-PPTV</string>
+			<string>OS X</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BC001DD39CF6BA548B208628</key>
+		<key>CD6AAF7DD59F30323F2F9098</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>42D574BF8C86E08C6E47D2F7</string>
-				<string>07C3D116EDD137BA372FCC1A</string>
-				<string>F0F16F9888DEDAFE688901EF</string>
-				<string>6EE0E35205D962DC2E159676</string>
-			</array>
+			<key>fileRef</key>
+			<string>AAF35D3EB31DCAF167A2AC48</string>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>BF1A51FB8C7F7606703D6B27</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NWLogging.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BFDD199BA847BCD40361F1D0</key>
+		<key>CDAE791DE810CE4B3112B87A</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>FD87186E536281D302BB8D2A</string>
-				<string>49A0D7E02CBA50FE25AF6C55</string>
+				<string>612866FB56495E72B3C13414</string>
+				<string>5F25EA176E469C86E225ECB1</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -2086,55 +3581,27 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>C01CD66AF6F330D5FB277011</key>
+		<key>D27DFA90C62BA164A3AB88F5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-dummy.m</string>
+			<string>Pods-NC DNS Updater Daemon-NWLogging-Private.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C07F4DCD8DD220C87AEBE9DC</key>
+		<key>D295E036339241771A8BA9F7</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>FE82A5D838D1D37073CED06A</string>
-				<string>B9690852BBA758AAB344E036</string>
-			</array>
+			<key>fileRef</key>
+			<string>C66CE76740059DC7731D3821</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Reachability</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>C571B41C903FB927665F43E6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>30E4F8564ED6A94FC361F99E</string>
-				<string>2D868532639054FFDF0ACAA2</string>
-				<string>C01CD66AF6F330D5FB277011</string>
-				<string>7C3081F34F6DBB3CA52B6B06</string>
-				<string>7C3E083FF95A1C595ED07232</string>
-				<string>B5DADB56E600582201D02D6A</string>
-				<string>3A6DF72A65B783806B1D957E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-NC DNS Updater</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C93CFA6010E757B9BD10E603</key>
+		<key>D355C4D29C088F4E9640DBFC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2143,99 +3610,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
+			<string>XMLReader.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CAA7EC848697DC5648342498</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0458D2CAB8A9954EB57D8C7B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>CCBCCA994DBE1822507CA06A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E7957C3AD67206208D2B686E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D1085B66350DAED44A0F7C36</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F4FF9241C0050ADA7035F08</string>
-				<string>2ACD5CE7B611A51486AAA6F2</string>
-				<string>FE27C56418E49AB9BE1867E2</string>
-				<string>2CB7DAB67C36FA78EF19B5D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-NC DNS Updater-AFNetworking</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D1E56181B9E83E7839DE031A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>BFDD199BA847BCD40361F1D0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0C654B4B0198A5FF0E0E59A7</string>
-				<string>95810D07EE1ECE5D941A083B</string>
-				<string>3A580920348657AB1F17B400</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
-			<key>productName</key>
-			<string>Pods-NC DNS Updater-XMLReader-PPTV</string>
-			<key>productReference</key>
-			<string>4C01FA7C5083ADD9106F8ACE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>D4D52D912B5BEC6B650AAE85</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D2D364E09D64839D7909D5D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D580A0935F058A847869FBD0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AF0DACA5540FDF5578ED368F</string>
-				<string>864AD67C4A84EB6B4362CFDF</string>
-				<string>D8F71747036256D124DBEDF5</string>
-				<string>2914F6256720E3E2D9681D52</string>
-				<string>58D5937767A643ABF0BEC65B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NOSwitch</string>
-			<key>path</key>
-			<string>NOSwitch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5E7A8039B2B147A8E3A2265</key>
+		<key>D35B6D736E87AFCA6AF37F11</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2244,13 +3623,161 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>NWLTools.m</string>
+			<string>NOSwitchButton.m</string>
 			<key>path</key>
-			<string>Library/Printers/NWLTools.m</string>
+			<string>NOSwitch/NOSwitchButton.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D65C16A7FE1CE1DA6AE70F4A</key>
+		<key>D36216AF53445867FA97774D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>00DE7279184E784F41C9C23A</string>
+				<string>2D3867F3CE092245496A2680</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D43D576116ED523F45E92836</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6360EC9B71BBFCD1E669FCE2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D4D9E8F596800168FD529B0C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NWLogging.xcconfig</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D77A12AD9ACEAC5F863C451A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XMLReader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D933A0C1FE34A7F6BC566109</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>00A3CD77CB36512143897C72</string>
+				<string>30F5C1F80BF36C24721AB789</string>
+				<string>08EC1598716AEBE87E7C441D</string>
+				<string>BECC499E8FCBC93CD9712B93</string>
+				<string>090F883E3EE6108B2AE7410D</string>
+				<string>3E8DF5771292F6A5E90C1EBE</string>
+				<string>114B819FD497D681571A04FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D987B30D54016A71A7DE4438</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B23723426E8DF11D452E6C8C</string>
+				<string>51FA266ACF8618B78DDC9037</string>
+				<string>7373C44F9E90900223A42147</string>
+				<string>033C5E3BB6FDBDC0A0C1B850</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DBA99E95C6C8EA617AF21AE7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>14822C78815D7B7414B30F5A</string>
+				<string>65373949A6B40FEA67658CD3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DC2111942411AC2C520B0B89</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF9CB622ABA567FF2D554506</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DC495D81C8C6739B5CD8E989</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLTools.h</string>
+			<key>path</key>
+			<string>Library/Printers/NWLTools.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEA1E68CBCEF7CAE4AA7488B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-AFNetworking-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DF9CB622ABA567FF2D554506</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLogging.h</string>
+			<key>path</key>
+			<string>Library/NWLogging.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFA7F2ED5B2BB83BD070DDF3</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -2317,66 +3844,12 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>D7A061172CCDC3EF432432A6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8AD5469272925ED1D70579DE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-NOSwitch/Pods-NC DNS Updater-NOSwitch-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D893EBF6551D0CD5BA5110B0</key>
+		<key>E0D45F80AC918035E451C563</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>8B1043692456A92A8FC8141D</string>
-				<string>D7A061172CCDC3EF432432A6</string>
+				<string>EA484D5EBF47ECD6AB7D5744</string>
+				<string>C180DEF2BB15FB7EBD2E836E</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -2385,187 +3858,7 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>D8F71747036256D124DBEDF5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NOSwitchButtonCell.h</string>
-			<key>path</key>
-			<string>NOSwitch/NOSwitchButtonCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB5B465539377F73F83ADE45</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>965814CC92E27B731DD8E10E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DDCF4B9BCFBBC3B1869238EB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F82887D3BE13B93CA686A141</string>
-				<string>CAA7EC848697DC5648342498</string>
-				<string>EEF7CD402262CFB9995D71B5</string>
-				<string>3C5E5E358C6897B1F453FE2C</string>
-				<string>8914E247FB42B5F836A7E3ED</string>
-				<string>3BCC831594196702F6C4A743</string>
-				<string>B36EA150E9671BD4DF3D41CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DE4AC04B35D48A5E9844B5F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NWLCore.c</string>
-			<key>path</key>
-			<string>Library/Core/NWLCore.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E47F43ABE796743F5ADB5667</key>
-		<dict>
-			<key>fileRef</key>
-			<string>864AD67C4A84EB6B4362CFDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E4A7C8EF927E26C76E8D1804</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2ACD5CE7B611A51486AAA6F2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-AFNetworking/Pods-NC DNS Updater-AFNetworking-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E500A792477DBC328061669D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLLogView.h</string>
-			<key>path</key>
-			<string>Library/UI/NWLLogView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E55D56E77D65552C15286442</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04137FA4C22ABE8FFC6E0017</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E7957C3AD67206208D2B686E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperationManager.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFHTTPRequestOperationManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E9A5584F1893AA76299CAC62</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C91A7F15E861A2F46865A9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>E9EFE769A6EB0C14FF514938</key>
+		<key>E1BD459E774FEC43860383EC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2574,44 +3867,29 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>AFURLRequestSerialization.m</string>
+			<string>NWLLogView.m</string>
 			<key>path</key>
-			<string>AFNetworking/AFURLRequestSerialization.m</string>
+			<string>Library/UI/NWLLogView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EA2944EF3125700F2A7C95D3</key>
+		<key>E31447EC19638B99940D443F</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2054919F3AE969A8AA889DDE</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AFURLConnectionOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFURLConnectionOperation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>EBF96EAED3A6C3A6C6805C46</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-NC DNS Updater-NWLogging-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EEF7CD402262CFB9995D71B5</key>
+		<key>E48204DB0F3E0D1833C5D750</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3472893D188A60FF6876B4B1</string>
+			<string>FE8F423D7248A95CA6D5A96E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2620,169 +3898,84 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>EF70B001774F0D5D08966E22</key>
+		<key>E6ACAA5CF72549A83852E3EB</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>311CF426E9525D11CD11F667</string>
-				<string>5428C1C61588EFF2AAF23036</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
+			<key>baseConfigurationReference</key>
+			<string>BC3C8EF6224598153EDF41E3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
 			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
-		<key>F056D56E90B69BF894D1F44F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLCore.h</string>
-			<key>path</key>
-			<string>Library/Core/NWLCore.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0F16F9888DEDAFE688901EF</key>
+		<key>E6DF86DD4427596E0D9932E9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B5461F4F473F3732103DE4AB</string>
+			<string>D355C4D29C088F4E9640DBFC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F12C0B78C500473950812849</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FBB53C917C6179E9C1F1CC25</string>
-				<string>AD938E5A3A9B0C31DC95974D</string>
-				<string>B5461F4F473F3732103DE4AB</string>
-				<string>8826933F9EBD3D9D7E9891D0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>OS X</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F133CE632FE5D2C2C73C8021</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F1A122F26C405BE534E8FA47</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>63F7FB3CB75A32EDE9D55E3F</string>
-			<key>remoteInfo</key>
-			<string>Pods-NC DNS Updater-NOSwitch</string>
-		</dict>
-		<key>F1A122F26C405BE534E8FA47</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>9609A7CBB06E1069E9D9E247</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>4D9778CBC28BC540CA33B8FE</string>
-			<key>productRefGroup</key>
-			<string>3B57EE2B1FDDC8BB81033A32</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>689EFF15C72E585FB35EE3BF</string>
-				<string>2405AF607D1688EA88EC7E92</string>
-				<string>63F7FB3CB75A32EDE9D55E3F</string>
-				<string>67A1BB034F428CFFD8EDFD64</string>
-				<string>D1E56181B9E83E7839DE031A</string>
-			</array>
-		</dict>
-		<key>F40A65671A58A4962A729855</key>
-		<dict>
-			<key>fileRef</key>
-			<string>274E3AA48FD8880EDD69D762</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F68A926E1CBB52371B41A99B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NWLLineLogger.h</string>
-			<key>path</key>
-			<string>Library/Printers/NWLLineLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F6D798954DD157C394F3C133</key>
-		<dict>
-			<key>fileRef</key>
-			<string>64E73783D701052BB7731F7C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F82887D3BE13B93CA686A141</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DE4AC04B35D48A5E9844B5F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>FBB53C917C6179E9C1F1CC25</key>
+		<key>E94412365D78335CB0F24A63</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Cocoa.framework</string>
+			<string>CoreServices.framework</string>
 			<key>path</key>
-			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework</string>
+			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>FD87186E536281D302BB8D2A</key>
+		<key>EA484D5EBF47ECD6AB7D5744</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>26259985736D4F54532672E0</string>
+			<string>524D3C6D04D5C295254A1682</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -2801,8 +3994,6 @@
 				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-NC DNS Updater-XMLReader-PPTV/Pods-NC DNS Updater-XMLReader-PPTV-prefix.pch</string>
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<array>
 					<string>DEBUG=1</string>
@@ -2832,10 +4023,40 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>FDAC97BBB79A6C02CFFE08AE</key>
+		<key>EAA956221085DCC5199E9A30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NWLPrinter.h</string>
+			<key>path</key>
+			<string>Library/Printers/NWLPrinter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB20599CA0FC753CF92682C8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFHTTPRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFHTTPRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EC291EB1212ECC266A55B371</key>
 		<dict>
 			<key>fileRef</key>
-			<string>71D3DF5FC7512089816B48B8</string>
+			<string>EB20599CA0FC753CF92682C8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2844,21 +4065,98 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>FDC163CA6AAE2AFBC0BB8D11</key>
+		<key>EC90286D139E49BBEE978C18</key>
 		<dict>
-			<key>fileRef</key>
-			<string>E500A792477DBC328061669D</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3DC24A4C65DD5682E8A6142B</string>
+				<string>714C6D019EA4B6F5BF684D20</string>
+				<string>D43D576116ED523F45E92836</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>FE135CF8214A2A98DAA1A882</key>
+		<key>ECB1D5B766B401C26F564CFF</key>
 		<dict>
-			<key>fileRef</key>
-			<string>FBB53C917C6179E9C1F1CC25</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>NO</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
-		<key>FE27C56418E49AB9BE1867E2</key>
+		<key>EF7E15ED416570C87516E154</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A65134A8E146BF316DF7CAD5</string>
+				<string>B3F767FF5AC45EED51352C85</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F007843D1A74812A1B2DF032</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2866,12 +4164,54 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFURLRequestSerialization.m</string>
 			<key>path</key>
-			<string>Pods-NC DNS Updater-AFNetworking-dummy.m</string>
+			<string>AFNetworking/AFURLRequestSerialization.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FE82A5D838D1D37073CED06A</key>
+		<key>F08B62901EEA28604E617CEF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>54D1E7E0E5F3206C3F693EF7</string>
+				<string>52880B648AB106117B363FFC</string>
+				<string>BB4464EE0B669CB6143CFFC2</string>
+				<string>D295E036339241771A8BA9F7</string>
+				<string>701A614F0685453B0D3E6650</string>
+				<string>2A38326E6A07403253846F15</string>
+				<string>23F741AD34B6F0C03203F33A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F2B667E59B7185F31F823AF2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A5E608A81C16C29D00654ACA</string>
+				<string>81E141E3AB92478E89184283</string>
+				<string>77D58DA65EB437F74FCF74E7</string>
+				<string>9B00329EAF7B2BBA6B87A0BA</string>
+				<string>FBB78C297222EB2C9CCC98F4</string>
+				<string>91ACBA8A42748BDF80546338</string>
+				<string>86ECDE3F182F3CC644CFB571</string>
+				<string>44CAAD12353DF4E8E747CA6C</string>
+				<string>56B642AED4FEC8FBB5DBB7B9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F2D57A0116812194565554A7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2880,13 +4220,219 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>AFNetworkReachabilityManager.h</string>
+			<string>NWLFilePrinter.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworkReachabilityManager.h</string>
+			<string>Library/Printers/NWLFilePrinter.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FF09F200CF9A60A991408D46</key>
+		<key>F2E33A18BDC1FCA8F84E5009</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater-NWLogging-dummy.m</string>
+			<key>path</key>
+			<string>../Pods-NC DNS Updater-NWLogging/Pods-NC DNS Updater-NWLogging-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F373B1788C0EF25CD0AC112B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>2CE4F158AEDBA7809AF918E9</string>
+			<key>targetProxy</key>
+			<string>AA6ED9027F8F50A0C5AE4C91</string>
+		</dict>
+		<key>F548AA814BADA0847078267E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F55F20B4A9C7C206D78C8980</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F6464DF0421B471088CC58F1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CC64E5ADC1372D5779E5B600</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F97916EE18AC4574D35BA11C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C9B47AA23D432832D38468FE</string>
+				<string>48BA417BE35787DE6E24568D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>FA65D0852B3EC402989C0840</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CDAE791DE810CE4B3112B87A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>974157433048F0D444110892</string>
+				<string>E31447EC19638B99940D443F</string>
+				<string>85C663788FF6A25ED3E3FD11</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging</string>
+			<key>productName</key>
+			<string>Pods-NC DNS Updater Daemon-NWLogging</string>
+			<key>productReference</key>
+			<string>9B00329EAF7B2BBA6B87A0BA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>FAC425CBF42BFAFA833CC41D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8D6543A74BF599DA6486CA5C</string>
+				<string>A8142371662E9BC26C098F30</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FB501C21BA3D1524071AA344</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NWLFilePrinter.m</string>
+			<key>path</key>
+			<string>Library/Printers/NWLFilePrinter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FBB78C297222EB2C9CCC98F4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-NC DNS Updater Daemon-XMLReader-PPTV.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>FC04E92613F5A3BB909D72AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C66CE76740059DC7731D3821</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FC7C27BDCD04986B9DE09048</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFURLConnectionOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FCC60E815AC66C6EFF2D4AD2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C742BFA33CF1BA1F2E97EDA5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FE6B0383BB9AFF76239C5912</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9282BBC767524157F63FFF44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>FE8F423D7248A95CA6D5A96E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NWLLineLogger.m</string>
+			<key>path</key>
+			<string>Library/Printers/NWLLineLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FEB01D3F13453D0D8D2D17BF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2894,15 +4440,13 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AFSecurityPolicy.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFSecurityPolicy.h</string>
+			<string>Pods-NC DNS Updater-NOSwitch-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>F1A122F26C405BE534E8FA47</string>
+	<string>A684BDE9A11A35F723E464F9</string>
 </dict>
 </plist>

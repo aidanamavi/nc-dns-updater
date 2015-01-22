@@ -4,65 +4,95 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-NC DNS Updater Daemon-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NC DNS Updater Daemon-NWLogging.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NC DNS Updater Daemon-XMLReader-PPTV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NC DNS Updater Daemon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NC DNS Updater-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-NC DNS Updater-NOSwitch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-NC DNS Updater-NWLogging.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-NC DNS Updater-XMLReader-PPTV.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-NC DNS Updater.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2405AF607D1688EA88EC7E92</key>
+		<key>02604E0E3566157BACADB4D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63F7FB3CB75A32EDE9D55E3F</key>
+		<key>0E39DB5436BB117F907F3329</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67A1BB034F428CFFD8EDFD64</key>
+		<key>2CE4F158AEDBA7809AF918E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>689EFF15C72E585FB35EE3BF</key>
+		<key>3475B98AF5D040DA32ABFA06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1E56181B9E83E7839DE031A</key>
+		<key>4FDFB25AFC1D521CD476F283</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C337B8E2CEA63F53C73F495</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A42619C1CA07BABDAC584AA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5C384F8FFE292DAE2D2793B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA65D0852B3EC402989C0840</key>
 		<dict>
 			<key>primary</key>
 			<true/>

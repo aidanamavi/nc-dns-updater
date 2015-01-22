@@ -31,6 +31,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [NCUIPService setAppVersion:[NCUVersionService getCurrentVersion].versionNumber];
         self.masterSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"];
 
         self.activityLoggingState = [[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"];
@@ -166,6 +167,7 @@
         }
     }];
 }
+
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
     NWLog(@"Processing %@", [namecheapDomain completeHostName]);
 

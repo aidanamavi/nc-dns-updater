@@ -12,10 +12,13 @@
 
 @interface NCUIPService : NSObject
 
+
 + (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString * ipAddress, NSError* error))completionBlock;
 + (NSString *)getInternalIPAddress;
 + (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock;
 + (BOOL)isStringAnIP:(NSString *)stringValue;
-+ (NSString*)getIPAddressForURL:(NSURL*)url;
++ (NSString *)getIPAddressForURL:(NSURL*)url;
++ (NSString *)appVersion;
++ (void)setAppVersion:(NSString *)appVersion;
 
 @end

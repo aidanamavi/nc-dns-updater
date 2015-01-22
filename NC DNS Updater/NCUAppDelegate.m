@@ -61,7 +61,7 @@
 - (NSURL *)applicationFilesDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSLocalDomainMask] lastObject];
     return [appSupportURL URLByAppendingPathComponent:@"com.laratech.NC_DNS_Updater"];
 }
 

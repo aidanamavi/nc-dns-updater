@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67A1BB034F428CFFD8EDFD64"
+               BlueprintIdentifier = "6C337B8E2CEA63F53C73F495"
                BuildableName = "libPods-NC DNS Updater-NWLogging.a"
                BlueprintName = "Pods-NC DNS Updater-NWLogging"
                ReferencedContainer = "container:Pods.xcodeproj">

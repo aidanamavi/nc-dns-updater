@@ -11,6 +11,10 @@
 		0FCA05881A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */; };
 		0FCA058B1A701750000C01D0 /* NCUDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA058A1A701750000C01D0 /* NCUDbManager.m */; };
 		0FCA058D1A7017B8000C01D0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCA058C1A7017B8000C01D0 /* Cocoa.framework */; };
+		0FCA05921A702357000C01D0 /* NCUNamecheapDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA05911A702357000C01D0 /* NCUNamecheapDomain.m */; };
+		0FCA05951A702450000C01D0 /* NCUDomainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA05941A702450000C01D0 /* NCUDomainService.m */; };
+		0FCA05981A702486000C01D0 /* NCUIPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA05961A702486000C01D0 /* NCUIPService.m */; };
+		7F9C36FCDFFEFE6E7069C9A8 /* libPods-NC DNS Updater Daemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5094FF3A4D4E57E55D3DE7DE /* libPods-NC DNS Updater Daemon.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +40,16 @@
 		0FCA058A1A701750000C01D0 /* NCUDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUDbManager.m; sourceTree = "<group>"; };
 		0FCA058C1A7017B8000C01D0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NC DNS Updater Daemon-Prefix.pch"; sourceTree = "<group>"; };
+		0FCA058F1A70233F000C01D0 /* NC DNS Updater Daemon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "NC DNS Updater Daemon"; sourceTree = "<group>"; };
+		0FCA05901A702357000C01D0 /* NCUNamecheapDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCUNamecheapDomain.h; path = "../NC DNS Updater/NCUNamecheapDomain.h"; sourceTree = "<group>"; };
+		0FCA05911A702357000C01D0 /* NCUNamecheapDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCUNamecheapDomain.m; path = "../NC DNS Updater/NCUNamecheapDomain.m"; sourceTree = "<group>"; };
+		0FCA05931A702450000C01D0 /* NCUDomainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUDomainService.h; sourceTree = "<group>"; };
+		0FCA05941A702450000C01D0 /* NCUDomainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUDomainService.m; sourceTree = "<group>"; };
+		0FCA05961A702486000C01D0 /* NCUIPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCUIPService.m; path = "../NC DNS Updater/NCUIPService.m"; sourceTree = "<group>"; };
+		0FCA05971A702486000C01D0 /* NCUIPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCUIPService.h; path = "../NC DNS Updater/NCUIPService.h"; sourceTree = "<group>"; };
+		2609946B2D932DE3D58620B7 /* Pods-NC DNS Updater Daemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NC DNS Updater Daemon.release.xcconfig"; path = "../Pods/Target Support Files/Pods-NC DNS Updater Daemon/Pods-NC DNS Updater Daemon.release.xcconfig"; sourceTree = "<group>"; };
+		5094FF3A4D4E57E55D3DE7DE /* libPods-NC DNS Updater Daemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NC DNS Updater Daemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95854A915FFBA4FCD47B7B71 /* Pods-NC DNS Updater Daemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NC DNS Updater Daemon.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-NC DNS Updater Daemon/Pods-NC DNS Updater Daemon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,20 +58,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCA058D1A7017B8000C01D0 /* Cocoa.framework in Frameworks */,
+				7F9C36FCDFFEFE6E7069C9A8 /* libPods-NC DNS Updater Daemon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9EA591E42590D600214923 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95854A915FFBA4FCD47B7B71 /* Pods-NC DNS Updater Daemon.debug.xcconfig */,
+				2609946B2D932DE3D58620B7 /* Pods-NC DNS Updater Daemon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0FCA05701A701132000C01D0 = {
 			isa = PBXGroup;
 			children = (
+				0FCA05961A702486000C01D0 /* NCUIPService.m */,
+				0FCA05971A702486000C01D0 /* NCUIPService.h */,
+				0FCA05901A702357000C01D0 /* NCUNamecheapDomain.h */,
+				0FCA05911A702357000C01D0 /* NCUNamecheapDomain.m */,
+				0FCA058F1A70233F000C01D0 /* NC DNS Updater Daemon */,
 				0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */,
 				0FCA058C1A7017B8000C01D0 /* Cocoa.framework */,
 				0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */,
 				0FCA057B1A701132000C01D0 /* NC DNS Updater Daemon */,
 				0FCA057A1A701132000C01D0 /* Products */,
+				0A9EA591E42590D600214923 /* Pods */,
+				1B25C09BB1B2B4397190DCCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +106,18 @@
 				0FCA057C1A701132000C01D0 /* main.m */,
 				0FCA05891A701750000C01D0 /* NCUDbManager.h */,
 				0FCA058A1A701750000C01D0 /* NCUDbManager.m */,
+				0FCA05931A702450000C01D0 /* NCUDomainService.h */,
+				0FCA05941A702450000C01D0 /* NCUDomainService.m */,
 			);
 			path = "NC DNS Updater Daemon";
+			sourceTree = "<group>";
+		};
+		1B25C09BB1B2B4397190DCCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5094FF3A4D4E57E55D3DE7DE /* libPods-NC DNS Updater Daemon.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FCA05801A701132000C01D0 /* Build configuration list for PBXNativeTarget "NC DNS Updater Daemon" */;
 			buildPhases = (
+				7D22999C3C89032B8BF4DECA /* Check Pods Manifest.lock */,
 				0FCA05751A701132000C01D0 /* Sources */,
 				0FCA05761A701132000C01D0 /* Frameworks */,
 				0FCA05771A701132000C01D0 /* CopyFiles */,
+				F65781879907635B3427BEDF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,14 +173,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D22999C3C89032B8BF4DECA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F65781879907635B3427BEDF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-NC DNS Updater Daemon/Pods-NC DNS Updater Daemon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FCA05751A701132000C01D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0FCA058B1A701750000C01D0 /* NCUDbManager.m in Sources */,
+				0FCA05981A702486000C01D0 /* NCUIPService.m in Sources */,
 				0FCA05881A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld in Sources */,
 				0FCA057D1A701132000C01D0 /* main.m in Sources */,
+				0FCA05921A702357000C01D0 /* NCUNamecheapDomain.m in Sources */,
+				0FCA05951A702450000C01D0 /* NCUDomainService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +299,7 @@
 		};
 		0FCA05811A701132000C01D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95854A915FFBA4FCD47B7B71 /* Pods-NC DNS Updater Daemon.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NC DNS Updater Daemon-Prefix.pch";
@@ -229,6 +309,7 @@
 		};
 		0FCA05821A701132000C01D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2609946B2D932DE3D58620B7 /* Pods-NC DNS Updater Daemon.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NC DNS Updater Daemon-Prefix.pch";
@@ -255,6 +336,7 @@
 				0FCA05821A701132000C01D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
