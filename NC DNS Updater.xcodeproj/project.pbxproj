@@ -30,6 +30,7 @@
 		0FAAB7A4197F150100A07A44 /* NCUMainTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAB7A3197F150100A07A44 /* NCUMainTableCellView.m */; };
 		0FAE69AE19ED72C4007B3222 /* NCUVersionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE69AD19ED72C4007B3222 /* NCUVersionService.m */; };
 		0FAE69B119ED734C007B3222 /* NCUVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE69B019ED734C007B3222 /* NCUVersion.m */; };
+		0FB25B8D1A72B54E003E1F15 /* NCUAppSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB25B8C1A72B54E003E1F15 /* NCUAppSetting.m */; };
 		74ABF17B2BDE469B82E623F0 /* libPods-NC DNS Updater.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 171452A43C9F4D53B8DAB49B /* libPods-NC DNS Updater.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,9 @@
 		0FAE69AD19ED72C4007B3222 /* NCUVersionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUVersionService.m; sourceTree = "<group>"; };
 		0FAE69AF19ED734C007B3222 /* NCUVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUVersion.h; sourceTree = "<group>"; };
 		0FAE69B019ED734C007B3222 /* NCUVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUVersion.m; sourceTree = "<group>"; };
+		0FB25B8A1A72B412003E1F15 /* NC_DNS_Updater_2.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_2.0.xcdatamodel; sourceTree = "<group>"; };
+		0FB25B8B1A72B54E003E1F15 /* NCUAppSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUAppSetting.h; sourceTree = "<group>"; };
+		0FB25B8C1A72B54E003E1F15 /* NCUAppSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUAppSetting.m; sourceTree = "<group>"; };
 		0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.5.xcdatamodel; sourceTree = "<group>"; };
 		0FCA056F1A6ECE52000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NC_DNS_Updater_1.9.xcdatamodel; sourceTree = "<group>"; };
 		171452A43C9F4D53B8DAB49B /* libPods-NC DNS Updater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NC DNS Updater.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +168,8 @@
 				0FAAB77B197ECA2600A07A44 /* MainMenu.xib */,
 				0FAAB781197ECA2600A07A44 /* Images.xcassets */,
 				0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */,
+				0FB25B8B1A72B54E003E1F15 /* NCUAppSetting.h */,
+				0FB25B8C1A72B54E003E1F15 /* NCUAppSetting.m */,
 				0F9A3E4B1986FF4D0028BA78 /* NCUNamecheapDomain.h */,
 				0F9A3E4C1986FF4D0028BA78 /* NCUNamecheapDomain.m */,
 				0FAAB76D197ECA2600A07A44 /* Supporting Files */,
@@ -370,6 +376,7 @@
 				0FAE69AE19ED72C4007B3222 /* NCUVersionService.m in Sources */,
 				0F9A3E4A1986B2830028BA78 /* NCUIPService.m in Sources */,
 				0FAAB77A197ECA2600A07A44 /* NCUAppDelegate.m in Sources */,
+				0FB25B8D1A72B54E003E1F15 /* NCUAppSetting.m in Sources */,
 				0F9A3E36198146410028BA78 /* NCUMainViewController.m in Sources */,
 				0F7C4AEE19EC3F52002BE4CC /* NCUApplication.m in Sources */,
 				0FAE69B119ED734C007B3222 /* NCUVersion.m in Sources */,
@@ -605,12 +612,13 @@
 		0FAAB77E197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0FB25B8A1A72B412003E1F15 /* NC_DNS_Updater_2.0.xcdatamodel */,
 				0FCA056F1A6ECE52000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */,
 				0F2190F21A6D421A003EF305 /* NC_DNS_Updater_1.8.xcdatamodel */,
 				0FBB4A1F1A3B519800F09DFE /* NC_DNS_Updater_1.5.xcdatamodel */,
 				0FAAB77F197ECA2600A07A44 /* NC_DNS_Updater.xcdatamodel */,
 			);
-			currentVersion = 0FCA056F1A6ECE52000C01D0 /* NC_DNS_Updater_1.9.xcdatamodel */;
+			currentVersion = 0FB25B8A1A72B412003E1F15 /* NC_DNS_Updater_2.0.xcdatamodel */;
 			path = NC_DNS_Updater.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

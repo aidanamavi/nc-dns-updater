@@ -13,12 +13,6 @@
 
 @interface NCUMainViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate, NSComboBoxDelegate>
 
-@property NSMutableArray *namecheapDomains;
-@property NSMutableDictionary *updateTimers;
-@property NCUNamecheapDomain *selectedNamecheapDomain;
-@property BOOL masterSwitchState;
-@property BOOL activityLoggingState;
-
 @property IBOutlet NSTableView *domainsTableView;
 @property IBOutlet NSView *formView;
 @property IBOutlet NSTextField *domainNameTextField;

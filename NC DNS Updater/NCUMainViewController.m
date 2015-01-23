@@ -15,8 +15,14 @@
 #import "NCUVersionService.h"
 #import "NCUVersion.h"
 #import <NOSwitch/NOSwitchButton.h>
+#import "NCUAppSetting.h"
 
 @interface NCUMainViewController ()
+
+@property NSMutableArray *namecheapDomains;
+@property NCUNamecheapDomain *selectedNamecheapDomain;
+@property NCUAppSetting *masterSwitchState;
+@property NCUAppSetting *activityLoggingState;
 
 @property NCULogViewerWindowController *logViewerWindow;
 @property NSTimer *checkForUpdateTimer;
@@ -32,14 +38,57 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [NCUIPService setAppVersion:[NCUVersionService getCurrentVersion].versionNumber];
-        self.masterSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"];
-
-        self.activityLoggingState = [[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"];
-        NWLog(@"Master switch state is %@.", self.masterSwitchState ? @"ON" : @"OFF");
+        [self loadAppSettings];
+        NWLog(@"Master switch state is %@.", [self.masterSwitchState.settingValue boolValue] ? @"ON" : @"OFF");
         
         [self loadDomains];
     }
     return self;
+}
+
+- (NCUAppDelegate *)appDelegate {
+    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
+    return appDelegate;
+}
+
+- (void)loadAppSettings {
+    NWLog(@"Loading app settings.");
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUAppSetting"];
+
+    NSError *error;
+    NSArray *appSettings = [[self getDataContext] executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    } else {
+        NWLog(@"App settings loaded successfully.");
+    
+        for (NCUAppSetting *appSetting in appSettings) {
+            if ([appSetting.settingName isEqualToString:@"MASTER_SWITCH"]) {
+                self.masterSwitchState = appSetting;
+            }
+            else if ([appSetting.settingName isEqualToString:@"ACTIVITY_LOGGING"]) {
+                self.activityLoggingState = appSetting;
+            }
+        }
+        
+        if (!self.masterSwitchState) {
+            self.masterSwitchState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
+            
+            self.masterSwitchState.settingName = @"MASTER_SWITCH";
+            [self.masterSwitchState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"]];
+        }
+        
+        if (!self.activityLoggingState) {
+            self.activityLoggingState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
+            
+            self.activityLoggingState.settingName = @"ACTIVITY_LOGGING";
+            [self.activityLoggingState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"] ];
+        }
+        
+        [self saveDbChanges];
+    }
 }
 
 - (void)loadView {
@@ -58,15 +107,13 @@
     [self updateActivityLoggingPosition];
     [self updateMasterSwitchPosition];
     
-    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-
     if ([self.namecheapDomains count] && !self.selectedNamecheapDomain) {
         [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
     }
     
-    [appDelegate.window makeFirstResponder:self.domainsTableView];
+    [[self appDelegate].window makeFirstResponder:self.domainsTableView];
     
-    [self setLoggingEnabledTo:self.activityLoggingState];
+    [self setLoggingEnabledTo:[self.activityLoggingState.settingValue boolValue]];
     [self checkForNewVersion];
     [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
@@ -77,11 +124,10 @@
     NWLog(@"Loading domain configuration.");
     
     self.namecheapDomains = [NSMutableArray array];
-    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUNamecheapDomain"];
     NSError *error;
 
-    [self.namecheapDomains addObjectsFromArray:[appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
+    [self.namecheapDomains addObjectsFromArray:[[self getDataContext] executeFetchRequest:fetchRequest error:&error]];
     
     if (error) {
         NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
@@ -144,7 +190,7 @@
             }
             else {
                 status = NCUMainTableCellViewStatusOutdated;
-                namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] && self.masterSwitchState ? @" Update request will be issued." : [NSString stringWithFormat:@" Automatic updates are disabled.%@", self.masterSwitchState ? @" Enable this host for automatic updates." : @" Turn on the Master Switch to enable automatic updates."]];
+                namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] && [self.masterSwitchState.settingValue boolValue] ? @" Update request will be issued." : [NSString stringWithFormat:@" Automatic updates are disabled.%@", [self.masterSwitchState.settingValue boolValue] ? @" Enable this host for automatic updates." : @" Turn on the Master Switch to enable automatic updates."]];
             }
             
             if (![namecheapDomain.enabled boolValue]) {
@@ -157,7 +203,7 @@
                 cell.status = status;
             }
             
-            if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue] && self.masterSwitchState) {
+            if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue] && [self.masterSwitchState.settingValue boolValue]) {
                 [self updateDnsWithNamecheapDomain:namecheapDomain];
             }
             
@@ -223,15 +269,6 @@
     }
 }
 
-- (void)removeTimerForNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
-    NSTimer *timer = [self.updateTimers objectForKey:namecheapDomain.identifier];
-    
-    if (timer) {
-        [timer invalidate];
-        [self.updateTimers removeObjectForKey:namecheapDomain];
-    }
-}
-
 - (void)createTimerForCurrentIPCheck {
     if (self.currentIpCheckTimer) {
         [self.currentIpCheckTimer invalidate];
@@ -257,7 +294,7 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSTableView *tableView = (NSTableView *)notification.object;
     
-    [self saveChanges];
+    [self saveDomainChanges];
     
     if (self.selectedNamecheapDomain) {
         NSInteger previousSelectedIndex = [self.namecheapDomains indexOfObject:self.selectedNamecheapDomain];
@@ -313,18 +350,17 @@
 }
 
 - (IBAction)activityLogging_Clicked:(id)sender {
-    self.activityLoggingState = !self.activityLoggingState;
-    [[NSUserDefaults standardUserDefaults] setBool:self.activityLoggingState forKey:@"ACTIVITY_LOGGING"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self setLoggingEnabledTo:self.activityLoggingState];
+    [self.activityLoggingState setBoolValue:![self.activityLoggingState.settingValue boolValue]];
+    [self saveDbChanges];
+
+    [self setLoggingEnabledTo:[self.activityLoggingState.settingValue boolValue]];
 }
 
 - (IBAction)masterSwitch_Clicked:(id)sender {
-    self.masterSwitchState = !self.masterSwitchState;
-    [[NSUserDefaults standardUserDefaults] setBool:self.masterSwitchState forKey:@"MASTER_SWITCH"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.masterSwitchState setBoolValue:![self.masterSwitchState.settingValue boolValue]];
+    [self saveDbChanges];
     
-    if (self.masterSwitchState) {
+    if ([self.masterSwitchState.settingValue boolValue]) {
         [self createTimerForCurrentIPCheck];
     }
     else {
@@ -347,7 +383,7 @@
         [self.domainsTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:self.selectedNamecheapDomain]] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
     
-    [self saveChanges];
+    [self saveDomainChanges];
     [self updateDomain:self.selectedNamecheapDomain];
 }
 
@@ -382,7 +418,7 @@
 }
 
 - (void)updateActivityLoggingPosition {
-    if (self.activityLoggingState) {
+    if ([self.activityLoggingState.settingValue boolValue]) {
         [self.loggingSwitchButton setState:NSOnState];
     }
     else {
@@ -391,7 +427,7 @@
 }
 
 - (void)updateMasterSwitchPosition {
-    if (self.masterSwitchState) {
+    if ([self.masterSwitchState.settingValue boolValue]) {
         [self.masterSwitchButton setState:NSOnState];
     }
     else {
@@ -399,7 +435,16 @@
     }
 }
 
-- (void)saveChanges {
+- (void)saveDbChanges {
+    if ([[self getDataContext] commitEditing] && [[self getDataContext] hasChanges]) {
+        NSError *error;
+        if (![[self getDataContext] save:&error]) {
+            NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
+        }
+    }
+}
+
+- (void)saveDomainChanges {
     if (self.formLoaded) {
         if (self.selectedNamecheapDomain) {
             if (self.domainNameTextField.stringValue.length == 0) {
@@ -414,17 +459,14 @@
             self.selectedNamecheapDomain.enabled = @(self.domainEnabledButton.state);
             self.selectedNamecheapDomain.currentIP = self.domainCurrentIPTextField.stringValue;
             self.selectedNamecheapDomain.comment = self.domainComments.stringValue;
-            
-            NSError *error;
-            if (![[self getDataContext] save:&error]) {
-                NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
-            }
+
+            [self saveDbChanges];
         }
     }
 }
 
 - (void)comboBoxWillDismiss:(NSNotification *)notification {
-    [self saveChanges];
+    [self saveDomainChanges];
     [self updateDomain:self.selectedNamecheapDomain];
 }
 
@@ -454,13 +496,8 @@
         [alert setInformativeText:@"Deleted domains cannot be restored."];
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
-            [self removeTimerForNamecheapDomain:self.selectedNamecheapDomain];
-            
             [[self getDataContext] deleteObject:self.selectedNamecheapDomain];
-            NSError *error;
-            if (![[self getDataContext] save:&error]) {
-                NSLog(@"ERROR SAVING IN DATABASE: %@", [error localizedDescription]);
-            }
+            [self saveDbChanges];
             
             self.selectedNamecheapDomain = nil;
             [self loadDomains];
@@ -474,13 +511,12 @@
 }
 
 - (NSManagedObjectContext *)getDataContext {
-    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    NSManagedObjectContext *context = [self appDelegate].managedObjectContext;
     return context;
 }
 
 - (IBAction)updateNow_Clicked:(id)sender {
-    [self saveChanges];
+    [self saveDomainChanges];
     if (self.selectedNamecheapDomain && [self isDomainInfoValid]) {
         [self updateDomain:self.selectedNamecheapDomain];
     }
@@ -493,13 +529,11 @@
 }
 
 - (void)setLoggingEnabledTo:(BOOL)state {
-    NCUAppDelegate *appDelegate = (NCUAppDelegate *)[NSApplication sharedApplication].delegate;
-    
     if (state) {
-        [[NWLMultiLogger shared] addPrinter:appDelegate.logFilePrinter];
+        [[NWLMultiLogger shared] addPrinter:[self appDelegate].logFilePrinter];
     }
     else {
-        [[NWLMultiLogger shared] removePrinter:appDelegate.logFilePrinter];
+        [[NWLMultiLogger shared] removePrinter:[self appDelegate].logFilePrinter];
     }
     
     NSLog(@"LOGGING IS %@", state ? @"enabled" : @"disabled");
