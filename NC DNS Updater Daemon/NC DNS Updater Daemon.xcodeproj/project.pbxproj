@@ -41,7 +41,6 @@
 		0FCA058A1A701750000C01D0 /* NCUDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUDbManager.m; sourceTree = "<group>"; };
 		0FCA058C1A7017B8000C01D0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NC DNS Updater Daemon-Prefix.pch"; sourceTree = "<group>"; };
-		0FCA058F1A70233F000C01D0 /* NC DNS Updater Daemon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "NC DNS Updater Daemon"; sourceTree = "<group>"; };
 		0FCA05901A702357000C01D0 /* NCUNamecheapDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCUNamecheapDomain.h; path = "../NC DNS Updater/NCUNamecheapDomain.h"; sourceTree = "<group>"; };
 		0FCA05911A702357000C01D0 /* NCUNamecheapDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCUNamecheapDomain.m; path = "../NC DNS Updater/NCUNamecheapDomain.m"; sourceTree = "<group>"; };
 		0FCA05931A702450000C01D0 /* NCUDomainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUDomainService.h; sourceTree = "<group>"; };
@@ -86,7 +85,6 @@
 				0FCA05971A702486000C01D0 /* NCUIPService.h */,
 				0FCA05901A702357000C01D0 /* NCUNamecheapDomain.h */,
 				0FCA05911A702357000C01D0 /* NCUNamecheapDomain.m */,
-				0FCA058F1A70233F000C01D0 /* NC DNS Updater Daemon */,
 				0FCA058E1A7018D1000C01D0 /* NC DNS Updater Daemon-Prefix.pch */,
 				0FCA058C1A7017B8000C01D0 /* Cocoa.framework */,
 				0FCA05831A7015C9000C01D0 /* NC_DNS_Updater.xcdatamodeld */,
