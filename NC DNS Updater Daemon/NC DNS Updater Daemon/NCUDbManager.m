@@ -7,6 +7,7 @@
 //
 
 #import "NCUDbManager.h"
+#import "NCUAppSetting.h"
 
 @implementation NCUDbManager
 
@@ -62,7 +63,6 @@
     NSDictionary *properties = [applicationFilesDirectory resourceValuesForKeys:@[NSURLIsDirectoryKey] error:&error];
     
     if (!properties) {
-        NWLog(@"NO PROPERTIES");
         BOOL ok = NO;
         if ([error code] == NSFileReadNoSuchFileError) {
             ok = [fileManager createDirectoryAtPath:[applicationFilesDirectory path] withIntermediateDirectories:YES attributes:nil error:&error];
@@ -72,7 +72,6 @@
             return nil;
         }
     } else {
-        NWLog(@"NO PROPERTIES");
         if (![properties[NSURLIsDirectoryKey] boolValue]) {
             // Customize and localize this error.
             NSString *failureDescription = [NSString stringWithFormat:@"Expected a folder to store application data, found a file (%@).", [applicationFilesDirectory path]];
@@ -142,6 +141,44 @@
         NWLog(@"Domain configuration loaded successfully.");
     }
 }
+
+- (void)loadAppSettings {
+    NWLog(@"Loading app settings.");
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUAppSetting"];
+    
+    NSError *error;
+    NSArray *appSettings = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    } else {
+        NWLog(@"App settings loaded successfully.");
+        
+        for (NCUAppSetting *appSetting in appSettings) {
+            if ([appSetting.settingName isEqualToString:@"MASTER_SWITCH"]) {
+                self.masterSwitchState = appSetting;
+            }
+            else if ([appSetting.settingName isEqualToString:@"ACTIVITY_LOGGING"]) {
+                self.activityLoggingState = appSetting;
+            }
+        }
+        
+        if (!self.masterSwitchState) {
+            self.masterSwitchState = [[NCUAppSetting alloc] init];
+            self.masterSwitchState.settingName = @"MASTER_SWITCH";
+            [self.masterSwitchState setBoolValue:NO];
+        }
+        
+        if (!self.activityLoggingState) {
+            self.activityLoggingState = [[NCUAppSetting alloc] init];
+            self.activityLoggingState.settingName = @"ACTIVITY_LOGGING";
+            [self.activityLoggingState setBoolValue:NO];
+        }
+    }
+}
+
+
 
 
 @end

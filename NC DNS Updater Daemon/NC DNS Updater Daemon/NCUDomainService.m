@@ -44,10 +44,10 @@
             }
             
             if ([namecheapDomain.currentIP isEqualToString:referenceIP]) {
-                NWLog(@"IP is up to date.");
+                NWLog(@"%@ IP is up to date.", [namecheapDomain completeHostName]);
             }
             else {
-                NWLog(@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] ? @" Update request will be issued" : @" Automatic updates are disabled.");
+                NWLog(@"%@ IP is outdated.%@", [namecheapDomain completeHostName], [namecheapDomain.enabled boolValue] ? @" Update request will be issued." : @" Automatic updates are disabled.");
             }
             
             if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue]) {
@@ -58,7 +58,7 @@
 }
 
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
-    NWLog(@"Processing %@", [namecheapDomain completeHostName]);
+    NWLog(@"Processing %@.", [namecheapDomain completeHostName]);
     
     if ([namecheapDomain.ipSource integerValue] == NCUIpSourceExternal) {
         NWLog(@"Determining external IP address.");

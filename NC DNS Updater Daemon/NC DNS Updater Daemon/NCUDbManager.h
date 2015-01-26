@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class NCUAppSetting;
+
 @interface NCUDbManager : NSObject
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSMutableArray *namecheapDomains;
+@property (strong, nonatomic) NCUAppSetting *masterSwitchState;
+@property (strong, nonatomic) NCUAppSetting *activityLoggingState;
 
 - (NSURL *)databaseFilesDirectory;
 - (void)loadDomains;
+- (void)loadAppSettings;
 
 @end

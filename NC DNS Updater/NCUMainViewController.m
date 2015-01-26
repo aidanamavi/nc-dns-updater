@@ -51,46 +51,6 @@
     return appDelegate;
 }
 
-- (void)loadAppSettings {
-    NWLog(@"Loading app settings.");
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUAppSetting"];
-
-    NSError *error;
-    NSArray *appSettings = [[self getDataContext] executeFetchRequest:fetchRequest error:&error];
-    
-    if (error) {
-        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
-    } else {
-        NWLog(@"App settings loaded successfully.");
-    
-        for (NCUAppSetting *appSetting in appSettings) {
-            if ([appSetting.settingName isEqualToString:@"MASTER_SWITCH"]) {
-                self.masterSwitchState = appSetting;
-            }
-            else if ([appSetting.settingName isEqualToString:@"ACTIVITY_LOGGING"]) {
-                self.activityLoggingState = appSetting;
-            }
-        }
-        
-        if (!self.masterSwitchState) {
-            self.masterSwitchState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
-            
-            self.masterSwitchState.settingName = @"MASTER_SWITCH";
-            [self.masterSwitchState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"]];
-        }
-        
-        if (!self.activityLoggingState) {
-            self.activityLoggingState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
-            
-            self.activityLoggingState.settingName = @"ACTIVITY_LOGGING";
-            [self.activityLoggingState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"] ];
-        }
-        
-        [self saveDbChanges];
-    }
-}
-
 - (void)loadView {
     [super loadView];
     
@@ -118,6 +78,46 @@
     [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
     [self updateDomain:nil];
+}
+
+- (void)loadAppSettings {
+    NWLog(@"Loading app settings.");
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"NCUAppSetting"];
+    
+    NSError *error;
+    NSArray *appSettings = [[self getDataContext] executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NWLog(@"ERROR FETCHING DATA: %@", [error localizedDescription]);
+    } else {
+        NWLog(@"App settings loaded successfully.");
+        
+        for (NCUAppSetting *appSetting in appSettings) {
+            if ([appSetting.settingName isEqualToString:@"MASTER_SWITCH"]) {
+                self.masterSwitchState = appSetting;
+            }
+            else if ([appSetting.settingName isEqualToString:@"ACTIVITY_LOGGING"]) {
+                self.activityLoggingState = appSetting;
+            }
+        }
+        
+        if (!self.masterSwitchState) {
+            self.masterSwitchState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
+            
+            self.masterSwitchState.settingName = @"MASTER_SWITCH";
+            [self.masterSwitchState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"MASTER_SWITCH"]];
+        }
+        
+        if (!self.activityLoggingState) {
+            self.activityLoggingState = [NSEntityDescription insertNewObjectForEntityForName:@"NCUAppSetting" inManagedObjectContext:[self getDataContext]];
+            
+            self.activityLoggingState.settingName = @"ACTIVITY_LOGGING";
+            [self.activityLoggingState setBoolValue:[[NSUserDefaults standardUserDefaults] boolForKey:@"ACTIVITY_LOGGING"] ];
+        }
+        
+        [self saveDbChanges];
+    }
 }
 
 - (void)loadDomains {
@@ -190,7 +190,7 @@
             }
             else {
                 status = NCUMainTableCellViewStatusOutdated;
-                namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] && [self.masterSwitchState.settingValue boolValue] ? @" Update request will be issued." : [NSString stringWithFormat:@" Automatic updates are disabled.%@", [self.masterSwitchState.settingValue boolValue] ? @" Enable this host for automatic updates." : @" Turn on the Master Switch to enable automatic updates."]];
+                namecheapDomain.comment = [NSString stringWithFormat:@"Host IP is outdated.%@", [namecheapDomain.enabled boolValue] && [self.masterSwitchState.settingValue boolValue] ? @"Update request issued. Please wait for update to propagate." : [NSString stringWithFormat:@" Automatic updates are disabled.%@", [self.masterSwitchState.settingValue boolValue] ? @" Enable this host for automatic updates." : @" Turn on the Master Switch to enable automatic updates."]];
             }
             
             if (![namecheapDomain.enabled boolValue]) {
@@ -203,10 +203,6 @@
                 cell.status = status;
             }
             
-            if (![namecheapDomain.currentIP isEqualToString:referenceIP] && [namecheapDomain.enabled boolValue] && [self.masterSwitchState.settingValue boolValue]) {
-                [self updateDnsWithNamecheapDomain:namecheapDomain];
-            }
-            
             if (self.selectedNamecheapDomain == namecheapDomain) {
                 [self loadForm];
             }
@@ -215,7 +211,7 @@
 }
 
 - (void)updateDnsWithNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain {
-    NWLog(@"Processing %@", [namecheapDomain completeHostName]);
+    NWLog(@"Processing %@.", [namecheapDomain completeHostName]);
 
     if ([namecheapDomain.ipSource integerValue] == NCUIpSourceExternal) {
         NWLog(@"Determining external IP address.");
@@ -326,6 +322,7 @@
     [self.domainsTableView reloadData];
     [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:namecheapDomain]] byExtendingSelection:NO];
     [self loadForm];
+    [self updateDomain:nil];
 }
 
 - (void)loadForm {
@@ -371,7 +368,6 @@
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
-    
     if (self.domainEnabledButton.state == NSOnState) {
         if (![self isDomainInfoValid]) {
             self.domainEnabledButton.state = NSOffState;
@@ -384,7 +380,10 @@
     }
     
     [self saveDomainChanges];
-    [self updateDomain:self.selectedNamecheapDomain];
+    
+    if (self.domainEnabledButton.state == NSOnState) {
+        [self updateDomain:self.selectedNamecheapDomain];
+    }
 }
 
 - (BOOL)isDomainInfoValid {
@@ -506,6 +505,7 @@
                 [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
             }
             [self loadForm];
+            [self updateDomain:nil];
         }
     }
 }
