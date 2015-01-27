@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
 
         if ([dbManager.activityLoggingState.settingValue boolValue]) {
             NWLog(@"Activity logging is enabled.");
-            NSString *logPath = [NSString stringWithFormat:@"%@/%@", [[dbManager databaseFilesDirectory] path], @"nc_dns_updater_daemon.log"];
+            NSString *logPath = [NSString stringWithFormat:@"%@/%@", [[dbManager databaseFilesDirectory] path], @"nc_dns_updater.log"];
             NWLog(@"Log path: %@", logPath);
             NWLFilePrinter *logPrinter = [[NWLFilePrinter alloc] initAndOpenPath:logPath];
             [[NWLMultiLogger shared] addPrinter:logPrinter];

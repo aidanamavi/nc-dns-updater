@@ -22,7 +22,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.logFilePrinter = [[NWLFilePrinter alloc] initAndOpenName:@"NCDNSUpdater"];
+    NSString *logPath = [NSString stringWithFormat:@"%@/%@", [[self applicationFilesDirectory] path], @"nc_dns_updater.log"];
+    self.logFilePrinter = [[NWLFilePrinter alloc] initAndOpenPath:logPath];
     
     [self.window setReleasedWhenClosed:NO];
     self.mainViewController = [[NCUMainViewController alloc] initWithNibName:@"NCUMainView" bundle:nil];

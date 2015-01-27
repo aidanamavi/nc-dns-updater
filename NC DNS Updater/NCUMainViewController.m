@@ -77,7 +77,7 @@
     [self checkForNewVersion];
     [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
-    [self updateDomain:nil];
+    [self refreshDomain:nil updateDns:NO];
 }
 
 - (void)loadAppSettings {
@@ -141,7 +141,7 @@
         [self checkForNewVersion];
     }
     else if (timer == self.currentIpCheckTimer) {
-        [self updateDomain:nil];
+        [self refreshDomain:nil updateDns:NO];
     }
     else {
         NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
@@ -153,7 +153,7 @@
     }
 }
 
-- (void)updateDomain:(NCUNamecheapDomain *)specificDomain {
+- (void)refreshDomain:(NCUNamecheapDomain *)specificDomain updateDns:(BOOL)updateDns {
     [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
         NSString *internalIP = [NCUIPService getInternalIPAddress];
         
@@ -195,6 +195,10 @@
             
             if (![namecheapDomain.enabled boolValue]) {
                 status = NCUMainTableCellViewStatusDisabled;
+            }
+            
+            if (updateDns) {
+                [self updateDnsWithNamecheapDomain:namecheapDomain];
             }
 
             NCUMainTableCellView *cell = [self.domainsTableView viewAtColumn:0 row:[self.namecheapDomains indexOfObject:namecheapDomain] makeIfNecessary:NO];
@@ -322,7 +326,7 @@
     [self.domainsTableView reloadData];
     [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:namecheapDomain]] byExtendingSelection:NO];
     [self loadForm];
-    [self updateDomain:nil];
+    [self refreshDomain:nil updateDns:NO];
 }
 
 - (void)loadForm {
@@ -364,7 +368,7 @@
         [self.currentIpCheckTimer invalidate];
     }
 
-    [self updateDomain:nil];
+    [self refreshDomain:nil updateDns:NO];
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
@@ -382,7 +386,7 @@
     [self saveDomainChanges];
     
     if (self.domainEnabledButton.state == NSOnState) {
-        [self updateDomain:self.selectedNamecheapDomain];
+        [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
     }
 }
 
@@ -466,7 +470,7 @@
 
 - (void)comboBoxWillDismiss:(NSNotification *)notification {
     [self saveDomainChanges];
-    [self updateDomain:self.selectedNamecheapDomain];
+    [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {
@@ -505,7 +509,7 @@
                 [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
             }
             [self loadForm];
-            [self updateDomain:nil];
+            [self refreshDomain:nil updateDns:NO];
         }
     }
 }
@@ -518,7 +522,7 @@
 - (IBAction)updateNow_Clicked:(id)sender {
     [self saveDomainChanges];
     if (self.selectedNamecheapDomain && [self isDomainInfoValid]) {
-        [self updateDomain:self.selectedNamecheapDomain];
+        [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
     }
 }
 
