@@ -22,7 +22,7 @@
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
-									<string>../../../../../../../../Applications/NC DNS Updater.app</string>
+									<string>../../../../../../../../../Applications/NC DNS Updater.app</string>
 									<key>PATH_TYPE</key>
 									<integer>3</integer>
 									<key>PERMISSIONS</key>
@@ -74,7 +74,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>../../../../../../../../Library/Application Support/com.laratech.NC_DNS_Updater</string>
+											<string>../../../../../../../../../Library/Application Support/com.laratech.NC_DNS_Updater</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -219,7 +219,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>../../../../../../../../Library/LaunchDaemons/com.laratech.nc_dns_updater_daemon.plist</string>
+											<string>../../../../../../../../../Library/LaunchDaemons/com.laratech.nc_dns_updater_daemon.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>

@@ -14,7 +14,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        [NCUIPService setAppVersion:@"2.0"];
+        [NCUIPService setAppVersion:@"2.1"];
     }
     
     return self;
