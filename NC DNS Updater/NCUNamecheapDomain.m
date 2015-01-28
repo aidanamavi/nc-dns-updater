@@ -22,7 +22,16 @@
 @dynamic comment;
 
 - (NSString *)completeHostName {
-    return [NSString stringWithFormat:@"%@.%@", self.host, self.domain];
+    NSString *completeHostName;
+    
+    if ([self.host isEqualToString:@"@"]) {
+        completeHostName = self.domain;
+    }
+    else {
+        completeHostName = [NSString stringWithFormat:@"%@.%@", self.host, self.domain];
+    }
+
+    return completeHostName;
 }
 
 - (NSURL *)httpUrl {

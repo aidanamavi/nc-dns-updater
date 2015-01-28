@@ -228,7 +228,7 @@
                     NWLog(@"External IP address is %@.", ipAddress);
                     if ([NCUIPService isStringAnIP:ipAddress]) {
                         NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
-                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress forceUpdate:YES withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                             namecheapDomain.comment = error ? [error localizedDescription] : @"Update request issued successfully. Please wait for update to propagate.";
                             if (namecheapDomain == self.selectedNamecheapDomain) {
                                 [self loadForm];
@@ -252,7 +252,7 @@
             NWLog(@"Internal IP address is %@.", ipAddress);
             if ([NCUIPService isStringAnIP:ipAddress]) {
                 NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
-                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress forceUpdate:YES withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                     namecheapDomain.comment = error ? [error localizedDescription] : @"Update request issued successfully. Please wait for update to propagate.";
                     if (namecheapDomain == self.selectedNamecheapDomain) {
                         [self loadForm];
@@ -540,7 +540,7 @@
         [[NWLMultiLogger shared] removePrinter:[self appDelegate].logFilePrinter];
     }
     
-    NSLog(@"LOGGING IS %@", state ? @"enabled" : @"disabled");
+    NSLog(@"LOGGING is %@", state ? @"enabled" : @"disabled");
 }
 
 - (void)checkForNewVersion {
@@ -563,18 +563,18 @@
             NCUVersion *currentVersion = [NCUVersionService getCurrentVersion];
             
             NWLog(@"Current Version: %@ / Available Version: %@.", currentVersion.versionNumber, availableVersion.versionNumber);
-
-            if ([availableVersion.versionNumber isEqualToString:currentVersion.versionNumber]) {
-                NWLog(@"%@ is the latest version.", currentVersion.versionNumber);
-                
-                self.messageTextField.textColor = [NSColor blackColor];
-                self.messageTextField.stringValue = @"You have the latest version of NC DNS Updater.";
-            }
-            else {
+            
+            if ([currentVersion.versionNumber compare:availableVersion.versionNumber] == NSOrderedAscending) {
                 NWLog(@"New version (%@) is available.", availableVersion.versionNumber);
                 
                 self.messageTextField.textColor = [NSColor blueColor];
                 self.messageTextField.stringValue = @"A new version of NC DNS Updater is available. Get it at http://idb.gosmd.net/.";
+            }
+            else {
+                NWLog(@"%@ is the latest version.", currentVersion.versionNumber);
+                
+                self.messageTextField.textColor = [NSColor blackColor];
+                self.messageTextField.stringValue = @"You have the latest version of NC DNS Updater.";
             }
         }
     }];

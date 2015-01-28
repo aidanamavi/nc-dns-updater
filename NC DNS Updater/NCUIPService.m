@@ -54,11 +54,11 @@ static NSString* _appVersion = nil;
     }];
 }
 
-+ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock {
++ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip forceUpdate:(BOOL)forceUpdate withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock {
     NSString *currentIpAddress = [self getIPAddressForURL:[namecheapDomain httpUrl]];
     NWLog(@"Current IP for %@ is %@.", [namecheapDomain completeHostName], currentIpAddress);
     
-    if ([currentIpAddress isEqualToString:ip]) {
+    if (!forceUpdate && [currentIpAddress isEqualToString:ip]) {
         NWLog(@"New IP address (%@) is the same as current IP address (%@). Skipping IP update.", ip, currentIpAddress);
         return;
     }

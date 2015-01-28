@@ -15,7 +15,7 @@
 
 + (void)getExternalIPAddressWithCompletionBlock:(void (^)(NSString * ipAddress, NSError* error))completionBlock;
 + (NSString *)getInternalIPAddress;
-+ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock;
++ (void)updateNamecheapDomain:(NCUNamecheapDomain *)namecheapDomain withIP:(NSString *)ip forceUpdate:(BOOL)forceUpdate withCompletionBlock:(void (^)(NCUNamecheapDomain *namecheapDomain, NSError *error))completionBlock;
 + (BOOL)isStringAnIP:(NSString *)stringValue;
 + (NSString *)getIPAddressForURL:(NSURL*)url;
 + (NSString *)appVersion;

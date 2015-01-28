@@ -71,7 +71,7 @@
                     NWLog(@"External IP address is %@.", ipAddress);
                     if ([NCUIPService isStringAnIP:ipAddress]) {
                         NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
-                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                        [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress forceUpdate:NO withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                             NWLog(@"%@", error ? [error localizedDescription] : @"Update request issued successfully. Please wait for update to propagate.");
                         }];
                     }
@@ -92,7 +92,7 @@
             NWLog(@"Internal IP address is %@.", ipAddress);
             if ([NCUIPService isStringAnIP:ipAddress]) {
                 NWLog(@"Requesting IP address update for %@ to %@.", [namecheapDomain completeHostName], ipAddress);
-                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
+                [NCUIPService updateNamecheapDomain:namecheapDomain withIP:ipAddress forceUpdate:NO withCompletionBlock:^(NCUNamecheapDomain *namecheapDomain, NSError *error) {
                     NWLog(@"%@", error ? [error localizedDescription] : @"Update request issued successfully. Please wait for update to propagate.");
                 }];
             }
