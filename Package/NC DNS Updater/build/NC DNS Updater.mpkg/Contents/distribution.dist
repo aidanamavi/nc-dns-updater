@@ -18,7 +18,7 @@
     <!--+==========================+
         |    Package References    |
         +==========================+-->
-    <pkg-ref id="com.laratech.NCDNSUpdater" version="2.0" auth="Root" installKBytes="1506">file:./Contents/Packages/NC%20DNS%20Updater.pkg</pkg-ref>
+    <pkg-ref id="com.laratech.NCDNSUpdater" version="2.1" auth="Root" installKBytes="1506">file:./Contents/Packages/NC%20DNS%20Updater.pkg</pkg-ref>
     <!--+==========================+
         |    JavaScript Scripts    |
         +==========================+-->
