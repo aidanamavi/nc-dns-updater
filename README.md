@@ -1,3 +1,4 @@
+![Screen-Shot-2015-01-21-at-13.48.35.png](https://bitbucket.org/repo/zALnLk/images/3957910297-Screen-Shot-2015-01-21-at-13.48.35.png)
 Surprising as it may seem, [Namecheap](http://www.namecheap.com) does not provide a **Mac OS X** client for their great dynamic DNS service. After getting tired of trying to get them to create one, I decided to make one myself.
 
 **NC DNS Updater** is a simple **Mac OS X** app to automatically update IPs for [Namecheap's](http://www.namecheap.com) Dynamic DNS Service. **NC DNS Updater** allows you to manage an unlimited number of domains/hosts, each with its own independent settings.
