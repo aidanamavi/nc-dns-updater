@@ -17,6 +17,12 @@
 #import <NOSwitch/NOSwitchButton.h>
 #import "NCUAppSetting.h"
 
+typedef enum : NSUInteger {
+    NCUUpdateDnsOptionNo,
+    NCUUpdateDnsOptionYesAll,
+    NCUUpdateDnsOptionYesOnlyEnabled,
+} NCUUpdateDnsOption;
+
 @interface NCUMainViewController ()
 
 @property NSMutableArray *namecheapDomains;
@@ -77,7 +83,7 @@
     [self checkForNewVersion];
     [self createTimerForCurrentIPCheck];
     [self createCheckForUpdateTimer];
-    [self refreshDomain:nil updateDns:NO];
+    [self refreshDomain:nil updateOption:NCUUpdateDnsOptionYesOnlyEnabled];
 }
 
 - (void)loadAppSettings {
@@ -141,7 +147,7 @@
         [self checkForNewVersion];
     }
     else if (timer == self.currentIpCheckTimer) {
-        [self refreshDomain:nil updateDns:NO];
+        [self refreshDomain:nil updateOption:NCUUpdateDnsOptionNo];
     }
     else {
         NCUNamecheapDomain *namecheapDomain = (NCUNamecheapDomain *)timer.userInfo;
@@ -153,7 +159,7 @@
     }
 }
 
-- (void)refreshDomain:(NCUNamecheapDomain *)specificDomain updateDns:(BOOL)updateDns {
+- (void)refreshDomain:(NCUNamecheapDomain *)specificDomain updateOption:(NCUUpdateDnsOption)updateDnsOption {
     [NCUIPService getExternalIPAddressWithCompletionBlock:^(NSString *ipAddress, NSError *error) {
         NSString *internalIP = [NCUIPService getInternalIPAddress];
         
@@ -197,7 +203,7 @@
                 status = NCUMainTableCellViewStatusDisabled;
             }
             
-            if (updateDns) {
+            if (updateDnsOption == NCUUpdateDnsOptionYesAll || (updateDnsOption == NCUUpdateDnsOptionYesOnlyEnabled && [namecheapDomain.enabled boolValue])) {
                 [self updateDnsWithNamecheapDomain:namecheapDomain];
             }
 
@@ -326,7 +332,7 @@
     [self.domainsTableView reloadData];
     [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[self.namecheapDomains indexOfObject:namecheapDomain]] byExtendingSelection:NO];
     [self loadForm];
-    [self refreshDomain:nil updateDns:NO];
+    [self refreshDomain:nil updateOption:NCUUpdateDnsOptionNo];
 }
 
 - (void)loadForm {
@@ -363,12 +369,13 @@
     
     if ([self.masterSwitchState.settingValue boolValue]) {
         [self createTimerForCurrentIPCheck];
+        [self refreshDomain:nil updateOption:NCUUpdateDnsOptionYesOnlyEnabled];
     }
     else {
         [self.currentIpCheckTimer invalidate];
+        [self refreshDomain:nil updateOption:NCUUpdateDnsOptionNo];
     }
 
-    [self refreshDomain:nil updateDns:NO];
 }
 
 - (IBAction)enabledSwitch_Clicked:(id)sender {
@@ -386,7 +393,7 @@
     [self saveDomainChanges];
     
     if (self.domainEnabledButton.state == NSOnState) {
-        [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
+        [self refreshDomain:self.selectedNamecheapDomain updateOption:NCUUpdateDnsOptionYesAll];
     }
 }
 
@@ -470,7 +477,7 @@
 
 - (void)comboBoxWillDismiss:(NSNotification *)notification {
     [self saveDomainChanges];
-    [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
+    [self refreshDomain:self.selectedNamecheapDomain updateOption:NCUUpdateDnsOptionYesOnlyEnabled];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {
@@ -509,7 +516,7 @@
                 [self.domainsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
             }
             [self loadForm];
-            [self refreshDomain:nil updateDns:NO];
+            [self refreshDomain:nil updateOption:NCUUpdateDnsOptionYesOnlyEnabled];
         }
     }
 }
@@ -522,7 +529,7 @@
 - (IBAction)updateNow_Clicked:(id)sender {
     [self saveDomainChanges];
     if (self.selectedNamecheapDomain && [self isDomainInfoValid]) {
-        [self refreshDomain:self.selectedNamecheapDomain updateDns:YES];
+        [self refreshDomain:self.selectedNamecheapDomain updateOption:NCUUpdateDnsOptionYesAll];
     }
 }
 
